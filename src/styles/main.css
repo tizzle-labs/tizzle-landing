@@ -1,0 +1,141 @@
+/* ─── DESIGN TOKENS ─────────────────────────────────────── */
+:root {
+  --accent: #caff00;
+  --accent-dim: rgba(202, 255, 0, 0.1);
+  --accent-text: #0a0a0a;
+  --error: #ff3b30;
+
+  --f-display: "Clash Grotesk", "DM Sans", sans-serif;
+  --f-body: "DM Sans", sans-serif;
+  --f-mono: "Geist Mono", monospace;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+}
+
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --surface-2: #161616;
+  --surface-3: #1e1e1e;
+  --border: #1e1e1e;
+  --border-2: #2a2a2a;
+  --text-1: #ffffff;
+  --text-2: #888888;
+  --text-3: #444444;
+}
+
+/* ─── RESET ─────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--f-body);
+  background: var(--bg);
+  color: var(--text-1);
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* ─── STICKY HEADER ─────────────────────────────────────── */
+.page-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ─── LOGO ───────────────────────────────────────────────── */
+.logo {
+  font-family: var(--f-display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-1);
+  text-decoration: none;
+}
+
+/* ─── HEADER NAV ─────────────────────────────────────────── */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  font-family: var(--f-display);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-link:hover {
+  color: var(--text-1);
+}
+
+/* ─── BUTTONS ────────────────────────────────────────────── */
+.btn-outline {
+  font-family: var(--f-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+/* ─── MONO CHIP ──────────────────────────────────────────── */
+.mono-chip {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--text-2);
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+.page-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+}

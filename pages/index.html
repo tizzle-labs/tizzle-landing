@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tizzle — On-Chain Event Ticketing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Geist+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/main.css" />
+  </head>
+
+  <body class="bg-bg text-white font-body antialiased">
+
+    <!-- ─── HEADER ──────────────────────────────────────────── -->
+    <header class="sticky top-0 z-50 bg-bg border-b border-border">
+      <div class="max-w-[1200px] mx-auto px-8 py-4 flex items-center justify-between">
+        <a href="/" class="font-display text-lg font-semibold tracking-tight text-white no-underline">TIZZLE</a>
+        <nav class="flex items-center gap-6">
+          <a href="/whitepaper/" class="font-display text-[13px] font-medium text-muted hover:text-white transition-colors no-underline">
+            Whitepaper
+          </a>
+          <span class="hidden md:inline-flex font-mono text-[11px] text-muted bg-surface border border-border-2 rounded-full px-3 py-[5px]">
+            Solana Devnet
+          </span>
+          <a
+            href="#waitlist"
+            class="font-display text-[13px] font-semibold text-accent border border-accent rounded-sm px-4 py-2 no-underline hover:bg-accent hover:text-accent-fg transition-colors"
+          >
+            Join Waitlist
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ─── HERO ────────────────────────────────────────────── -->
+    <section class="max-w-[1200px] mx-auto px-8 py-20">
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-3 font-mono text-[11px] tracking-[0.14em] uppercase text-accent mb-6">
+        <span class="block w-6 h-px bg-accent shrink-0"></span>
+        ON-CHAIN TICKETING
+      </div>
+
+      <h1
+        class="font-display font-bold tracking-[-0.04em] leading-[0.9] mb-8"
+        style="font-size: clamp(56px, 10vw, 128px)"
+      >
+        <span class="block text-white">TIZZLE</span>
+        <span class="text-outline block">TICKET</span>
+      </h1>
+
+      <p class="font-body text-[17px] text-muted max-w-[480px] leading-[1.65] mb-10">
+        No backend. No middlemen. QR verified on Solana.
+      </p>
+
+      <div class="flex items-center gap-4 flex-wrap mb-16">
+        <a
+          href="#waitlist"
+          class="font-display text-[15px] font-semibold text-accent-fg bg-accent rounded-sm px-7 py-[14px] no-underline hover:bg-[#b8e800] transition-colors"
+        >
+          Join the Waitlist
+        </a>
+        <span class="font-mono text-[11px] text-muted bg-surface border border-border-2 rounded-full px-3 py-[5px]">
+          Solana Devnet · Hackathon Demo
+        </span>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex gap-12 flex-wrap">
+        <div class="flex flex-col gap-1">
+          <span class="font-display text-2xl font-semibold tracking-tight text-white">3 ROLES</span>
+          <span class="font-mono text-[11px] tracking-[0.08em] uppercase text-muted">Fan · Organizer · Venue</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <span class="font-display text-2xl font-semibold tracking-tight text-white">1 SCAN</span>
+          <span class="font-mono text-[11px] tracking-[0.08em] uppercase text-muted">Instant verification</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <span class="font-display text-2xl font-semibold tracking-tight text-white">0 TRUST GAP</span>
+          <span class="font-mono text-[11px] tracking-[0.08em] uppercase text-muted">Chain confirms all</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── HOW IT WORKS ─────────────────────────────────────── -->
+    <section class="max-w-[1200px] mx-auto px-8 py-24">
+      <div class="flex items-center gap-3 font-mono text-[11px] tracking-[0.14em] uppercase text-accent mb-6">
+        <span class="block w-6 h-px bg-accent shrink-0"></span>
+        HOW IT WORKS
+      </div>
+      <h2
+        class="font-display font-semibold tracking-[-0.03em] text-white mb-12"
+        style="font-size: clamp(28px, 4vw, 44px)"
+      >
+        Three roles. One chain.
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        <!-- Fan -->
+        <div class="relative bg-surface border border-border rounded-sm p-6 overflow-hidden">
+          <div class="absolute top-[-8px] right-4 font-display text-[64px] font-semibold text-[#222] leading-none select-none pointer-events-none">01</div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <span class="font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-muted">Fan</span>
+          </div>
+          <div class="font-display text-lg font-semibold text-white mb-3">Buy, hold, show</div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">
+            Purchase tickets to events, hold them in your wallet, show the QR at the door.
+          </p>
+        </div>
+
+        <!-- Organizer -->
+        <div class="relative bg-surface border border-border rounded-sm p-6 overflow-hidden">
+          <div class="absolute top-[-8px] right-4 font-display text-[64px] font-semibold text-[#222] leading-none select-none pointer-events-none">02</div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#aaa] shrink-0"></div>
+            <span class="font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-muted">Organizer</span>
+          </div>
+          <div class="font-display text-lg font-semibold text-white mb-3">Create, mint, issue</div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">
+            Create an event, mint tickets on Solana, distribute to fans.
+          </p>
+        </div>
+
+        <!-- Venue -->
+        <div class="relative bg-surface border border-border rounded-sm p-6 overflow-hidden">
+          <div class="absolute top-[-8px] right-4 font-display text-[64px] font-semibold text-[#222] leading-none select-none pointer-events-none">03</div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-1.5 h-1.5 rounded-full bg-muted shrink-0"></div>
+            <span class="font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-muted">Venue</span>
+          </div>
+          <div class="font-display text-lg font-semibold text-white mb-3">Scan, verify, done</div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">
+            Point the scanner at a QR. The chain confirms validity instantly.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── FEATURES ─────────────────────────────────────────── -->
+    <section class="max-w-[1200px] mx-auto px-8 py-24">
+      <div class="flex items-center gap-3 font-mono text-[11px] tracking-[0.14em] uppercase text-accent mb-6">
+        <span class="block w-6 h-px bg-accent shrink-0"></span>
+        BUILT FOR THE CHAIN
+      </div>
+      <h2
+        class="font-display font-semibold tracking-[-0.03em] text-white mb-12"
+        style="font-size: clamp(28px, 4vw, 44px)"
+      >
+        Everything on-chain.
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+        <div class="bg-surface border border-border rounded-sm p-6">
+          <span class="font-mono text-xl text-accent mb-4 block">⬡</span>
+          <div class="font-display text-[15px] font-semibold text-white mb-2">No Backend</div>
+          <p class="font-body text-sm text-muted leading-[1.65]">Tickets live on-chain. No server to hack, no database to lose.</p>
+        </div>
+
+        <div class="bg-surface border border-border rounded-sm p-6">
+          <span class="font-mono text-xl text-accent mb-4 block">⚡</span>
+          <div class="font-display text-[15px] font-semibold text-white mb-2">Instant Verification</div>
+          <p class="font-body text-sm text-muted leading-[1.65]">Solana confirms in ~400ms. The line moves fast.</p>
+        </div>
+
+        <div class="bg-surface border border-border rounded-sm p-6">
+          <span class="font-mono text-xl text-accent mb-4 block">◈</span>
+          <div class="font-display text-[15px] font-semibold text-white mb-2">QR-Native</div>
+          <p class="font-body text-sm text-muted leading-[1.65]">Every ticket is a signed QR. No app needed to scan it.</p>
+        </div>
+
+        <div class="bg-surface border border-border rounded-sm p-6">
+          <span class="font-mono text-xl text-accent mb-4 block">▣</span>
+          <div class="font-display text-[15px] font-semibold text-white mb-2">Wallet-Owned</div>
+          <p class="font-body text-sm text-muted leading-[1.65]">Your tickets are yours. In your wallet, not our database.</p>
+        </div>
+
+        <div class="bg-surface border border-border rounded-sm p-6">
+          <span class="font-mono text-xl text-accent mb-4 block">⊘</span>
+          <div class="font-display text-[15px] font-semibold text-white mb-2">No Middlemen</div>
+          <p class="font-body text-sm text-muted leading-[1.65]">Direct fan-to-organizer. No platform fee sitting in the middle.</p>
+        </div>
+
+        <div class="bg-surface border border-border rounded-sm p-6">
+          <span class="font-mono text-xl text-accent mb-4 block">◎</span>
+          <div class="font-display text-[15px] font-semibold text-white mb-2">Devnet Safe</div>
+          <p class="font-body text-sm text-muted leading-[1.65]">Built on Solana devnet. Real infrastructure, zero financial risk.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── PHONE MOCKUPS ─────────────────────────────────────── -->
+    <section class="max-w-[1200px] mx-auto px-8 py-24">
+      <div class="flex items-center gap-3 font-mono text-[11px] tracking-[0.14em] uppercase text-accent mb-6">
+        <span class="block w-6 h-px bg-accent shrink-0"></span>
+        THE APP
+      </div>
+      <h2
+        class="font-display font-semibold tracking-[-0.03em] text-white mb-12"
+        style="font-size: clamp(28px, 4vw, 44px)"
+      >
+        Every screen, built for the moment.
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-start">
+
+        <!-- Fan — My Tickets -->
+        <div class="flex flex-col gap-4">
+          <div class="phone-frame">
+            <!-- Status bar -->
+            <div class="flex items-center justify-between px-5 pt-3 pb-2 shrink-0 relative">
+              <div class="w-20 h-[22px] bg-black rounded-full"></div>
+              <span class="font-mono text-[11px] text-muted absolute left-1/2 -translate-x-1/2">9:41</span>
+              <div class="flex gap-1 items-center">
+                <div class="w-2.5 h-2.5 rounded-full bg-muted opacity-70"></div>
+                <div class="w-3.5 h-2 rounded-sm bg-muted opacity-70"></div>
+                <div class="w-1.5 h-2.5 rounded-sm bg-accent opacity-100"></div>
+              </div>
+            </div>
+            <!-- Screen content -->
+            <div class="flex-1 px-5 py-4 flex flex-col gap-2.5 overflow-hidden">
+              <div class="font-display text-[15px] font-semibold text-white">My Tickets</div>
+              <div class="bg-surface-2 border border-border rounded-sm p-3 flex flex-col gap-1.5">
+                <div class="font-display text-[12px] font-semibold text-white">Solana Summer Fest</div>
+                <div class="flex items-center justify-between">
+                  <span class="font-mono text-[9px] text-faint tracking-[0.04em]">TKT-4F2A · Jun 14</span>
+                  <span class="font-mono text-[9px] font-semibold text-accent-fg bg-accent rounded-sm px-1.5 py-0.5 uppercase tracking-[0.06em]">VALID</span>
+                </div>
+              </div>
+              <div class="bg-surface-2 border border-border rounded-sm p-3 flex flex-col gap-1.5">
+                <div class="font-display text-[12px] font-semibold text-white">Base Camp DJ Night</div>
+                <div class="flex items-center justify-between">
+                  <span class="font-mono text-[9px] text-faint tracking-[0.04em]">TKT-9C71 · Jul 02</span>
+                  <span class="font-mono text-[9px] font-semibold text-accent-fg bg-accent rounded-sm px-1.5 py-0.5 uppercase tracking-[0.06em]">VALID</span>
+                </div>
+              </div>
+              <div class="bg-surface-2 border border-border rounded-sm p-3 flex flex-col gap-1.5">
+                <div class="font-display text-[12px] font-semibold text-white">Devnet Hackathon</div>
+                <div class="flex items-center justify-between">
+                  <span class="font-mono text-[9px] text-faint tracking-[0.04em]">TKT-2E8B · Mar 28</span>
+                  <span class="font-mono text-[9px] font-semibold text-accent-fg bg-accent rounded-sm px-1.5 py-0.5 uppercase tracking-[0.06em]">VALID</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <span class="font-mono text-[11px] uppercase tracking-[0.08em] text-muted">Fan · My Tickets</span>
+          </div>
+        </div>
+
+        <!-- Organizer — Create Event -->
+        <div class="flex flex-col gap-4">
+          <div class="phone-frame">
+            <div class="flex items-center justify-between px-5 pt-3 pb-2 shrink-0 relative">
+              <div class="w-20 h-[22px] bg-black rounded-full"></div>
+              <span class="font-mono text-[11px] text-muted absolute left-1/2 -translate-x-1/2">9:41</span>
+              <div class="flex gap-1 items-center">
+                <div class="w-2.5 h-2.5 rounded-full bg-muted opacity-70"></div>
+                <div class="w-3.5 h-2 rounded-sm bg-muted opacity-70"></div>
+                <div class="w-1.5 h-2.5 rounded-sm bg-accent opacity-100"></div>
+              </div>
+            </div>
+            <div class="flex-1 px-5 py-4 flex flex-col gap-2.5 overflow-hidden">
+              <div class="font-display text-[15px] font-semibold text-white">Create Event</div>
+              <div class="flex flex-col gap-1">
+                <span class="font-mono text-[9px] text-muted uppercase tracking-[0.08em]">Event Name</span>
+                <div class="bg-bg border border-border-2 rounded-sm px-2.5 py-2 font-body text-[11px] text-white">Solana Summer Fest</div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span class="font-mono text-[9px] text-muted uppercase tracking-[0.08em]">Date</span>
+                <div class="bg-bg border border-border-2 rounded-sm px-2.5 py-2 font-body text-[11px] text-white">Jun 14, 2026</div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span class="font-mono text-[9px] text-muted uppercase tracking-[0.08em]">Venue</span>
+                <div class="bg-bg border border-border-2 rounded-sm px-2.5 py-2 font-body text-[11px] text-white">The Warehouse</div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span class="font-mono text-[9px] text-muted uppercase tracking-[0.08em]">Capacity</span>
+                <div class="bg-bg border border-border-2 rounded-sm px-2.5 py-2 font-body text-[11px] text-white">500</div>
+              </div>
+              <div class="font-display text-[11px] font-semibold text-accent-fg bg-accent rounded-sm py-2.5 text-center mt-1">
+                Mint Tickets on Solana
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#aaa] shrink-0"></div>
+            <span class="font-mono text-[11px] uppercase tracking-[0.08em] text-muted">Organizer · Create Event</span>
+          </div>
+        </div>
+
+        <!-- Venue — Scanner -->
+        <div class="flex flex-col gap-4">
+          <div class="phone-frame">
+            <div class="flex items-center justify-between px-5 pt-3 pb-2 shrink-0 relative">
+              <div class="w-20 h-[22px] bg-black rounded-full"></div>
+              <span class="font-mono text-[11px] text-muted absolute left-1/2 -translate-x-1/2">9:41</span>
+              <div class="flex gap-1 items-center">
+                <div class="w-2.5 h-2.5 rounded-full bg-muted opacity-70"></div>
+                <div class="w-3.5 h-2 rounded-sm bg-muted opacity-70"></div>
+                <div class="w-1.5 h-2.5 rounded-sm bg-accent opacity-100"></div>
+              </div>
+            </div>
+            <div class="flex-1 px-5 py-4 flex flex-col gap-2.5 overflow-hidden">
+              <div class="font-display text-[15px] font-semibold text-white">Scanner</div>
+              <!-- Viewfinder -->
+              <div class="flex-1 bg-black rounded-sm relative overflow-hidden min-h-[120px] flex items-center justify-center">
+                <div class="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-accent"></div>
+                <div class="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-accent"></div>
+                <div class="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-accent"></div>
+                <div class="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-accent"></div>
+                <div class="scanner-line"></div>
+                <span class="font-mono text-[9px] text-accent/40 tracking-[0.1em] uppercase">SCANNING</span>
+              </div>
+              <div class="font-mono text-[9px] text-white bg-surface border border-border-2 rounded-full px-2.5 py-1 text-center">
+                Solana Summer Fest · Door 1
+              </div>
+              <div class="flex justify-between">
+                <div class="flex flex-col gap-0.5">
+                  <span class="font-display text-sm font-semibold text-white">142</span>
+                  <span class="font-mono text-[8px] uppercase tracking-[0.08em] text-muted">Scanned</span>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <span class="font-display text-sm font-semibold text-white">358</span>
+                  <span class="font-mono text-[8px] uppercase tracking-[0.08em] text-muted">Remaining</span>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <span class="font-display text-sm font-semibold text-accent">500</span>
+                  <span class="font-mono text-[8px] uppercase tracking-[0.08em] text-muted">Capacity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-muted shrink-0"></div>
+            <span class="font-mono text-[11px] uppercase tracking-[0.08em] text-muted">Venue · Scanner</span>
+          </div>
+        </div>
+
+        <!-- Fan — Ticket QR -->
+        <div class="flex flex-col gap-4">
+          <div class="phone-frame">
+            <div class="flex items-center justify-between px-5 pt-3 pb-2 shrink-0 relative">
+              <div class="w-20 h-[22px] bg-black rounded-full"></div>
+              <span class="font-mono text-[11px] text-muted absolute left-1/2 -translate-x-1/2">9:41</span>
+              <div class="flex gap-1 items-center">
+                <div class="w-2.5 h-2.5 rounded-full bg-muted opacity-70"></div>
+                <div class="w-3.5 h-2 rounded-sm bg-muted opacity-70"></div>
+                <div class="w-1.5 h-2.5 rounded-sm bg-accent opacity-100"></div>
+              </div>
+            </div>
+            <div class="flex-1 px-5 py-4 flex flex-col gap-2.5 overflow-hidden">
+              <div class="font-display text-[15px] font-semibold text-white">My Ticket</div>
+              <div class="qr-grid w-full aspect-square border border-accent rounded-sm my-2"></div>
+              <div class="font-display text-[12px] font-semibold text-white text-center">Solana Summer Fest</div>
+              <div class="flex items-center justify-center gap-2">
+                <span class="font-mono text-[9px] text-faint tracking-[0.04em]">TKT-4F2A · Jun 14</span>
+                <span class="font-mono text-[9px] font-semibold text-accent-fg bg-accent rounded-sm px-1.5 py-0.5 uppercase tracking-[0.06em]">VALID</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
+            <span class="font-mono text-[11px] uppercase tracking-[0.08em] text-muted">Fan · Ticket QR</span>
+          </div>
+        </div>
+
+        <!-- Organizer — Dashboard -->
+        <div class="flex flex-col gap-4">
+          <div class="phone-frame">
+            <div class="flex items-center justify-between px-5 pt-3 pb-2 shrink-0 relative">
+              <div class="w-20 h-[22px] bg-black rounded-full"></div>
+              <span class="font-mono text-[11px] text-muted absolute left-1/2 -translate-x-1/2">9:41</span>
+              <div class="flex gap-1 items-center">
+                <div class="w-2.5 h-2.5 rounded-full bg-muted opacity-70"></div>
+                <div class="w-3.5 h-2 rounded-sm bg-muted opacity-70"></div>
+                <div class="w-1.5 h-2.5 rounded-sm bg-accent opacity-100"></div>
+              </div>
+            </div>
+            <div class="flex-1 px-5 py-4 flex flex-col gap-2.5 overflow-hidden">
+              <div class="font-display text-[15px] font-semibold text-white">My Events</div>
+              <div class="bg-surface-2 border border-border rounded-sm p-2.5 flex flex-col gap-1.5">
+                <div class="font-display text-[12px] font-semibold text-white">Solana Summer Fest</div>
+                <div class="font-mono text-[9px] text-muted uppercase tracking-[0.04em]">142 / 500 SOLD</div>
+                <div class="w-full h-[3px] bg-surface-3 rounded-full overflow-hidden">
+                  <div class="h-full bg-accent rounded-full" style="width: 28%"></div>
+                </div>
+              </div>
+              <div class="bg-surface-2 border border-border rounded-sm p-2.5 flex flex-col gap-1.5">
+                <div class="font-display text-[12px] font-semibold text-white">Base Camp DJ Night</div>
+                <div class="font-mono text-[9px] text-muted uppercase tracking-[0.04em]">87 / 200 SOLD</div>
+                <div class="w-full h-[3px] bg-surface-3 rounded-full overflow-hidden">
+                  <div class="h-full bg-accent rounded-full" style="width: 44%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-[#aaa] shrink-0"></div>
+            <span class="font-mono text-[11px] uppercase tracking-[0.08em] text-muted">Organizer · Dashboard</span>
+          </div>
+        </div>
+
+        <!-- Venue — Scan Success -->
+        <div class="flex flex-col gap-4">
+          <div class="phone-frame">
+            <div class="flex items-center justify-between px-5 pt-3 pb-2 shrink-0 relative">
+              <div class="w-20 h-[22px] bg-black rounded-full"></div>
+              <span class="font-mono text-[11px] text-muted absolute left-1/2 -translate-x-1/2">9:41</span>
+              <div class="flex gap-1 items-center">
+                <div class="w-2.5 h-2.5 rounded-full bg-muted opacity-70"></div>
+                <div class="w-3.5 h-2 rounded-sm bg-muted opacity-70"></div>
+                <div class="w-1.5 h-2.5 rounded-sm bg-accent opacity-100"></div>
+              </div>
+            </div>
+            <div class="flex-1 overflow-hidden">
+              <div class="w-full h-full flex flex-col items-center justify-center gap-2.5 bg-black p-5 relative">
+                <div class="scan-pulse"></div>
+                <div class="font-display text-[48px] font-bold text-accent leading-none relative z-10">✓</div>
+                <div class="font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-accent">Valid Ticket</div>
+                <div class="font-body text-[11px] text-muted text-center leading-[1.5]">
+                  Solana Summer Fest<br />
+                  <span class="font-mono text-[9px]">TKT-4F2A</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-muted shrink-0"></div>
+            <span class="font-mono text-[11px] uppercase tracking-[0.08em] text-muted">Venue · Scan Success</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── FAQ ──────────────────────────────────────────────── -->
+    <section class="max-w-[1200px] mx-auto px-8 py-24">
+      <div class="flex items-center gap-3 font-mono text-[11px] tracking-[0.14em] uppercase text-accent mb-6">
+        <span class="block w-6 h-px bg-accent shrink-0"></span>
+        FAQ
+      </div>
+      <h2
+        class="font-display font-semibold tracking-[-0.03em] text-white mb-12"
+        style="font-size: clamp(28px, 4vw, 44px)"
+      >
+        Common questions.
+      </h2>
+
+      <div class="max-w-[720px]">
+        <div class="border-b border-border py-5">
+          <div class="font-display text-base font-semibold text-white mb-2">Do I need a crypto wallet to join the waitlist?</div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">No. The waitlist is just an email. You only need a wallet when the app launches.</p>
+        </div>
+        <div class="border-b border-border py-5">
+          <div class="font-display text-base font-semibold text-white mb-2">What is Solana devnet?</div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">Devnet is Solana's test network — real blockchain infrastructure with no real money involved. Perfect for a hackathon demo.</p>
+        </div>
+        <div class="border-b border-border py-5">
+          <div class="font-display text-base font-semibold text-white mb-2">How does ticket verification work?</div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">Each ticket is a signed on-chain token. The venue scanner reads the QR, checks the signature against the chain, and gets an instant yes/no.</p>
+        </div>
+        <div class="border-b border-border py-5">
+          <div class="font-display text-base font-semibold text-white mb-2">Can tickets be transferred or resold?</div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">Yes — because tickets live in your wallet, you can transfer them like any token. Resale rules are set by the organizer at mint time.</p>
+        </div>
+        <div class="border-b border-border py-5">
+          <div class="font-display text-base font-semibold text-white mb-2">Is this production-ready?</div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">Not yet. This is a hackathon demo on devnet. We're validating the concept before moving to mainnet.</p>
+        </div>
+        <div class="py-5">
+          <div class="font-display text-base font-semibold text-white mb-2">What wallets are supported?</div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">We're targeting Solana mobile wallets (Phantom, Solflare). Any wallet that supports the Solana token standard will work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── WAITLIST ──────────────────────────────────────────── -->
+    <section class="max-w-[1200px] mx-auto px-8 py-24 border-t border-border" id="waitlist">
+      <div class="flex items-center gap-3 font-mono text-[11px] tracking-[0.14em] uppercase text-accent mb-6">
+        <span class="block w-6 h-px bg-accent shrink-0"></span>
+        EARLY ACCESS
+      </div>
+      <h2
+        class="font-display font-semibold tracking-[-0.03em] text-white mb-4"
+        style="font-size: clamp(28px, 4vw, 44px)"
+      >
+        Be first through the door.
+      </h2>
+      <p class="font-body text-[15px] text-muted max-w-[520px] leading-[1.65] mb-8">
+        We're launching on Solana devnet. Join the waitlist and we'll reach out when it's ready.
+      </p>
+
+      <form
+        class="flex gap-2 max-w-[520px] flex-col sm:flex-row"
+        action="https://formspree.io/f/xojpqlwy"
+        method="POST"
+      >
+        <input
+          class="flex-1 bg-surface border border-border rounded-sm px-4 py-3 font-body text-[15px] text-white placeholder:text-faint outline-none focus:border-accent transition-colors"
+          type="email"
+          name="email"
+          placeholder="your@email.com"
+          required
+        />
+        <button
+          class="font-display text-[15px] font-semibold text-accent-fg bg-accent rounded-sm px-6 py-3 cursor-pointer whitespace-nowrap hover:bg-[#b8e800] transition-colors border-none"
+          type="submit"
+        >
+          Get Early Access
+        </button>
+      </form>
+
+      <p class="font-mono text-[11px] uppercase tracking-[0.08em] text-faint mt-3">
+        NO SPAM. NO WALLET REQUIRED TO JOIN.
+      </p>
+    </section>
+
+    <!-- ─── FOOTER ───────────────────────────────────────────── -->
+    <footer class="border-t border-border">
+      <div class="max-w-[1200px] mx-auto px-8 py-6 flex items-center justify-between">
+        <a href="/" class="font-display text-lg font-semibold tracking-tight text-white no-underline">TIZZLE</a>
+        <span class="font-mono text-[11px] text-faint tracking-[0.04em]">© 2026 Tizzle · Built on Solana</span>
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whitepaper — Tizzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Geist+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <link rel="stylesheet" href="/src/styles/whitepaper.css" />
+    <link rel="stylesheet" href="/src/styles/responsive.css" />
+  </head>
+
+  <body>
+    <!-- ─── HEADER ────────────────────────────────────────────── -->
+    <header class="page-header">
+      <a href="/" class="logo">TIZZLE</a>
+      <nav class="header-nav">
+        <a href="/" class="nav-link">← Home</a>
+      </nav>
+    </header>
+
+    <!-- ─── WHITEPAPER CONTENT ─────────────────────────────────── -->
+    <div class="wp-container">
+
+      <!-- Hero -->
+      <div class="wp-hero">
+        <div class="wp-meta">
+          <div class="wp-meta-row">
+            <span class="wp-meta-label">Project Name:</span>
+            <span class="wp-meta-value">Tizzle</span>
+          </div>
+          <div class="wp-meta-row">
+            <span class="wp-meta-label">Blockchain:</span>
+            <span class="wp-meta-value">Solana</span>
+          </div>
+          <div class="wp-meta-row">
+            <span class="wp-meta-label">Website:</span>
+            <span class="wp-meta-value">tizzle.io</span>
+          </div>
+          <div class="wp-meta-row">
+            <span class="wp-meta-label">Status:</span>
+            <span class="wp-meta-value">In Development</span>
+          </div>
+        </div>
+
+        <h1 class="wp-title">Whitepaper</h1>
+        <p class="wp-subtitle">
+          Tizzle is a refundable staking-based event ticketing protocol built on
+          Solana. Instead of purchasing tickets traditionally, users stake tokens
+          to reserve attendance. If they attend the event, their stake is
+          refunded, reducing no-shows while removing payment friction.
+        </p>
+      </div>
+
+      <!-- ─── 01. Executive Summary ────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">01</span>
+        <h2 class="wp-section-title">Executive Summary</h2>
+        <p class="wp-text">
+          Tizzle is a Solana-based event ticketing protocol that replaces
+          traditional ticket purchases with a refundable staking mechanism.
+          Users lock tokens when registering for events and receive refunds
+          after verified attendance, creating a commitment-based system that
+          dramatically reduces no-show rates while eliminating payment friction.
+        </p>
+        <p class="wp-text">
+          The protocol introduces a <strong>Pay-per-Slot</strong> business model
+          where organizers pay a flat platform fee for every attendee slot
+          created, while attendees stake tokens that are held in escrow and
+          returned after attendance verification. This creates aligned incentives
+          for both organizers and attendees without charging attendees directly.
+        </p>
+      </section>
+
+      <!-- ─── 02. Vision & Mission ─────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">02</span>
+        <h2 class="wp-section-title">Vision & Mission</h2>
+
+        <h3 class="wp-section-subtitle">Vision</h3>
+        <p class="wp-text">
+          To become the standard infrastructure for on-chain event management,
+          enabling a future where attendance verification, reputation systems,
+          and token utility are seamlessly integrated into everyday event
+          experiences.
+        </p>
+
+        <h3 class="wp-section-subtitle">Mission</h3>
+        <ul class="wp-list">
+          <li>
+            Leverage Solana's high-performance infrastructure for real-time
+            event ticketing
+          </li>
+          <li>
+            Create a sustainable economic loop driven by organizer fees, not
+            attendee charges
+          </li>
+          <li>
+            Ensure the protocol remains accessible to all participants
+            regardless of experience
+          </li>
+          <li>
+            Maintain transparency through on-chain logic and verifiable
+            attendance records
+          </li>
+        </ul>
+      </section>
+
+      <!-- ─── 03. Problem Statement ────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">03</span>
+        <h2 class="wp-section-title">Problem Statement</h2>
+        <p class="wp-text">
+          Traditional event ticketing systems face several critical challenges:
+        </p>
+
+        <div class="wp-grid">
+          <div class="wp-card">
+            <span class="wp-card-icon">🚫</span>
+            <div class="wp-card-title">High No-Show Rates</div>
+            <p class="wp-card-text">
+              Free events often experience 30–50% no-show rates, wasting
+              organizer resources.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">💳</span>
+            <div class="wp-card-title">Payment Friction</div>
+            <p class="wp-card-text">
+              Traditional payment methods create barriers, especially for
+              international attendees.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">🔒</span>
+            <div class="wp-card-title">Limited Token Utility</div>
+            <p class="wp-card-text">
+              Most crypto tokens lack real-world use cases beyond speculation.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">✓</span>
+            <div class="wp-card-title">No Verification</div>
+            <p class="wp-card-text">
+              Lack of transparent, on-chain attendance verification.
+            </p>
+          </div>
+        </div>
+
+        <p class="wp-text">
+          Tizzle addresses these issues by building entirely on Solana, using
+          stake-based commitment mechanics, deterministic smart contracts, and a
+          fee-backed sustainable model.
+        </p>
+      </section>
+
+      <!-- ─── 04. Core Mechanism ───────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">04</span>
+        <h2 class="wp-section-title">Core Mechanism Overview</h2>
+
+        <h3 class="wp-section-subtitle">Stake-to-Attend Flow</h3>
+        <p class="wp-text">
+          Tizzle introduces a five-step process that ensures commitment without
+          upfront payment:
+        </p>
+
+        <ul class="wp-list">
+          <li>
+            <strong>Organizer Creates Event</strong> — Pays a linear platform
+            fee based on event capacity
+          </li>
+          <li>
+            <strong>User Stakes Tokens</strong> — Locks tokens to reserve
+            attendance (SOL, SPL Token, or Token-2022)
+          </li>
+          <li>
+            <strong>Escrow Lock</strong> — Tokens are held in a Program Derived
+            Address (PDA)
+          </li>
+          <li>
+            <strong>QR Verification</strong> — User scans QR code at the event
+            venue for attendance proof
+          </li>
+          <li>
+            <strong>Refund Claim</strong> — After unlock time, users claim their
+            staked tokens back
+          </li>
+        </ul>
+
+        <div class="wp-highlight">
+          <div class="wp-highlight-title">Key Innovation</div>
+          <p class="wp-highlight-text">
+            Tizzle never charges attendees directly. Platform revenue comes
+            exclusively from organizer fees, while attendee stakes are held in
+            escrow and returned after attendance verification.
+          </p>
+        </div>
+      </section>
+
+      <!-- ─── 05. Economic Model ───────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">05</span>
+        <h2 class="wp-section-title">Economic Model</h2>
+
+        <h3 class="wp-section-subtitle">5.1 Platform Fee Structure</h3>
+        <p class="wp-text">
+          Tizzle implements a <strong>Pay-per-Slot</strong> model that charges
+          event organizers a flat fee for every attendee slot created, regardless
+          of whether the slot is filled.
+        </p>
+
+        <div class="wp-code">
+          <pre>Total Platform Fee = Event Capacity × Fee Per Slot
+
+Example:
+capacity    = 100 attendees
+fee_per_slot = 0.0005 SOL
+Total Fee   = 100 × 0.0005 SOL = 0.05 SOL</pre>
+        </div>
+
+        <div class="wp-table-wrap">
+          <table class="wp-table">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fee Model</td>
+                <td>Linear Pay-per-Slot</td>
+              </tr>
+              <tr>
+                <td>Charged To</td>
+                <td>Event Organizer</td>
+              </tr>
+              <tr>
+                <td>Payment Time</td>
+                <td>During event creation</td>
+              </tr>
+              <tr>
+                <td>Destination</td>
+                <td>Platform Treasury PDA</td>
+              </tr>
+              <tr>
+                <td>Attendee Cost</td>
+                <td><strong>Zero platform fee</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="wp-section-subtitle">5.2 Revenue Streams</h3>
+
+        <p class="wp-text"><strong>Platform Revenue (Protocol)</strong></p>
+        <div class="wp-code">
+          <pre>Source:      Organizer platform fees (paid in SOL)
+Formula:     platform_fee = capacity × fee_per_slot
+Destination: Platform Treasury PDA
+Use:         Protocol development and maintenance</pre>
+        </div>
+
+        <p class="wp-text"><strong>Organizer Revenue</strong></p>
+        <div class="wp-code">
+          <pre>Sources:
+1. Host Fee (optional)
+   - Percentage deducted from attendee refunds
+   - In same token as stake
+   - Example: 5% of 10 SOL = 0.5 SOL
+
+2. No-Show Penalty
+   - Full stake from non-attending users
+   - In same token as stake
+   - Compensates for lost event capacity</pre>
+        </div>
+
+        <h3 class="wp-section-subtitle">5.3 Token Flow</h3>
+        <div class="wp-table-wrap">
+          <table class="wp-table">
+            <thead>
+              <tr>
+                <th>Flow Type</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Token</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Platform Fee</td>
+                <td>Organizer Wallet</td>
+                <td>Platform Treasury</td>
+                <td>SOL (always)</td>
+              </tr>
+              <tr>
+                <td>Stake Deposit</td>
+                <td>Attendee Wallet</td>
+                <td>Escrow Vault</td>
+                <td>Any supported token</td>
+              </tr>
+              <tr>
+                <td>Refund (Attended)</td>
+                <td>Escrow Vault</td>
+                <td>Attendee Wallet</td>
+                <td>Same as stake</td>
+              </tr>
+              <tr>
+                <td>Host Fee</td>
+                <td>Escrow Vault</td>
+                <td>Org Treasury</td>
+                <td>Same as stake</td>
+              </tr>
+              <tr>
+                <td>No-Show Penalty</td>
+                <td>Escrow Vault</td>
+                <td>Org Treasury</td>
+                <td>Same as stake</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ─── 06. Technical Architecture ──────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">06</span>
+        <h2 class="wp-section-title">Technical Architecture</h2>
+
+        <p class="wp-text">Tizzle consists of three integrated layers:</p>
+
+        <h3 class="wp-section-subtitle">6.1 On-Chain Program (Anchor/Rust)</h3>
+        <ul class="wp-list">
+          <li>Event creation and configuration</li>
+          <li>Platform fee collection (always in SOL)</li>
+          <li>Multi-token stake locking (SOL, SPL Token, Token-2022)</li>
+          <li>Attendance verification</li>
+          <li>Refund distribution logic</li>
+          <li>Host fee management</li>
+        </ul>
+
+        <h3 class="wp-section-subtitle">6.2 Backend Services (NestJS)</h3>
+        <ul class="wp-list">
+          <li>RESTful API for event management</li>
+          <li>QR code generation and verification</li>
+          <li>Wallet-based authentication (Ed25519 signature verification)</li>
+          <li>Real-time analytics and metrics</li>
+          <li>Helius webhook integration for transaction monitoring</li>
+          <li>Redis caching for performance optimization</li>
+          <li>PostgreSQL database for metadata storage</li>
+        </ul>
+
+        <h3 class="wp-section-subtitle">6.3 Frontend Application</h3>
+        <ul class="wp-list">
+          <li>Event discovery and browsing</li>
+          <li>Wallet integration (Phantom, Solflare, etc.)</li>
+          <li>Ticket staking and registration</li>
+          <li>QR code scanning for check-in</li>
+          <li>Organizer dashboard and analytics</li>
+          <li>Badge and reputation system</li>
+        </ul>
+      </section>
+
+      <!-- ─── 07. Smart Contract Design ───────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">07</span>
+        <h2 class="wp-section-title">Smart Contract Design</h2>
+
+        <h3 class="wp-section-subtitle">7.1 Account Structure</h3>
+        <p class="wp-text">
+          The protocol uses Program Derived Addresses (PDAs) for deterministic
+          account management:
+        </p>
+
+        <div class="wp-table-wrap">
+          <table class="wp-table">
+            <thead>
+              <tr>
+                <th>Account</th>
+                <th>Purpose</th>
+                <th>Seeds</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Protocol Config</td>
+                <td>Global protocol settings</td>
+                <td>["config"]</td>
+              </tr>
+              <tr>
+                <td>Organization</td>
+                <td>Organizer profile and treasury</td>
+                <td>["organization", organizer_pubkey]</td>
+              </tr>
+              <tr>
+                <td>Event</td>
+                <td>Event configuration and metrics</td>
+                <td>["event", organization_pubkey, event_id]</td>
+              </tr>
+              <tr>
+                <td>Registration</td>
+                <td>Attendee ticket record</td>
+                <td>["registration", event_pubkey, attendee_pubkey]</td>
+              </tr>
+              <tr>
+                <td>Escrow Vault</td>
+                <td>Holds staked tokens</td>
+                <td>["escrow", event_pubkey]</td>
+              </tr>
+              <tr>
+                <td>Platform Treasury</td>
+                <td>Collects platform fees</td>
+                <td>["treasury"]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="wp-section-subtitle">7.2 Multi-Token Support</h3>
+        <p class="wp-text">Tizzle supports three types of tokens for staking:</p>
+
+        <div class="wp-grid">
+          <div class="wp-card">
+            <span class="wp-card-icon">◎</span>
+            <div class="wp-card-title">Native SOL</div>
+            <p class="wp-card-text">
+              Direct lamport transfers via System Program. Most gas-efficient
+              option with no token accounts required.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">⬡</span>
+            <div class="wp-card-title">SPL Token</div>
+            <p class="wp-card-text">
+              Standard fungible tokens using Token Program. Backward compatible
+              with existing tokens.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">◈</span>
+            <div class="wp-card-title">Token-2022</div>
+            <p class="wp-card-text">
+              Next-generation tokens with extensions like transfer fees, hooks,
+              and metadata support.
+            </p>
+          </div>
+        </div>
+
+        <div class="wp-highlight">
+          <div class="wp-highlight-title">Important</div>
+          <p class="wp-highlight-text">
+            Platform fees are always paid in native SOL, regardless of the stake
+            token type. This ensures consistent protocol revenue while allowing
+            flexibility in stake token selection.
+          </p>
+        </div>
+      </section>
+
+      <!-- ─── 08. Event Lifecycle ──────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">08</span>
+        <h2 class="wp-section-title">Event Lifecycle</h2>
+
+        <p class="wp-text">
+          Events progress through deterministic states based on timestamps,
+          ensuring predictable behavior without requiring manual status updates.
+        </p>
+
+        <h3 class="wp-section-subtitle">Status States</h3>
+        <div class="wp-table-wrap">
+          <table class="wp-table">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Condition</th>
+                <th>Actions Allowed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Available</td>
+                <td>now &lt; start_time</td>
+                <td>Registration open</td>
+              </tr>
+              <tr>
+                <td>Ongoing</td>
+                <td>start_time ≤ now &lt; end_time</td>
+                <td>Check-in active</td>
+              </tr>
+              <tr>
+                <td>Ended</td>
+                <td>end_time ≤ now &lt; unlock_time</td>
+                <td>No actions</td>
+              </tr>
+              <tr>
+                <td>Settlement</td>
+                <td>now ≥ unlock_time</td>
+                <td>Refunds claimable</td>
+              </tr>
+              <tr>
+                <td>Closed</td>
+                <td>All refunds processed</td>
+                <td>Event finalized</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="wp-highlight">
+          <div class="wp-highlight-title">Immutability Rules</div>
+          <p class="wp-highlight-text">
+            Once created, events cannot be deleted. This ensures historical
+            transparency, prevents organizer manipulation, and maintains reliable
+            on-chain attendance records. Critical fields like stake_amount,
+            capacity, and organizer cannot be modified after creation to protect
+            attendee commitments.
+          </p>
+        </div>
+      </section>
+
+      <!-- ─── 09. Security Model ───────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">09</span>
+        <h2 class="wp-section-title">Security Model</h2>
+
+        <h3 class="wp-section-subtitle">9.1 On-Chain Security</h3>
+        <div class="wp-grid">
+          <div class="wp-card">
+            <span class="wp-card-icon">🔐</span>
+            <div class="wp-card-title">PDA Authority</div>
+            <p class="wp-card-text">
+              All accounts use Program Derived Addresses, ensuring only the
+              program can authorize critical operations.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">✓</span>
+            <div class="wp-card-title">Double Refund Prevention</div>
+            <p class="wp-card-text">
+              Registration accounts track refund status, preventing users from
+              claiming refunds multiple times.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">🛡️</span>
+            <div class="wp-card-title">Token Verification</div>
+            <p class="wp-card-text">
+              All token transfers use transfer_checked with mint and decimal
+              validation.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">⏰</span>
+            <div class="wp-card-title">Timestamp Validation</div>
+            <p class="wp-card-text">
+              Strict time-based checks prevent premature refunds and ensure
+              proper event progression.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="wp-section-subtitle">9.2 Backend Security</h3>
+        <p class="wp-text"><strong>Wallet-Based Authentication</strong></p>
+        <div class="wp-code">
+          <pre>1. Client requests nonce from server
+2. Client signs message with wallet private key
+3. Server verifies signature using Ed25519
+4. JWT token issued for authenticated sessions
+5. All protected endpoints require valid JWT</pre>
+        </div>
+
+        <p class="wp-text"><strong>On-Chain Verification</strong></p>
+        <p class="wp-text">
+          All POST and PUT operations verify on-chain state before database
+          updates. The blockchain is the source of truth. The backend database
+          serves as a cache and metadata store, but all critical operations are
+          verified against on-chain state.
+        </p>
+      </section>
+
+      <!-- ─── 10. Why Solana ───────────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">10</span>
+        <h2 class="wp-section-title">Why Solana?</h2>
+
+        <div class="wp-grid">
+          <div class="wp-card">
+            <span class="wp-card-icon">⚡</span>
+            <div class="wp-card-title">Ultra-Low Fees</div>
+            <p class="wp-card-text">
+              Transaction costs average $0.00025, making micro-transactions
+              economically viable for event ticketing.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">🚀</span>
+            <div class="wp-card-title">High Throughput</div>
+            <p class="wp-card-text">
+              65,000 TPS capacity enables simultaneous registrations during
+              high-demand events without congestion.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">📱</span>
+            <div class="wp-card-title">Mobile Wallet Support</div>
+            <p class="wp-card-text">
+              Native mobile wallet adapters provide seamless on-site check-in
+              experiences via QR codes.
+            </p>
+          </div>
+          <div class="wp-card">
+            <span class="wp-card-icon">⏱️</span>
+            <div class="wp-card-title">Fast Finality</div>
+            <p class="wp-card-text">
+              400ms block times enable real-time attendance verification and
+              instant refund processing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 11. Roadmap ──────────────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">11</span>
+        <h2 class="wp-section-title">Roadmap</h2>
+
+        <h3 class="wp-section-subtitle">Phase 1: Foundation (Q1 2026) ✅</h3>
+        <ul class="wp-list">
+          <li>Core smart contract development (Anchor/Rust)</li>
+          <li>Multi-token support (SOL, SPL Token, Token-2022)</li>
+          <li>Backend API with wallet authentication</li>
+          <li>Basic event creation and registration</li>
+          <li>QR code check-in system</li>
+        </ul>
+
+        <h3 class="wp-section-subtitle">Phase 2: Enhancement (Q2 2026)</h3>
+        <ul class="wp-list">
+          <li>Mobile application (iOS & Android)</li>
+          <li>Advanced analytics dashboard</li>
+          <li>Badge and reputation system</li>
+          <li>Email and push notifications</li>
+          <li>Multi-language support</li>
+        </ul>
+
+        <h3 class="wp-section-subtitle">Phase 3: Expansion (Q3 2026)</h3>
+        <ul class="wp-list">
+          <li>NFT ticket integration (proof-of-attendance)</li>
+          <li>Secondary ticket marketplace</li>
+          <li>Dynamic pricing based on demand</li>
+          <li>Token-gated events (NFT access control)</li>
+          <li>Reputation-based staking discounts</li>
+        </ul>
+
+        <h3 class="wp-section-subtitle">Phase 4: Ecosystem (Q4 2026)</h3>
+        <ul class="wp-list">
+          <li>DAO governance for protocol parameters</li>
+          <li>Cross-event loyalty rewards</li>
+          <li>AI-powered event recommendations</li>
+          <li>Integration with major event platforms</li>
+          <li>Mainnet launch and scaling</li>
+        </ul>
+      </section>
+
+      <!-- ─── 12. Risks & Mitigations ─────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">12</span>
+        <h2 class="wp-section-title">Risks & Mitigations</h2>
+
+        <h3 class="wp-section-subtitle">Smart Contract Risk</h3>
+        <p class="wp-text">
+          <strong>Risk:</strong> Bugs or vulnerabilities in smart contract code
+          could lead to loss of funds.
+        </p>
+        <p class="wp-text"><strong>Mitigation:</strong></p>
+        <ul class="wp-list">
+          <li>Comprehensive unit and integration tests</li>
+          <li>Third-party security audits before mainnet</li>
+          <li>Bug bounty program</li>
+          <li>Gradual rollout with limited TVL caps initially</li>
+        </ul>
+
+        <h3 class="wp-section-subtitle">Adoption Risk</h3>
+        <p class="wp-text">
+          <strong>Risk:</strong> Users may be unfamiliar with crypto wallets and
+          staking mechanisms.
+        </p>
+        <p class="wp-text"><strong>Mitigation:</strong></p>
+        <ul class="wp-list">
+          <li>Intuitive UX with clear onboarding</li>
+          <li>Educational content and tutorials</li>
+          <li>Support for popular wallets (Phantom, Solflare)</li>
+          <li>Fiat on-ramp integrations (future)</li>
+        </ul>
+
+        <h3 class="wp-section-subtitle">Network Risk</h3>
+        <p class="wp-text">
+          <strong>Risk:</strong> Solana network congestion or downtime could
+          affect event operations.
+        </p>
+        <p class="wp-text"><strong>Mitigation:</strong></p>
+        <ul class="wp-list">
+          <li>Priority fee optimization for critical transactions</li>
+          <li>Offline check-in mode with later on-chain sync</li>
+          <li>Multiple RPC providers for redundancy</li>
+          <li>Clear communication during network issues</li>
+        </ul>
+      </section>
+
+      <!-- ─── 13. Conclusion ───────────────────────────────────── -->
+      <section class="wp-section">
+        <span class="wp-section-number">13</span>
+        <h2 class="wp-section-title">Conclusion</h2>
+        <p class="wp-text">
+          Tizzle represents a paradigm shift in event ticketing, replacing
+          traditional payment models with a commitment-based staking mechanism
+          that aligns incentives for all participants. By leveraging Solana's
+          high-performance blockchain, Tizzle delivers zero platform fees for
+          attendees, instant refunds, and transparent on-chain attendance
+          records.
+        </p>
+        <p class="wp-text">
+          The protocol's design prioritizes security, transparency, and user
+          experience while maintaining the flexibility to evolve through
+          community governance. As blockchain technology continues to mature,
+          Tizzle demonstrates how decentralized systems can solve real-world
+          problems more effectively than traditional alternatives.
+        </p>
+
+        <div class="wp-highlight">
+          <div class="wp-highlight-title">Vision</div>
+          <p class="wp-highlight-text">
+            Tizzle aims to become the standard infrastructure for on-chain event
+            management, enabling a future where attendance verification,
+            reputation systems, and token utility are seamlessly integrated into
+            everyday event experiences.
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ─── FOOTER ────────────────────────────────────────────── -->
+    <footer class="page-footer">
+      <a href="/" class="logo">TIZZLE</a>
+      <span class="footer-copy">© 2026 Tizzle · Built on Solana</span>
+    </footer>
+
+  </body>
+</html>
