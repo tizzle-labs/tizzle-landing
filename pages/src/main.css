@@ -7,7 +7,7 @@
 ──────────────────────────────────────────────────────────── */
 @theme {
   /* Brand */
-  --color-accent: #caff00;
+  --color-accent: #8FF363;
   --color-accent-fg: #0a0a0a;
 
   /* Backgrounds */
@@ -89,6 +89,38 @@
     transform: scale(1.6);
     opacity: 0;
   }
+}
+
+/* ─── MOBILE NAV MENU ────────────────────────────────────────
+   Animated dropdown for mobile hamburger menu.
+──────────────────────────────────────────────────────────── */
+.nav-mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.3s ease,
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+.nav-mobile-menu.open {
+  max-height: 320px;
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  .nav-mobile-menu { display: none !important; }
+}
+
+/* ─── HAMBURGER ICON SWAP ────────────────────────────────────
+   Smooth fade between open/close icons.
+──────────────────────────────────────────────────────────── */
+.nav-icon {
+  transition: opacity 0.15s ease, transform 0.2s ease;
+}
+.nav-icon.hidden {
+  display: none;
 }
 
 /* ─── QR GRID BACKGROUND ─────────────────────────────────────

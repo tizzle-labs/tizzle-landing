@@ -18,50 +18,125 @@
   </head>
 
   <body class="bg-bg text-white font-body antialiased">
-
     <!-- ─── HEADER ──────────────────────────────────────────── -->
     <header class="sticky top-0 z-50 bg-bg border-b border-border">
-      <div class="max-w-[1200px] mx-auto px-8 py-4 flex items-center justify-between">
-        <a href="/" class="font-display text-lg font-semibold tracking-tight text-white no-underline">TIZZLE</a>
-        <nav class="flex items-center gap-6">
-          <a href="/whitepaper/" class="font-display text-[13px] font-medium text-muted hover:text-white transition-colors no-underline">
-            Whitepaper
-          </a>
-          <span class="hidden md:inline-flex font-mono text-[11px] text-muted bg-surface border border-border-2 rounded-full px-3 py-[5px]">
-            Solana Devnet
-          </span>
+      <div
+        class="relative max-w-[1200px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="no-underline flex items-center shrink-0 relative z-10"
+        >
+          <img src="/tizzle-logo-navbar.png" alt="Tizzle" class="h-14" />
+        </a>
+        <nav
+          class="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2"
+        >
+          <a
+            href="/whitepaper/"
+            class="font-display text-[15px] font-medium text-muted hover:text-white transition-colors no-underline"
+            >Whitepaper</a
+          >
+          <a
+            href="/help/"
+            class="font-display text-[15px] font-medium text-muted hover:text-white transition-colors no-underline"
+            >Help</a
+          >
+        </nav>
+        <div class="flex items-center gap-3 relative z-10">
           <a
             href="/#waitlist"
-            class="font-display text-[13px] font-semibold text-accent border border-accent rounded-sm px-4 py-2 no-underline hover:bg-accent hover:text-accent-fg transition-colors"
+            class="hidden sm:inline-flex font-display text-[15px] font-semibold text-accent border border-accent rounded-sm px-5 py-2.5 no-underline hover:bg-accent hover:text-accent-fg transition-colors"
+            >Join Waitlist</a
           >
-            Join Waitlist
-          </a>
-        </nav>
+          <button
+            id="nav-toggle"
+            class="md:hidden text-muted hover:text-white transition-colors p-1"
+            aria-label="Toggle menu"
+          >
+            <svg
+              id="icon-open"
+              class="nav-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+            <svg
+              id="icon-close"
+              class="nav-icon hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="nav-mobile-menu border-t border-border bg-bg"
+      >
+        <div
+          class="max-w-[1200px] mx-auto px-4 sm:px-8 py-5 flex flex-col gap-4"
+        >
+          <a
+            href="/whitepaper/"
+            class="font-display text-[16px] font-medium text-muted hover:text-white transition-colors no-underline"
+            >Whitepaper</a
+          >
+          <a
+            href="/help/"
+            class="font-display text-[16px] font-medium text-muted hover:text-white transition-colors no-underline"
+            >Help</a
+          >
+          <div class="border-t border-border pt-4">
+            <a
+              href="/#waitlist"
+              class="sm:hidden font-display text-[15px] font-semibold text-accent border border-accent rounded-sm px-5 py-2.5 no-underline hover:bg-accent hover:text-accent-fg transition-colors inline-flex"
+              >Join Waitlist</a
+            >
+          </div>
+        </div>
       </div>
     </header>
 
     <!-- ─── CONTENT ─────────────────────────────────────────── -->
-    <div class="max-w-[800px] mx-auto px-8 py-20 pb-32">
-
+    <div
+      class="max-w-[800px] mx-auto px-4 sm:px-8 py-12 sm:py-20 pb-24 sm:pb-32"
+    >
       <!-- Hero -->
       <div class="mb-20">
         <!-- Meta info -->
         <div class="flex flex-col gap-2 mb-8">
-          <div class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase">
-            <span class="text-faint min-w-[100px]">Project Name:</span>
-            <span class="text-white">Tizzle</span>
-          </div>
-          <div class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase">
-            <span class="text-faint min-w-[100px]">Blockchain:</span>
-            <span class="text-white">Solana</span>
-          </div>
-          <div class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase">
+          <div
+            class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase"
+          >
             <span class="text-faint min-w-[100px]">Website:</span>
-            <span class="text-white">tizzle.io</span>
+            <span class="text-white">tizzle.app</span>
           </div>
-          <div class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase">
-            <span class="text-faint min-w-[100px]">Status:</span>
-            <span class="text-white">In Development</span>
+          <div
+            class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase"
+          >
+            <span class="text-faint min-w-[100px]">Network:</span>
+            <span class="text-white">Devnet</span>
           </div>
         </div>
 
@@ -71,67 +146,110 @@
         >
           Whitepaper
         </h1>
-        <p class="font-body text-[17px] text-muted leading-[1.65] max-w-[600px]">
-          Tizzle is a refundable staking-based event ticketing protocol built on Solana.
-          Instead of purchasing tickets traditionally, users stake tokens to reserve attendance.
-          If they attend the event, their stake is refunded, reducing no-shows while removing payment friction.
+        <p
+          class="font-body text-[17px] text-muted leading-[1.65] max-w-[600px]"
+        >
+          Tizzle is a refundable staking-based event ticketing protocol built on
+          Solana. Instead of purchasing tickets traditionally, users stake
+          tokens to reserve attendance. If they attend the event, their stake is
+          refunded, reducing no-shows while removing payment friction.
         </p>
       </div>
 
       <!-- ─── 01. Executive Summary ─────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">01</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >01</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Executive Summary
         </h2>
         <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
-          Tizzle is a Solana-based event ticketing protocol that replaces traditional ticket purchases with a
-          refundable staking mechanism. Users lock tokens when registering for events and receive refunds after
-          verified attendance, creating a commitment-based system that dramatically reduces no-show rates while
-          eliminating payment friction.
+          Tizzle is a Solana-based event ticketing protocol that replaces
+          traditional ticket purchases with a refundable staking mechanism.
+          Users lock tokens when registering for events and receive refunds
+          after verified attendance, creating a commitment-based system that
+          dramatically reduces no-show rates while eliminating payment friction.
         </p>
         <p class="font-body text-[15px] text-muted leading-[1.75]">
-          The protocol introduces a <strong class="text-white font-semibold">Pay-per-Slot</strong> business model
-          where organizers pay a flat platform fee for every attendee slot created, while attendees stake tokens
-          that are held in escrow and returned after attendance verification. This creates aligned incentives for
-          both organizers and attendees without charging attendees directly.
+          The protocol introduces a
+          <strong class="text-white font-semibold">Pay-per-Slot</strong>
+          business model where organizers pay a flat platform fee for every
+          attendee slot created, while attendees stake tokens that are held in
+          escrow and returned after attendance verification. This creates
+          aligned incentives for both organizers and attendees without charging
+          attendees directly.
         </p>
       </section>
 
       <!-- ─── 02. Vision & Mission ──────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">02</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >02</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Vision & Mission
         </h2>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Vision</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Vision
+        </h3>
         <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
-          To become the standard infrastructure for on-chain event management, enabling a future where attendance
-          verification, reputation systems, and token utility are seamlessly integrated into everyday event experiences.
+          To become the standard infrastructure for on-chain event management,
+          enabling a future where attendance verification, reputation systems,
+          and token utility are seamlessly integrated into everyday event
+          experiences.
         </p>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Mission</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Mission
+        </h3>
         <ul class="mt-5 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">
-            Leverage Solana's high-performance infrastructure for real-time event ticketing
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Leverage Solana's high-performance infrastructure for real-time
+            event ticketing
           </li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">
-            Create a sustainable economic loop driven by organizer fees, not attendee charges
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Create a sustainable economic loop driven by organizer fees, not
+            attendee charges
           </li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">
-            Ensure the protocol remains accessible to all participants regardless of experience
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Ensure the protocol remains accessible to all participants
+            regardless of experience
           </li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">
-            Maintain transparency through on-chain logic and verifiable attendance records
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Maintain transparency through on-chain logic and verifiable
+            attendance records
           </li>
         </ul>
       </section>
 
       <!-- ─── 03. Problem Statement ─────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">03</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >03</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Problem Statement
         </h2>
         <p class="font-body text-[15px] text-muted leading-[1.75] mb-6">
@@ -141,124 +259,272 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">🚫</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">High No-Show Rates</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Free events often experience 30–50% no-show rates, wasting organizer resources.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              High No-Show Rates
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Free events often experience 30–50% no-show rates, wasting
+              organizer resources.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">💳</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Payment Friction</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Traditional payment methods create barriers, especially for international attendees.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Payment Friction
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Traditional payment methods create barriers, especially for
+              international attendees.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">🔒</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Limited Token Utility</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Most crypto tokens lack real-world use cases beyond speculation.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Limited Token Utility
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Most crypto tokens lack real-world use cases beyond speculation.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">✓</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">No Verification</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Lack of transparent, on-chain attendance verification.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              No Verification
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Lack of transparent, on-chain attendance verification.
+            </p>
           </div>
         </div>
 
         <p class="font-body text-[15px] text-muted leading-[1.75]">
-          Tizzle addresses these issues by building entirely on Solana, using stake-based commitment mechanics,
-          deterministic smart contracts, and a fee-backed sustainable model.
+          Tizzle addresses these issues by building entirely on Solana, using
+          stake-based commitment mechanics, deterministic smart contracts, and a
+          fee-backed sustainable model.
         </p>
       </section>
 
       <!-- ─── 04. Core Mechanism ────────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">04</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >04</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Core Mechanism Overview
         </h2>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Stake-to-Attend Flow</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Stake-to-Attend Flow
+        </h3>
         <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
-          Tizzle introduces a five-step process that ensures commitment without upfront payment:
+          Tizzle introduces a five-step process that ensures commitment without
+          upfront payment:
         </p>
 
         <ul class="mt-5 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">
-            <strong class="text-white font-semibold">Organizer Creates Event</strong> — Pays a linear platform fee based on event capacity
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            <strong class="text-white font-semibold"
+              >Organizer Creates Event</strong
+            >
+            — Pays a linear platform fee based on event capacity
           </li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">
-            <strong class="text-white font-semibold">User Stakes Tokens</strong> — Locks tokens to reserve attendance (SOL, SPL Token, or Token-2022)
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            <strong class="text-white font-semibold">User Stakes Tokens</strong>
+            — Locks tokens to reserve attendance (SOL, SPL Token, or Token-2022)
           </li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">
-            <strong class="text-white font-semibold">Escrow Lock</strong> — Tokens are held in a Program Derived Address (PDA)
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            <strong class="text-white font-semibold">Escrow Lock</strong> —
+            Tokens are held in a Program Derived Address (PDA)
           </li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">
-            <strong class="text-white font-semibold">QR Verification</strong> — User scans QR code at the event venue for attendance proof
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            <strong class="text-white font-semibold">QR Verification</strong> —
+            User scans QR code at the event venue for attendance proof
           </li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">
-            <strong class="text-white font-semibold">Refund Claim</strong> — After unlock time, users claim their staked tokens back
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            <strong class="text-white font-semibold">Refund Claim</strong> —
+            After unlock time, users claim their staked tokens back
           </li>
         </ul>
 
         <!-- Highlight box -->
-        <div class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5 my-6">
-          <div class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]">Key Innovation</div>
+        <div
+          class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5 my-6"
+        >
+          <div
+            class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]"
+          >
+            Key Innovation
+          </div>
           <p class="font-body text-[15px] text-muted leading-[1.65]">
-            Tizzle never charges attendees directly. Platform revenue comes exclusively from organizer fees,
-            while attendee stakes are held in escrow and returned after attendance verification.
+            Tizzle never charges attendees directly. Platform revenue comes
+            exclusively from organizer fees, while attendee stakes are held in
+            escrow and returned after attendance verification.
           </p>
         </div>
       </section>
 
       <!-- ─── 05. Economic Model ─────────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">05</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >05</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Economic Model
         </h2>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">5.1 Platform Fee Structure</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          5.1 Platform Fee Structure
+        </h3>
         <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
-          Tizzle implements a <strong class="text-white font-semibold">Pay-per-Slot</strong> model that charges event
-          organizers a flat fee for every attendee slot created, regardless of whether the slot is filled.
+          Tizzle implements a
+          <strong class="text-white font-semibold">Pay-per-Slot</strong> model
+          that charges event organizers a flat fee for every attendee slot
+          created, regardless of whether the slot is filled.
         </p>
 
-        <div class="bg-surface border border-border rounded-sm p-5 my-5 overflow-x-auto">
-          <pre class="font-mono text-[13px] text-white leading-[1.6] whitespace-pre">Total Platform Fee = Event Capacity × Fee Per Slot
+        <div
+          class="bg-surface border border-border rounded-sm p-5 my-5 overflow-x-auto"
+        >
+          <pre
+            class="font-mono text-[13px] text-white leading-[1.6] whitespace-pre"
+          >
+Total Platform Fee = Event Capacity × Fee Per Slot
 
 Example:
 capacity     = 100 attendees
 fee_per_slot = 0.0005 SOL
-Total Fee    = 100 × 0.0005 SOL = 0.05 SOL</pre>
+Total Fee    = 100 × 0.0005 SOL = 0.05 SOL</pre
+          >
         </div>
 
         <div class="overflow-x-auto my-6">
-          <table class="w-full border-collapse text-sm">
-            <thead>
-              <tr>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Property</th>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Fee Model</td><td class="font-body px-4 py-3 border-b border-border text-muted">Linear Pay-per-Slot</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Charged To</td><td class="font-body px-4 py-3 border-b border-border text-muted">Event Organizer</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Payment Time</td><td class="font-body px-4 py-3 border-b border-border text-muted">During event creation</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Destination</td><td class="font-body px-4 py-3 border-b border-border text-muted">Platform Treasury PDA</td></tr>
-              <tr><td class="font-body px-4 py-3 text-muted">Attendee Cost</td><td class="font-body px-4 py-3 text-muted"><strong class="text-white font-semibold">Zero platform fee</strong></td></tr>
-            </tbody>
-          </table>
+          <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+            <table class="w-full border-collapse text-sm min-w-[480px]">
+              <thead>
+                <tr>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Property
+                  </th>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Fee Model
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Linear Pay-per-Slot
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Charged To
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Event Organizer
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Payment Time
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    During event creation
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Destination
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Platform Treasury PDA
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-body px-4 py-3 text-muted">Attendee Cost</td>
+                  <td class="font-body px-4 py-3 text-muted">
+                    <strong class="text-white font-semibold"
+                      >Zero platform fee</strong
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">5.2 Revenue Streams</h3>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3"><strong class="text-white font-semibold">Platform Revenue (Protocol)</strong></p>
-        <div class="bg-surface border border-border rounded-sm p-5 my-5 overflow-x-auto">
-          <pre class="font-mono text-[13px] text-white leading-[1.6] whitespace-pre">Source:      Organizer platform fees (paid in SOL)
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          5.2 Revenue Streams
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3">
+          <strong class="text-white font-semibold"
+            >Platform Revenue (Protocol)</strong
+          >
+        </p>
+        <div
+          class="bg-surface border border-border rounded-sm p-5 my-5 overflow-x-auto"
+        >
+          <pre
+            class="font-mono text-[13px] text-white leading-[1.6] whitespace-pre"
+          >
+Source:      Organizer platform fees (paid in SOL)
 Formula:     platform_fee = capacity × fee_per_slot
 Destination: Platform Treasury PDA
-Use:         Protocol development and maintenance</pre>
+Use:         Protocol development and maintenance</pre
+          >
         </div>
 
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3"><strong class="text-white font-semibold">Organizer Revenue</strong></p>
-        <div class="bg-surface border border-border rounded-sm p-5 my-5 overflow-x-auto">
-          <pre class="font-mono text-[13px] text-white leading-[1.6] whitespace-pre">Sources:
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3">
+          <strong class="text-white font-semibold">Organizer Revenue</strong>
+        </p>
+        <div
+          class="bg-surface border border-border rounded-sm p-5 my-5 overflow-x-auto"
+        >
+          <pre
+            class="font-mono text-[13px] text-white leading-[1.6] whitespace-pre"
+          >
+Sources:
 1. Host Fee (optional)
    - Percentage deducted from attendee refunds
    - In same token as stake
@@ -267,364 +533,1092 @@ Use:         Protocol development and maintenance</pre>
 2. No-Show Penalty
    - Full stake from non-attending users
    - In same token as stake
-   - Compensates for lost event capacity</pre>
+   - Compensates for lost event capacity</pre
+          >
         </div>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">5.3 Token Flow</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          5.3 Token Flow
+        </h3>
         <div class="overflow-x-auto my-6">
-          <table class="w-full border-collapse text-sm">
-            <thead>
-              <tr>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Flow Type</th>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">From</th>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">To</th>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Token</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Platform Fee</td><td class="font-body px-4 py-3 border-b border-border text-muted">Organizer Wallet</td><td class="font-body px-4 py-3 border-b border-border text-muted">Platform Treasury</td><td class="font-body px-4 py-3 border-b border-border text-muted">SOL (always)</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Stake Deposit</td><td class="font-body px-4 py-3 border-b border-border text-muted">Attendee Wallet</td><td class="font-body px-4 py-3 border-b border-border text-muted">Escrow Vault</td><td class="font-body px-4 py-3 border-b border-border text-muted">Any supported token</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Refund (Attended)</td><td class="font-body px-4 py-3 border-b border-border text-muted">Escrow Vault</td><td class="font-body px-4 py-3 border-b border-border text-muted">Attendee Wallet</td><td class="font-body px-4 py-3 border-b border-border text-muted">Same as stake</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Host Fee</td><td class="font-body px-4 py-3 border-b border-border text-muted">Escrow Vault</td><td class="font-body px-4 py-3 border-b border-border text-muted">Org Treasury</td><td class="font-body px-4 py-3 border-b border-border text-muted">Same as stake</td></tr>
-              <tr><td class="font-body px-4 py-3 text-muted">No-Show Penalty</td><td class="font-body px-4 py-3 text-muted">Escrow Vault</td><td class="font-body px-4 py-3 text-muted">Org Treasury</td><td class="font-body px-4 py-3 text-muted">Same as stake</td></tr>
-            </tbody>
-          </table>
+          <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+            <table class="w-full border-collapse text-sm min-w-[480px]">
+              <thead>
+                <tr>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Flow Type
+                  </th>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    From
+                  </th>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    To
+                  </th>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Token
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Platform Fee
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Organizer Wallet
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Platform Treasury
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    SOL (always)
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Stake Deposit
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Attendee Wallet
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Escrow Vault
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Any supported token
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Refund (Attended)
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Escrow Vault
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Attendee Wallet
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Same as stake
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Host Fee
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Escrow Vault
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Org Treasury
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Same as stake
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-body px-4 py-3 text-muted">
+                    No-Show Penalty
+                  </td>
+                  <td class="font-body px-4 py-3 text-muted">Escrow Vault</td>
+                  <td class="font-body px-4 py-3 text-muted">Org Treasury</td>
+                  <td class="font-body px-4 py-3 text-muted">Same as stake</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
       <!-- ─── 06. Technical Architecture ───────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">06</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >06</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Technical Architecture
         </h2>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">Tizzle consists of three integrated layers:</p>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Tizzle consists of three integrated layers:
+        </p>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">6.1 On-Chain Program (Anchor/Rust)</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          6.1 On-Chain Program (Anchor/Rust)
+        </h3>
         <ul class="mt-5 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Event creation and configuration</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Platform fee collection (always in SOL)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Multi-token stake locking (SOL, SPL Token, Token-2022)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Attendance verification</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Refund distribution logic</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Host fee management</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Event creation and configuration
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Platform fee collection (always in SOL)
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Multi-token stake locking (SOL, SPL Token, Token-2022)
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Attendance verification
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Refund distribution logic
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Host fee management
+          </li>
         </ul>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">6.2 Backend Services (NestJS)</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          6.2 Backend Services (NestJS)
+        </h3>
         <ul class="mt-5 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">RESTful API for event management</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">QR code generation and verification</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Wallet-based authentication (Ed25519 signature verification)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Helius webhook integration for transaction monitoring</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Redis caching for performance optimization</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">PostgreSQL database for metadata storage</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            RESTful API for event management
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            QR code generation and verification
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Wallet-based authentication (Ed25519 signature verification)
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Helius webhook integration for transaction monitoring
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Redis caching for performance optimization
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            PostgreSQL database for metadata storage
+          </li>
         </ul>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">6.3 Frontend Application</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          6.3 Frontend Application
+        </h3>
         <ul class="mt-5 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Event discovery and browsing</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Wallet integration (Phantom, Solflare, etc.)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Ticket staking and registration</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">QR code scanning for check-in</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Organizer dashboard and analytics</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Badge and reputation system</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Event discovery and browsing
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Wallet integration (Phantom, Solflare, etc.)
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Ticket staking and registration
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            QR code scanning for check-in
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Organizer dashboard and analytics
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Badge and reputation system
+          </li>
         </ul>
       </section>
 
       <!-- ─── 07. Smart Contract Design ─────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">07</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >07</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Smart Contract Design
         </h2>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">7.1 Account Structure</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          7.1 Account Structure
+        </h3>
         <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
-          The protocol uses Program Derived Addresses (PDAs) for deterministic account management:
+          The protocol uses Program Derived Addresses (PDAs) for deterministic
+          account management:
         </p>
         <div class="overflow-x-auto my-6">
-          <table class="w-full border-collapse text-sm">
-            <thead>
-              <tr>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Account</th>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Purpose</th>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Seeds</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Protocol Config</td><td class="font-body px-4 py-3 border-b border-border text-muted">Global protocol settings</td><td class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]">["config"]</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Organization</td><td class="font-body px-4 py-3 border-b border-border text-muted">Organizer profile and treasury</td><td class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]">["organization", organizer]</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Event</td><td class="font-body px-4 py-3 border-b border-border text-muted">Event configuration and metrics</td><td class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]">["event", org, event_id]</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Registration</td><td class="font-body px-4 py-3 border-b border-border text-muted">Attendee ticket record</td><td class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]">["registration", event, user]</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Escrow Vault</td><td class="font-body px-4 py-3 border-b border-border text-muted">Holds staked tokens</td><td class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]">["escrow", event]</td></tr>
-              <tr><td class="font-body px-4 py-3 text-muted">Platform Treasury</td><td class="font-body px-4 py-3 text-muted">Collects platform fees</td><td class="font-mono px-4 py-3 text-muted text-[13px]">["treasury"]</td></tr>
-            </tbody>
-          </table>
+          <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+            <table class="w-full border-collapse text-sm min-w-[480px]">
+              <thead>
+                <tr>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Account
+                  </th>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Purpose
+                  </th>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Seeds
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Protocol Config
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Global protocol settings
+                  </td>
+                  <td
+                    class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]"
+                  >
+                    ["config"]
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Organization
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Organizer profile and treasury
+                  </td>
+                  <td
+                    class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]"
+                  >
+                    ["organization", organizer]
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Event
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Event configuration and metrics
+                  </td>
+                  <td
+                    class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]"
+                  >
+                    ["event", org, event_id]
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Registration
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Attendee ticket record
+                  </td>
+                  <td
+                    class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]"
+                  >
+                    ["registration", event, user]
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Escrow Vault
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Holds staked tokens
+                  </td>
+                  <td
+                    class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]"
+                  >
+                    ["escrow", event]
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-body px-4 py-3 text-muted">
+                    Platform Treasury
+                  </td>
+                  <td class="font-body px-4 py-3 text-muted">
+                    Collects platform fees
+                  </td>
+                  <td class="font-mono px-4 py-3 text-muted text-[13px]">
+                    ["treasury"]
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">7.2 Multi-Token Support</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          7.2 Multi-Token Support
+        </h3>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="font-mono text-2xl text-accent mb-3 block">◎</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Native SOL</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Direct lamport transfers via System Program. Most gas-efficient option.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Native SOL
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Direct lamport transfers via System Program. Most gas-efficient
+              option.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="font-mono text-2xl text-accent mb-3 block">⬡</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">SPL Token</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Standard fungible tokens using Token Program. Backward compatible.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              SPL Token
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Standard fungible tokens using Token Program. Backward compatible.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="font-mono text-2xl text-accent mb-3 block">◈</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Token-2022</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Next-gen tokens with transfer fees, hooks, and metadata support.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Token-2022
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Next-gen tokens with transfer fees, hooks, and metadata support.
+            </p>
           </div>
         </div>
 
-        <div class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5 my-6">
-          <div class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]">Important</div>
+        <div
+          class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5 my-6"
+        >
+          <div
+            class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]"
+          >
+            Important
+          </div>
           <p class="font-body text-[15px] text-muted leading-[1.65]">
-            Platform fees are always paid in native SOL, regardless of the stake token type. This ensures consistent
-            protocol revenue while allowing flexibility in stake token selection.
+            Platform fees are always paid in native SOL, regardless of the stake
+            token type. This ensures consistent protocol revenue while allowing
+            flexibility in stake token selection.
           </p>
         </div>
       </section>
 
       <!-- ─── 08. Event Lifecycle ────────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">08</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >08</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Event Lifecycle
         </h2>
         <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
-          Events progress through deterministic states based on timestamps, ensuring predictable behavior without requiring manual updates.
+          Events progress through deterministic states based on timestamps,
+          ensuring predictable behavior without requiring manual updates.
         </p>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Status States</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Status States
+        </h3>
         <div class="overflow-x-auto my-6">
-          <table class="w-full border-collapse text-sm">
-            <thead>
-              <tr>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Status</th>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Condition</th>
-                <th class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white">Actions Allowed</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Available</td><td class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]">now &lt; start_time</td><td class="font-body px-4 py-3 border-b border-border text-muted">Registration open</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Ongoing</td><td class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]">start_time ≤ now &lt; end_time</td><td class="font-body px-4 py-3 border-b border-border text-muted">Check-in active</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Ended</td><td class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]">end_time ≤ now &lt; unlock_time</td><td class="font-body px-4 py-3 border-b border-border text-muted">No actions</td></tr>
-              <tr><td class="font-body px-4 py-3 border-b border-border text-muted">Settlement</td><td class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]">now ≥ unlock_time</td><td class="font-body px-4 py-3 border-b border-border text-muted">Refunds claimable</td></tr>
-              <tr><td class="font-body px-4 py-3 text-muted">Closed</td><td class="font-mono px-4 py-3 text-muted text-[13px]">All refunds processed</td><td class="font-body px-4 py-3 text-muted">Event finalized</td></tr>
-            </tbody>
-          </table>
+          <div class="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+            <table class="w-full border-collapse text-sm min-w-[480px]">
+              <thead>
+                <tr>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Status
+                  </th>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Condition
+                  </th>
+                  <th
+                    class="font-display font-semibold text-left px-4 py-3 bg-surface border-b border-border text-white"
+                  >
+                    Actions Allowed
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Available
+                  </td>
+                  <td
+                    class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]"
+                  >
+                    now &lt; start_time
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Registration open
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Ongoing
+                  </td>
+                  <td
+                    class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]"
+                  >
+                    start_time ≤ now &lt; end_time
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Check-in active
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Ended
+                  </td>
+                  <td
+                    class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]"
+                  >
+                    end_time ≤ now &lt; unlock_time
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    No actions
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Settlement
+                  </td>
+                  <td
+                    class="font-mono px-4 py-3 border-b border-border text-muted text-[13px]"
+                  >
+                    now ≥ unlock_time
+                  </td>
+                  <td
+                    class="font-body px-4 py-3 border-b border-border text-muted"
+                  >
+                    Refunds claimable
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-body px-4 py-3 text-muted">Closed</td>
+                  <td class="font-mono px-4 py-3 text-muted text-[13px]">
+                    All refunds processed
+                  </td>
+                  <td class="font-body px-4 py-3 text-muted">
+                    Event finalized
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <div class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5 my-6">
-          <div class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]">Immutability Rules</div>
+        <div
+          class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5 my-6"
+        >
+          <div
+            class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]"
+          >
+            Immutability Rules
+          </div>
           <p class="font-body text-[15px] text-muted leading-[1.65]">
-            Once created, events cannot be deleted. This ensures historical transparency, prevents organizer manipulation,
-            and maintains reliable on-chain attendance records. Critical fields like stake_amount, capacity, and organizer
-            cannot be modified after creation.
+            Once created, events cannot be deleted. This ensures historical
+            transparency, prevents organizer manipulation, and maintains
+            reliable on-chain attendance records. Critical fields like
+            stake_amount, capacity, and organizer cannot be modified after
+            creation.
           </p>
         </div>
       </section>
 
       <!-- ─── 09. Security Model ────────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">09</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >09</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Security Model
         </h2>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">9.1 On-Chain Security</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          9.1 On-Chain Security
+        </h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">🔐</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">PDA Authority</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">All accounts use Program Derived Addresses, ensuring only the program can authorize critical operations.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              PDA Authority
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              All accounts use Program Derived Addresses, ensuring only the
+              program can authorize critical operations.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">✓</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Double Refund Prevention</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Registration accounts track refund status, preventing users from claiming refunds multiple times.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Double Refund Prevention
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Registration accounts track refund status, preventing users from
+              claiming refunds multiple times.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">🛡️</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Token Verification</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">All token transfers use transfer_checked with mint and decimal validation.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Token Verification
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              All token transfers use transfer_checked with mint and decimal
+              validation.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">⏰</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Timestamp Validation</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Strict time-based checks prevent premature refunds and ensure proper event progression.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Timestamp Validation
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Strict time-based checks prevent premature refunds and ensure
+              proper event progression.
+            </p>
           </div>
         </div>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">9.2 Backend Security</h3>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3"><strong class="text-white font-semibold">Wallet-Based Authentication</strong></p>
-        <div class="bg-surface border border-border rounded-sm p-5 my-5 overflow-x-auto">
-          <pre class="font-mono text-[13px] text-white leading-[1.6] whitespace-pre">1. Client requests nonce from server
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          9.2 Backend Security
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3">
+          <strong class="text-white font-semibold"
+            >Wallet-Based Authentication</strong
+          >
+        </p>
+        <div
+          class="bg-surface border border-border rounded-sm p-5 my-5 overflow-x-auto"
+        >
+          <pre
+            class="font-mono text-[13px] text-white leading-[1.6] whitespace-pre"
+          >
+1. Client requests nonce from server
 2. Client signs message with wallet private key
 3. Server verifies signature using Ed25519
 4. JWT token issued for authenticated sessions
-5. All protected endpoints require valid JWT</pre>
+5. All protected endpoints require valid JWT</pre
+          >
         </div>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3"><strong class="text-white font-semibold">On-Chain Verification</strong></p>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3">
+          <strong class="text-white font-semibold"
+            >On-Chain Verification</strong
+          >
+        </p>
         <p class="font-body text-[15px] text-muted leading-[1.75]">
-          All POST and PUT operations verify on-chain state before database updates. The blockchain is the source of truth.
-          The backend database serves as a cache and metadata store, but all critical operations are verified against on-chain state.
+          All POST and PUT operations verify on-chain state before database
+          updates. The blockchain is the source of truth. The backend database
+          serves as a cache and metadata store, but all critical operations are
+          verified against on-chain state.
         </p>
       </section>
 
       <!-- ─── 10. Why Solana ─────────────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">10</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >10</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Why Solana?
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">⚡</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Ultra-Low Fees</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Transaction costs average $0.00025, making micro-transactions economically viable for event ticketing.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Ultra-Low Fees
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Transaction costs average $0.00025, making micro-transactions
+              economically viable for event ticketing.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">🚀</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">High Throughput</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">65,000 TPS capacity enables simultaneous registrations during high-demand events without congestion.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              High Throughput
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              65,000 TPS capacity enables simultaneous registrations during
+              high-demand events without congestion.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">📱</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Mobile Wallet Support</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">Native mobile wallet adapters provide seamless on-site check-in experiences via QR codes.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Mobile Wallet Support
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Native mobile wallet adapters provide seamless on-site check-in
+              experiences via QR codes.
+            </p>
           </div>
           <div class="bg-surface border border-border rounded-sm p-5">
             <span class="text-2xl mb-3 block">⏱️</span>
-            <div class="font-display text-[15px] font-semibold text-white mb-2">Fast Finality</div>
-            <p class="font-body text-sm text-muted leading-[1.65]">400ms block times enable real-time attendance verification and instant refund processing.</p>
+            <div class="font-display text-[15px] font-semibold text-white mb-2">
+              Fast Finality
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              400ms block times enable real-time attendance verification and
+              instant refund processing.
+            </p>
           </div>
         </div>
       </section>
 
       <!-- ─── 11. Roadmap ────────────────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">11</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >11</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Roadmap
         </h2>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Phase 1: Foundation (Q1 2026) ✅</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Phase 1: Foundation (Q1 2026) ✅
+        </h3>
         <ul class="mt-5 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Core smart contract development (Anchor/Rust)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Multi-token support (SOL, SPL Token, Token-2022)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Backend API with wallet authentication</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Basic event creation and registration</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">QR code check-in system</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Core smart contract development (Anchor/Rust)
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Multi-token support (SOL, SPL Token, Token-2022)
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Backend API with wallet authentication
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Basic event creation and registration
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            QR code check-in system
+          </li>
         </ul>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Phase 2: Enhancement (Q2 2026)</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Phase 2: Enhancement (Q2 2026)
+        </h3>
         <ul class="mt-5 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Mobile application (iOS & Android)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Advanced analytics dashboard</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Badge and reputation system</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Email and push notifications</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Multi-language support</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Mobile application (iOS & Android)
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Advanced analytics dashboard
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Badge and reputation system
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Email and push notifications
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Multi-language support
+          </li>
         </ul>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Phase 3: Expansion (Q3 2026)</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Phase 3: Expansion (Q3 2026)
+        </h3>
         <ul class="mt-5 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">NFT ticket integration (proof-of-attendance)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Secondary ticket marketplace</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Dynamic pricing based on demand</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Token-gated events (NFT access control)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Reputation-based staking discounts</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Dynamic pricing based on demand
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Reputation-based staking discounts
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Cross-event attendance history & reputation score
+          </li>
         </ul>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Phase 4: Ecosystem (Q4 2026)</h3>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Phase 4: Ecosystem (Q4 2026)
+        </h3>
         <ul class="mt-5 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">DAO governance for protocol parameters</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Cross-event loyalty rewards</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">AI-powered event recommendations</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Integration with major event platforms</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Mainnet launch and scaling</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            DAO governance for protocol parameters
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Cross-event loyalty rewards
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            AI-powered event recommendations
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Integration with major event platforms
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Mainnet launch and scaling
+          </li>
         </ul>
       </section>
 
       <!-- ─── 12. Risks & Mitigations ───────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">12</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >12</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Risks & Mitigations
         </h2>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Smart Contract Risk</h3>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-2"><strong class="text-white font-semibold">Risk:</strong> Bugs or vulnerabilities in smart contract code could lead to loss of funds.</p>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3"><strong class="text-white font-semibold">Mitigation:</strong></p>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Smart Contract Risk
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-2">
+          <strong class="text-white font-semibold">Risk:</strong> Bugs or
+          vulnerabilities in smart contract code could lead to loss of funds.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3">
+          <strong class="text-white font-semibold">Mitigation:</strong>
+        </p>
         <ul class="mt-3 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Comprehensive unit and integration tests</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Third-party security audits before mainnet</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Bug bounty program</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Gradual rollout with limited TVL caps initially</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Comprehensive unit and integration tests
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Third-party security audits before mainnet
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Bug bounty program
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Gradual rollout with limited TVL caps initially
+          </li>
         </ul>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Adoption Risk</h3>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-2"><strong class="text-white font-semibold">Risk:</strong> Users may be unfamiliar with crypto wallets and staking mechanisms.</p>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3"><strong class="text-white font-semibold">Mitigation:</strong></p>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Adoption Risk
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-2">
+          <strong class="text-white font-semibold">Risk:</strong> Users may be
+          unfamiliar with crypto wallets and staking mechanisms.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3">
+          <strong class="text-white font-semibold">Mitigation:</strong>
+        </p>
         <ul class="mt-3 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Intuitive UX with clear onboarding</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Educational content and tutorials</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Support for popular wallets (Phantom, Solflare)</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Fiat on-ramp integrations (future)</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Intuitive UX with clear onboarding
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Educational content and tutorials
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Support for popular wallets (Phantom, Solflare)
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Fiat on-ramp integrations (future)
+          </li>
         </ul>
 
-        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">Network Risk</h3>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-2"><strong class="text-white font-semibold">Risk:</strong> Solana network congestion or downtime could affect event operations.</p>
-        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3"><strong class="text-white font-semibold">Mitigation:</strong></p>
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Network Risk
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-2">
+          <strong class="text-white font-semibold">Risk:</strong> Solana network
+          congestion or downtime could affect event operations.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-3">
+          <strong class="text-white font-semibold">Mitigation:</strong>
+        </p>
         <ul class="mt-3 mb-5 space-y-3">
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Priority fee optimization for critical transactions</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Offline check-in mode with later on-chain sync</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Multiple RPC providers for redundancy</li>
-          <li class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono">Clear communication during network issues</li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Priority fee optimization for critical transactions
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Offline check-in mode with later on-chain sync
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Multiple RPC providers for redundancy
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Clear communication during network issues
+          </li>
         </ul>
       </section>
 
       <!-- ─── 13. Conclusion ────────────────────────────────── -->
       <section class="mb-16">
-        <span class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block">13</span>
-        <h2 class="font-display font-semibold tracking-[-0.03em] text-white mb-5" style="font-size: clamp(24px, 4vw, 32px)">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >13</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
           Conclusion
         </h2>
         <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
-          Tizzle represents a paradigm shift in event ticketing, replacing traditional payment models with a
-          commitment-based staking mechanism that aligns incentives for all participants. By leveraging Solana's
-          high-performance blockchain, Tizzle delivers zero platform fees for attendees, instant refunds, and
-          transparent on-chain attendance records.
+          Tizzle represents a paradigm shift in event ticketing, replacing
+          traditional payment models with a commitment-based staking mechanism
+          that aligns incentives for all participants. By leveraging Solana's
+          high-performance blockchain, Tizzle delivers zero platform fees for
+          attendees, instant refunds, and transparent on-chain attendance
+          records.
         </p>
         <p class="font-body text-[15px] text-muted leading-[1.75] mb-6">
-          The protocol's design prioritizes security, transparency, and user experience while maintaining the
-          flexibility to evolve through community governance. As blockchain technology continues to mature, Tizzle
-          demonstrates how decentralized systems can solve real-world problems more effectively than traditional alternatives.
+          The protocol's design prioritizes security, transparency, and user
+          experience while maintaining the flexibility to evolve through
+          community governance. As blockchain technology continues to mature,
+          Tizzle demonstrates how decentralized systems can solve real-world
+          problems more effectively than traditional alternatives.
         </p>
 
-        <div class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5">
-          <div class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]">Vision</div>
+        <div
+          class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5"
+        >
+          <div
+            class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]"
+          >
+            Vision
+          </div>
           <p class="font-body text-[15px] text-muted leading-[1.65]">
-            Tizzle aims to become the standard infrastructure for on-chain event management, enabling a future where
-            attendance verification, reputation systems, and token utility are seamlessly integrated into everyday event experiences.
+            Tizzle aims to become the standard infrastructure for on-chain event
+            management, enabling a future where attendance verification,
+            reputation systems, and token utility are seamlessly integrated into
+            everyday event experiences.
           </p>
         </div>
       </section>
-
     </div>
 
     <!-- ─── FOOTER ───────────────────────────────────────────── -->
     <footer class="border-t border-border">
-      <div class="max-w-[1200px] mx-auto px-8 py-6 flex items-center justify-between">
-        <a href="/" class="font-display text-lg font-semibold tracking-tight text-white no-underline">TIZZLE</a>
-        <span class="font-mono text-[11px] text-faint tracking-[0.04em]">© 2026 Tizzle · Built on Solana</span>
+      <div
+        class="max-w-[1200px] mx-auto px-4 sm:px-8 py-6 flex flex-wrap items-center justify-between gap-4"
+      >
+        <a
+          href="/"
+          class="font-display text-xl font-semibold tracking-tight text-white no-underline"
+          >TIZZLE</a
+        >
+        <div class="flex items-center gap-6">
+          <a
+            href="https://x.com/tizzleai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted hover:text-white transition-colors"
+            aria-label="Follow Tizzle on X"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+          <a
+            href="/terms-of-service/"
+            class="font-mono text-[13px] text-muted hover:text-white transition-colors no-underline"
+            >Terms of Service</a
+          >
+          <span class="font-mono text-[13px] text-faint tracking-[0.04em]"
+            >© 2026 Tizzle · Built on Solana</span
+          >
+        </div>
       </div>
     </footer>
-
+    <script>
+      const toggle = document.getElementById("nav-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>

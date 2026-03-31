@@ -30,7 +30,6 @@
 
     <!-- ─── WHITEPAPER CONTENT ─────────────────────────────────── -->
     <div class="wp-container">
-
       <!-- Hero -->
       <div class="wp-hero">
         <div class="wp-meta">
@@ -55,8 +54,8 @@
         <h1 class="wp-title">Whitepaper</h1>
         <p class="wp-subtitle">
           Tizzle is a refundable staking-based event ticketing protocol built on
-          Solana. Instead of purchasing tickets traditionally, users stake tokens
-          to reserve attendance. If they attend the event, their stake is
+          Solana. Instead of purchasing tickets traditionally, users stake
+          tokens to reserve attendance. If they attend the event, their stake is
           refunded, reducing no-shows while removing payment friction.
         </p>
       </div>
@@ -76,8 +75,9 @@
           The protocol introduces a <strong>Pay-per-Slot</strong> business model
           where organizers pay a flat platform fee for every attendee slot
           created, while attendees stake tokens that are held in escrow and
-          returned after attendance verification. This creates aligned incentives
-          for both organizers and attendees without charging attendees directly.
+          returned after attendance verification. This creates aligned
+          incentives for both organizers and attendees without charging
+          attendees directly.
         </p>
       </section>
 
@@ -215,17 +215,19 @@
         <h3 class="wp-section-subtitle">5.1 Platform Fee Structure</h3>
         <p class="wp-text">
           Tizzle implements a <strong>Pay-per-Slot</strong> model that charges
-          event organizers a flat fee for every attendee slot created, regardless
-          of whether the slot is filled.
+          event organizers a flat fee for every attendee slot created,
+          regardless of whether the slot is filled.
         </p>
 
         <div class="wp-code">
-          <pre>Total Platform Fee = Event Capacity × Fee Per Slot
+          <pre>
+Total Platform Fee = Event Capacity × Fee Per Slot
 
 Example:
 capacity    = 100 attendees
 fee_per_slot = 0.0005 SOL
-Total Fee   = 100 × 0.0005 SOL = 0.05 SOL</pre>
+Total Fee   = 100 × 0.0005 SOL = 0.05 SOL</pre
+          >
         </div>
 
         <div class="wp-table-wrap">
@@ -265,15 +267,18 @@ Total Fee   = 100 × 0.0005 SOL = 0.05 SOL</pre>
 
         <p class="wp-text"><strong>Platform Revenue (Protocol)</strong></p>
         <div class="wp-code">
-          <pre>Source:      Organizer platform fees (paid in SOL)
+          <pre>
+Source:      Organizer platform fees (paid in SOL)
 Formula:     platform_fee = capacity × fee_per_slot
 Destination: Platform Treasury PDA
-Use:         Protocol development and maintenance</pre>
+Use:         Protocol development and maintenance</pre
+          >
         </div>
 
         <p class="wp-text"><strong>Organizer Revenue</strong></p>
         <div class="wp-code">
-          <pre>Sources:
+          <pre>
+Sources:
 1. Host Fee (optional)
    - Percentage deducted from attendee refunds
    - In same token as stake
@@ -282,7 +287,8 @@ Use:         Protocol development and maintenance</pre>
 2. No-Show Penalty
    - Full stake from non-attending users
    - In same token as stake
-   - Compensates for lost event capacity</pre>
+   - Compensates for lost event capacity</pre
+          >
         </div>
 
         <h3 class="wp-section-subtitle">5.3 Token Flow</h3>
@@ -427,7 +433,9 @@ Use:         Protocol development and maintenance</pre>
         </div>
 
         <h3 class="wp-section-subtitle">7.2 Multi-Token Support</h3>
-        <p class="wp-text">Tizzle supports three types of tokens for staking:</p>
+        <p class="wp-text">
+          Tizzle supports three types of tokens for staking:
+        </p>
 
         <div class="wp-grid">
           <div class="wp-card">
@@ -520,10 +528,10 @@ Use:         Protocol development and maintenance</pre>
           <div class="wp-highlight-title">Immutability Rules</div>
           <p class="wp-highlight-text">
             Once created, events cannot be deleted. This ensures historical
-            transparency, prevents organizer manipulation, and maintains reliable
-            on-chain attendance records. Critical fields like stake_amount,
-            capacity, and organizer cannot be modified after creation to protect
-            attendee commitments.
+            transparency, prevents organizer manipulation, and maintains
+            reliable on-chain attendance records. Critical fields like
+            stake_amount, capacity, and organizer cannot be modified after
+            creation to protect attendee commitments.
           </p>
         </div>
       </section>
@@ -572,11 +580,13 @@ Use:         Protocol development and maintenance</pre>
         <h3 class="wp-section-subtitle">9.2 Backend Security</h3>
         <p class="wp-text"><strong>Wallet-Based Authentication</strong></p>
         <div class="wp-code">
-          <pre>1. Client requests nonce from server
+          <pre>
+1. Client requests nonce from server
 2. Client signs message with wallet private key
 3. Server verifies signature using Ed25519
 4. JWT token issued for authenticated sessions
-5. All protected endpoints require valid JWT</pre>
+5. All protected endpoints require valid JWT</pre
+          >
         </div>
 
         <p class="wp-text"><strong>On-Chain Verification</strong></p>
@@ -746,7 +756,6 @@ Use:         Protocol development and maintenance</pre>
           </p>
         </div>
       </section>
-
     </div>
 
     <!-- ─── FOOTER ────────────────────────────────────────────── -->
@@ -754,6 +763,5 @@ Use:         Protocol development and maintenance</pre>
       <a href="/" class="logo">TIZZLE</a>
       <span class="footer-copy">© 2026 Tizzle · Built on Solana</span>
     </footer>
-
   </body>
 </html>

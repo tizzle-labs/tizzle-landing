@@ -20,6 +20,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "pages/index.html"),
         whitepaper: resolve(__dirname, "pages/whitepaper/index.html"),
+        terms: resolve(__dirname, "pages/terms-of-service/index.html"),
+        help: resolve(__dirname, "pages/help/index.html"),
       },
     },
   },

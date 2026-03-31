@@ -1,7 +1,7 @@
 /* ─── DESIGN TOKENS ─────────────────────────────────────── */
 :root {
-  --accent: #caff00;
-  --accent-dim: rgba(202, 255, 0, 0.1);
+  --accent: #8FF363;
+  --accent-dim: rgba(143, 243, 99, 0.1);
   --accent-text: #0a0a0a;
   --error: #ff3b30;
 

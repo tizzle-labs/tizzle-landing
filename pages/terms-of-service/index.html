@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service — Tizzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Geist+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/main.css" />
+  </head>
+
+  <body class="bg-bg text-white font-body antialiased">
+    <!-- ─── HEADER ──────────────────────────────────────────── -->
+    <header class="sticky top-0 z-50 bg-bg border-b border-border">
+      <div
+        class="relative max-w-[1200px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="no-underline flex items-center shrink-0 relative z-10"
+        >
+          <img src="/tizzle-logo-navbar.png" alt="Tizzle" class="h-14" />
+        </a>
+        <nav
+          class="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2"
+        >
+          <a
+            href="/whitepaper/"
+            class="font-display text-[15px] font-medium text-muted hover:text-white transition-colors no-underline"
+            >Whitepaper</a
+          >
+          <a
+            href="/help/"
+            class="font-display text-[15px] font-medium text-muted hover:text-white transition-colors no-underline"
+            >Help</a
+          >
+        </nav>
+        <div class="flex items-center gap-3 relative z-10">
+          <a
+            href="/#waitlist"
+            class="hidden sm:inline-flex font-display text-[15px] font-semibold text-accent border border-accent rounded-sm px-5 py-2.5 no-underline hover:bg-accent hover:text-accent-fg transition-colors"
+            >Join Waitlist</a
+          >
+          <button
+            id="nav-toggle"
+            class="md:hidden text-muted hover:text-white transition-colors p-1"
+            aria-label="Toggle menu"
+          >
+            <svg
+              id="icon-open"
+              class="nav-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+            <svg
+              id="icon-close"
+              class="nav-icon hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="nav-mobile-menu border-t border-border bg-bg"
+      >
+        <div
+          class="max-w-[1200px] mx-auto px-4 sm:px-8 py-5 flex flex-col gap-4"
+        >
+          <a
+            href="/whitepaper/"
+            class="font-display text-[16px] font-medium text-muted hover:text-white transition-colors no-underline"
+            >Whitepaper</a
+          >
+          <a
+            href="/help/"
+            class="font-display text-[16px] font-medium text-muted hover:text-white transition-colors no-underline"
+            >Help</a
+          >
+          <div class="border-t border-border pt-4">
+            <a
+              href="/#waitlist"
+              class="sm:hidden font-display text-[15px] font-semibold text-accent border border-accent rounded-sm px-5 py-2.5 no-underline hover:bg-accent hover:text-accent-fg transition-colors inline-flex"
+              >Join Waitlist</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ─── CONTENT ─────────────────────────────────────────── -->
+    <div
+      class="max-w-[800px] mx-auto px-4 sm:px-8 py-12 sm:py-20 pb-24 sm:pb-32"
+    >
+      <!-- Hero -->
+      <div class="mb-20">
+        <div class="flex flex-col gap-2 mb-8">
+          <div
+            class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase"
+          >
+            <span class="text-faint min-w-[100px]">Version:</span>
+            <span class="text-white">1.0</span>
+          </div>
+          <div
+            class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase"
+          >
+            <span class="text-faint min-w-[100px]">Effective:</span>
+            <span class="text-white">April 1, 2026</span>
+          </div>
+        </div>
+
+        <h1
+          class="font-display font-bold tracking-[-0.04em] leading-[0.95] text-white mb-6"
+          style="font-size: clamp(40px, 8vw, 72px)"
+        >
+          Terms of Service
+        </h1>
+        <p
+          class="font-body text-[17px] text-muted leading-[1.65] max-w-[600px]"
+        >
+          Please read these Terms of Service carefully before using the Tizzle
+          protocol. By connecting your wallet or interacting with the platform,
+          you agree to be bound by these terms.
+        </p>
+      </div>
+
+      <!-- ─── 01. Acceptance of Terms ──────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >01</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Acceptance of Terms
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          By accessing or using the Tizzle protocol, website, smart contracts,
+          or any related services (collectively, the "Platform"), you ("User")
+          agree to be legally bound by these Terms of Service ("Terms"). If you
+          do not agree with any part of these Terms, you must immediately stop
+          using the Platform.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          These Terms apply to all users of the Platform, including event
+          organizers, attendees, and any other party who interacts with the
+          Tizzle smart contracts deployed on the Solana blockchain.
+        </p>
+        <div
+          class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5 mt-6"
+        >
+          <div
+            class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]"
+          >
+            Important Notice
+          </div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">
+            Tizzle is currently deployed on Solana Devnet and is under active
+            development. These Terms govern your use of the Platform in its
+            current state and any future versions.
+          </p>
+        </div>
+      </section>
+
+      <!-- ─── 02. Protocol Description ────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >02</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Protocol Description
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Tizzle is a decentralized event ticketing protocol built on the Solana
+          blockchain. The Platform enables:
+        </p>
+        <ul class="mt-5 mb-5 space-y-3">
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            <strong class="text-white font-semibold">Stake-to-Attend:</strong>
+            Users stake tokens into a smart contract escrow to register for
+            events, replacing traditional ticket purchases
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            <strong class="text-white font-semibold"
+              >On-Chain Attendance Verification:</strong
+            >
+            Attendance is verified via QR code scanning at the event venue,
+            recorded immutably on-chain
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            <strong class="text-white font-semibold">Refund Mechanism:</strong>
+            Staked tokens are returned to attendees after verified attendance,
+            subject to organizer configuration and unlock time
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            <strong class="text-white font-semibold"
+              >Pay-per-Slot Model:</strong
+            >
+            Event organizers pay a flat platform fee per attendee slot;
+            attendees are never charged a platform fee
+          </li>
+        </ul>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          All core protocol logic is executed by open smart contracts (programs)
+          on the Solana blockchain. Token custody is handled exclusively through
+          Program Derived Addresses (PDAs) — Tizzle does not hold or control
+          user funds directly.
+        </p>
+      </section>
+
+      <!-- ─── 03. Eligibility ───────────────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >03</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Eligibility
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          To use the Platform, you must meet all of the following requirements:
+        </p>
+        <ul class="mt-5 mb-5 space-y-3">
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Be at least 18 years of age, or the age of legal majority in your
+            jurisdiction
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Have the legal capacity to enter into a binding agreement
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Not be a resident of a jurisdiction where access to crypto assets or
+            DeFi protocols is restricted or prohibited
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Not be on any sanctions list maintained by the U.S. OFAC, UN, EU, or
+            any other applicable authority
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Possess a compatible Solana wallet (e.g., Phantom, Solflare) and
+            accept full responsibility for its security
+          </li>
+        </ul>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          By using the Platform, you represent and warrant that you satisfy all
+          of the above eligibility requirements. Tizzle reserves the right to
+          restrict access to the Platform for any user who does not meet these
+          requirements.
+        </p>
+      </section>
+
+      <!-- ─── 04. Wallet & Account Responsibilities ─────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >04</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Wallet & Account Responsibilities
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Access to Tizzle is non-custodial and wallet-based. You are solely
+          responsible for:
+        </p>
+        <ul class="mt-5 mb-6 space-y-3">
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Safeguarding your wallet's private keys and seed phrase — Tizzle
+            cannot recover lost access to your wallet
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            All transactions initiated from your wallet address, whether
+            authorized by you or not
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Ensuring you have sufficient SOL balance to cover transaction fees
+            (gas) for all on-chain interactions
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Reviewing and approving each transaction in your wallet before
+            signing
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Keeping your wallet software up to date and secure
+          </li>
+        </ul>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          Tizzle authenticates users via cryptographic wallet signatures. There
+          are no usernames or passwords. If your wallet is compromised, Tizzle
+          has no ability to reverse transactions or restore lost funds.
+        </p>
+      </section>
+
+      <!-- ─── 05. Staking Mechanism & Financial Risks ───── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >05</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Staking Mechanism & Financial Risks
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Tizzle uses a stake-based registration model. When you register for an
+          event, a specified amount of tokens is locked in a smart contract
+          escrow (PDA) until the event's unlock time. You acknowledge and accept
+          the following:
+        </p>
+
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Stake & Refund Conditions
+        </h3>
+        <ul class="mt-5 mb-5 space-y-3">
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Staked tokens are locked until the event's configured unlock time
+            and are not accessible during that period
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Refund eligibility depends on the event organizer's configuration,
+            including whether attendance verification is required
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            If attendance is required and you do not check in at the event, your
+            staked tokens may be forfeited in whole or in part
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Refund claims must be initiated by the user after the unlock time —
+            unclaimed refunds remain in the escrow
+          </li>
+        </ul>
+
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Financial Risk Disclosures
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          <div class="bg-surface border border-border rounded-sm p-5">
+            <div
+              class="font-display text-[13px] font-semibold text-white mb-2 uppercase tracking-[0.06em]"
+            >
+              Token Volatility
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              The value of staked tokens may fluctuate significantly during the
+              lock-up period. Tizzle is not responsible for any loss in token
+              value.
+            </p>
+          </div>
+          <div class="bg-surface border border-border rounded-sm p-5">
+            <div
+              class="font-display text-[13px] font-semibold text-white mb-2 uppercase tracking-[0.06em]"
+            >
+              Smart Contract Risk
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Despite rigorous testing, smart contracts may contain undiscovered
+              bugs or vulnerabilities. Use the Platform at your own risk.
+            </p>
+          </div>
+          <div class="bg-surface border border-border rounded-sm p-5">
+            <div
+              class="font-display text-[13px] font-semibold text-white mb-2 uppercase tracking-[0.06em]"
+            >
+              Network Risk
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Solana network congestion, outages, or forks may delay
+              transactions including refund claims. Tizzle is not liable for
+              network-level failures.
+            </p>
+          </div>
+          <div class="bg-surface border border-border rounded-sm p-5">
+            <div
+              class="font-display text-[13px] font-semibold text-white mb-2 uppercase tracking-[0.06em]"
+            >
+              Regulatory Risk
+            </div>
+            <p class="font-body text-sm text-muted leading-[1.65]">
+              Crypto regulations vary by jurisdiction and may change. You are
+              responsible for compliance with laws in your local jurisdiction.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5 mt-4"
+        >
+          <div
+            class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]"
+          >
+            Not Financial Advice
+          </div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">
+            Nothing on the Tizzle Platform constitutes financial, investment,
+            legal, or tax advice. You should consult qualified professionals
+            before making any financial decisions related to crypto assets.
+          </p>
+        </div>
+      </section>
+
+      <!-- ─── 06. Event Organizer Terms ─────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >06</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Event Organizer Terms
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          If you create events on the Tizzle Platform as an organizer, you
+          additionally agree to the following:
+        </p>
+
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Platform Fees
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Event creation requires payment of a platform fee calculated as:
+          <span
+            class="font-mono text-accent text-[13px] bg-surface border border-border rounded px-2 py-1 mx-1"
+            >Total Fee = Capacity × Fee Per Slot</span
+          >
+          This fee is paid at the time of the
+          <span class="font-mono text-[13px] text-white">create_event</span>
+          instruction and is non-refundable once the event is created on-chain.
+        </p>
+
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Organizer Responsibilities
+        </h3>
+        <ul class="mt-5 mb-5 space-y-3">
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            You are solely responsible for the accuracy of event information
+            (date, location, capacity, stake amount) entered at the time of
+            event creation
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            You must conduct the event as described; cancellations and refund
+            handling for cancelled events are your responsibility
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            You are responsible for operating the QR code check-in system at
+            your event using a gatekeeper wallet
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            You may not create events for illegal activities, scams, or any
+            purpose that violates these Terms or applicable law
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Host fee configurations (if applicable) must be set transparently
+            and disclosed to attendees prior to registration
+          </li>
+        </ul>
+
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Immutability of On-Chain Parameters
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          Once an event is created on-chain, core parameters such as stake
+          amount, capacity, and unlock time are immutable and governed by the
+          smart contract. Tizzle cannot modify or override on-chain event state
+          on your behalf. Ensure all parameters are correct before submitting
+          the creation transaction.
+        </p>
+      </section>
+
+      <!-- ─── 07. Attendee Terms ─────────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >07</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Attendee Terms
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          When registering for and attending events on the Tizzle Platform, you
+          agree to the following:
+        </p>
+        <ul class="mt-5 mb-5 space-y-3">
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            You acknowledge that staking tokens to register for an event is a
+            voluntary commitment and accept the risk of forfeiture for
+            non-attendance where configured by the organizer
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            You are responsible for presenting your wallet QR code at the event
+            for attendance verification — failure to check in may result in
+            forfeiture of your staked tokens
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            You must claim your refund after the unlock time by interacting with
+            the smart contract — refunds are not automatically distributed
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Tizzle does not guarantee that any third-party event will take place
+            as described by the organizer
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Disputes between attendees and organizers are not mediated by Tizzle
+            — the smart contract governs the outcome
+          </li>
+        </ul>
+      </section>
+
+      <!-- ─── 08. Prohibited Use ────────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >08</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Prohibited Use
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          You agree not to use the Platform for any of the following purposes:
+        </p>
+        <ul class="mt-5 mb-5 space-y-3">
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Fraudulent, deceptive, or misleading activities, including creating
+            fake events to extract staked tokens from users
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Money laundering, terrorist financing, or any other illegal
+            financial activity
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Attempting to exploit, hack, or manipulate the smart contracts,
+            APIs, or any infrastructure of the Platform
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Automating interactions with the Platform (bots, scripts) in a
+            manner that places undue load on infrastructure or circumvents
+            intended protocol behavior
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Accessing the Platform from a jurisdiction where doing so is
+            prohibited by applicable law
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Using the Platform to organize events that are illegal, violent,
+            discriminatory, or violate the rights of others
+          </li>
+        </ul>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          Tizzle reserves the right to report any suspected illegal activity to
+          relevant law enforcement authorities and to restrict access to the
+          Platform for any user found in violation of these prohibitions.
+        </p>
+      </section>
+
+      <!-- ─── 09. Intellectual Property ─────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >09</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Intellectual Property
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          All content on the Tizzle website, including but not limited to text,
+          graphics, logos, and design, is the property of Tizzle or its
+          licensors and is protected by applicable intellectual property laws.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          The Tizzle smart contract code deployed on Solana is open and
+          verifiable on-chain. The underlying source code repository is governed
+          by its respective open-source license terms.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          You may not reproduce, distribute, modify, or create derivative works
+          from the Tizzle brand assets, website, or proprietary software without
+          prior written consent from Tizzle.
+        </p>
+      </section>
+
+      <!-- ─── 10. Disclaimers ───────────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >10</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Disclaimers
+        </h2>
+
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          As-Is Basis
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          The Platform is provided on an "as-is" and "as-available" basis
+          without warranties of any kind, either express or implied. Tizzle does
+          not warrant that the Platform will be uninterrupted, error-free, or
+          free of harmful components.
+        </p>
+
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Decentralized Protocol
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Tizzle operates as a decentralized protocol on a public blockchain.
+          On-chain transactions are irreversible by design. Tizzle does not have
+          the technical ability to reverse, cancel, or modify transactions that
+          have been confirmed on the Solana blockchain.
+        </p>
+
+        <h3 class="font-display text-lg font-semibold text-white mt-8 mb-4">
+          Third-Party Services
+        </h3>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          The Platform may interact with third-party services including wallet
+          providers, RPC nodes, and blockchain explorers. Tizzle is not
+          responsible for the availability, accuracy, or security of any
+          third-party services you may use in connection with the Platform.
+        </p>
+      </section>
+
+      <!-- ─── 11. Limitation of Liability ──────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >11</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Limitation of Liability
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          To the maximum extent permitted by applicable law, Tizzle and its
+          affiliates, officers, employees, and agents shall not be liable for:
+        </p>
+        <ul class="mt-5 mb-5 space-y-3">
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Loss of staked tokens due to smart contract bugs, exploits, or
+            network failures
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Loss of access to your wallet or private keys
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Financial losses arising from token price volatility during the
+            staking period
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Actions or omissions of event organizers, including event
+            cancellations or misrepresentation
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Indirect, incidental, special, consequential, or punitive damages
+            arising from your use of the Platform
+          </li>
+          <li
+            class="relative pl-6 font-body text-[15px] text-muted leading-[1.75] before:content-['→'] before:absolute before:left-0 before:text-accent before:font-mono"
+          >
+            Unauthorized access to your wallet or transactions carried out using
+            your wallet credentials
+          </li>
+        </ul>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          In jurisdictions that do not allow the exclusion of certain warranties
+          or limitation of liability, our liability is limited to the maximum
+          extent permitted by law.
+        </p>
+      </section>
+
+      <!-- ─── 12. Privacy ──────────────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >12</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Privacy
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Tizzle collects minimal off-chain data. Because the Platform is built
+          on a public blockchain, all on-chain interactions — including event
+          registrations, stake transactions, and attendance verifications — are
+          publicly visible on the Solana blockchain and cannot be deleted.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Off-chain data (such as event metadata stored in our API) is handled
+          in accordance with our Privacy Policy. By using the Platform, you
+          consent to the collection and use of data as described therein.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          Wallet addresses are pseudonymous identifiers on the blockchain and
+          are not inherently linked to your personal identity. However, Tizzle
+          cannot guarantee the anonymity of on-chain activity.
+        </p>
+      </section>
+
+      <!-- ─── 13. Changes to Terms ──────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >13</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Changes to Terms
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Tizzle reserves the right to modify these Terms at any time. When we
+          make changes, we will update the "Effective" date at the top of this
+          page and, where appropriate, notify users through the Platform or
+          other communication channels.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          Your continued use of the Platform after any changes to these Terms
+          constitutes your acceptance of the updated Terms. If you do not agree
+          to the revised Terms, you must stop using the Platform.
+        </p>
+      </section>
+
+      <!-- ─── 14. Governing Law ─────────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >14</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Governing Law & Disputes
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          These Terms shall be governed by and construed in accordance with
+          applicable law. Any disputes arising from these Terms or your use of
+          the Platform shall first be attempted to be resolved through
+          good-faith negotiation.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-4">
+          Given the decentralized nature of the Protocol, many interactions are
+          governed entirely by on-chain smart contract logic rather than by
+          Tizzle as a centralized party. The smart contract code is the
+          authoritative source of truth for all staking, attendance, and refund
+          outcomes.
+        </p>
+        <p class="font-body text-[15px] text-muted leading-[1.75]">
+          If any provision of these Terms is found to be unenforceable or
+          invalid, that provision shall be limited or eliminated to the minimum
+          extent necessary, and the remaining provisions of these Terms shall
+          remain in full force and effect.
+        </p>
+      </section>
+
+      <!-- ─── 15. Contact ───────────────────────────────── -->
+      <section class="mb-16">
+        <span
+          class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent mb-3 block"
+          >15</span
+        >
+        <h2
+          class="font-display font-semibold tracking-[-0.03em] text-white mb-5"
+          style="font-size: clamp(24px, 4vw, 32px)"
+        >
+          Contact
+        </h2>
+        <p class="font-body text-[15px] text-muted leading-[1.75] mb-6">
+          If you have any questions, concerns, or feedback regarding these Terms
+          of Service or the Tizzle Platform, please reach out to us:
+        </p>
+        <div class="bg-surface border border-border rounded-sm p-6">
+          <div class="flex flex-col gap-3">
+            <div
+              class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase"
+            >
+              <span class="text-faint min-w-[80px]">Website:</span>
+              <span class="text-white">tizzle.app</span>
+            </div>
+            <div
+              class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase"
+            >
+              <span class="text-faint min-w-[80px]">Protocol:</span>
+              <span class="text-white">Solana — Tizzle Program</span>
+            </div>
+            <div
+              class="flex items-start gap-4 font-mono text-[11px] tracking-[0.08em] uppercase"
+            >
+              <span class="text-faint min-w-[80px]">Network:</span>
+              <span class="text-white">Devnet (Mainnet TBD)</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-surface border border-border border-l-[3px] border-l-accent rounded-sm px-6 py-5 mt-6"
+        >
+          <div
+            class="font-display text-sm font-semibold text-accent mb-2 uppercase tracking-[0.08em]"
+          >
+            Beta Disclaimer
+          </div>
+          <p class="font-body text-[15px] text-muted leading-[1.65]">
+            Tizzle is currently in beta on Solana Devnet. All features, fees,
+            and smart contract parameters are subject to change before mainnet
+            launch. Do not use real funds until the official mainnet release is
+            announced.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ─── FOOTER ───────────────────────────────────────────── -->
+    <footer class="border-t border-border">
+      <div
+        class="max-w-[1200px] mx-auto px-4 sm:px-8 py-6 flex flex-wrap items-center justify-between gap-4"
+      >
+        <a href="/" class="no-underline flex items-center">
+          <img src="/tizzle-logo.png" alt="Tizzle" class="h-9 w-auto" />
+        </a>
+        <div class="flex items-center gap-6">
+          <a
+            href="https://x.com/tizzleai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted hover:text-white transition-colors"
+            aria-label="Follow Tizzle on X"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+          <a
+            href="/terms"
+            class="font-mono text-[13px] text-muted hover:text-white transition-colors no-underline"
+            >Terms of Service</a
+          >
+          <span class="font-mono text-[13px] text-faint tracking-[0.04em]"
+            >© 2026 Tizzle · Built on Solana</span
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.getElementById("nav-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
