@@ -845,8 +845,8 @@
                     <span class="font-body text-[14px] text-muted leading-[1.75]">You attended and were scanned in. Your stake is pending return — wait for the unlock date to claim.</span>
                   </li>
                   <li class="flex gap-3">
-                    <span class="font-mono text-[11px] text-accent bg-accent/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">CLAIMABLE</span>
-                    <span class="font-body text-[14px] text-muted leading-[1.75]">The unlock date has passed. Go to the Tickets tab and tap Claim to receive your stake back.</span>
+                    <span class="font-mono text-[11px] text-accent bg-accent/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">CLAIM</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">The unlock date has passed and you attended. Go to the Tickets tab and tap Claim to receive your stake back.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="font-mono text-[11px] text-white bg-surface-2 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">REFUNDED</span>
@@ -855,10 +855,6 @@
                   <li class="flex gap-3">
                     <span class="font-mono text-[11px] text-[#ff3b30] bg-[#ff3b30]/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">NO-SHOW</span>
                     <span class="font-body text-[14px] text-muted leading-[1.75]">You registered but were never scanned in. Your stake is forfeited and cannot be recovered.</span>
-                  </li>
-                  <li class="flex gap-3">
-                    <span class="font-mono text-[11px] text-muted bg-surface-2 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">CANCELLED</span>
-                    <span class="font-body text-[14px] text-muted leading-[1.75]">The event was cancelled. Your stake is automatically refunded.</span>
                   </li>
                 </ul>
               </div>
@@ -1000,7 +996,7 @@
                 <ol class="list-decimal list-inside flex flex-col gap-2 mb-3">
                   <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Register</strong> — stake is locked in escrow. Ticket status: VALID.</li>
                   <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Attend & get scanned</strong> — ticket marked USED. Stake is now claimable after the unlock date.</li>
-                  <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Unlock date passes</strong> — ticket becomes CLAIMABLE.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Unlock date passes</strong> — ticket status changes to CLAIM.</li>
                   <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Claim</strong> — stake returned to your wallet. Ticket status: REFUNDED.</li>
                 </ol>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
@@ -1046,11 +1042,11 @@
               </summary>
               <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Once your ticket status is <strong class="text-white font-medium">CLAIMABLE</strong> (unlock date has passed and you attended):
+                  Once your ticket status is <strong class="text-white font-medium">CLAIM</strong> (unlock date has passed and you attended):
                 </p>
                 <ol class="list-decimal list-inside flex flex-col gap-2 mb-3">
                   <li class="font-body text-[14px] text-muted leading-[1.75]">Go to the <strong class="text-white font-medium">Tickets tab</strong>.</li>
-                  <li class="font-body text-[14px] text-muted leading-[1.75]">Tap the ticket with CLAIMABLE status.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Tap the ticket showing CLAIM status.</li>
                   <li class="font-body text-[14px] text-muted leading-[1.75]">Tap <strong class="text-white font-medium">Claim</strong> and approve the transaction in your wallet app.</li>
                   <li class="font-body text-[14px] text-muted leading-[1.75]">Your staked tokens are transferred back to your wallet. Ticket status changes to REFUNDED.</li>
                 </ol>
@@ -1250,12 +1246,12 @@
 
             <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
               <summary class="flex items-center justify-between px-5 py-4 gap-4">
-                <span class="font-display text-[14px] font-medium text-white">My ticket isn't showing as CLAIMABLE — why?</span>
+                <span class="font-display text-[14px] font-medium text-white">My ticket isn't showing as CLAIM — why?</span>
                 <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
               <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  A ticket only becomes CLAIMABLE when <strong class="text-white font-medium">both conditions</strong> are met:
+                  A ticket only shows CLAIM when <strong class="text-white font-medium">both conditions</strong> are met:
                 </p>
                 <ol class="list-decimal list-inside flex flex-col gap-2 mb-3">
                   <li class="font-body text-[14px] text-muted leading-[1.75]">Your ticket was scanned and confirmed (status moved to USED)</li>
