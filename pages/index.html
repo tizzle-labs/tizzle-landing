@@ -401,109 +401,92 @@
     </section>
 
     <!-- ─── THE APP ──────────────────────────────────────────── -->
-    <section id="section-app" class="max-w-[1200px] mx-auto px-4 sm:px-8 py-16 sm:py-24">
-      <div
-        class="section-eyebrow flex items-center gap-3 font-mono text-[15px] tracking-[0.14em] uppercase text-accent mb-6"
-      >
-        <span class="block w-6 h-px bg-accent shrink-0"></span>
-        THE APP
+    <section id="section-app" class="py-16 sm:py-24 overflow-hidden">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8">
+        <div class="section-eyebrow flex items-center justify-center gap-3 font-mono text-[15px] tracking-[0.14em] uppercase text-accent mb-6">
+          <span class="block w-6 h-px bg-accent shrink-0"></span>
+          THE APP
+          <span class="block w-6 h-px bg-accent shrink-0"></span>
+        </div>
+        <h2
+          class="section-heading font-display font-semibold tracking-[-0.03em] text-white text-center mb-12"
+          style="font-size: clamp(28px, 4vw, 44px)"
+        >
+          Every screen, built for the moment.
+        </h2>
       </div>
-      <h2
-        class="section-heading font-display font-semibold tracking-[-0.03em] text-white mb-12"
-        style="font-size: clamp(28px, 4vw, 44px)"
-      >
-        Every screen, built for the moment.
-      </h2>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-        <!-- Login -->
-        <div class="app-screenshot flex flex-col gap-3">
-          <div class="rounded-[28px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
-            <img src="/screenshots/login.png" alt="Login" class="w-full block" loading="lazy" />
+      <div class="max-w-[900px] mx-auto px-4 sm:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+
+          <!-- Phone mockup (top on mobile, right on desktop) -->
+          <div class="lg:order-2 shrink-0 flex justify-center">
+            <div class="relative w-[240px] sm:w-[276px]">
+              <!-- Ambient glow -->
+              <div class="absolute inset-[-30%] bg-accent rounded-full opacity-[0.07] blur-3xl pointer-events-none"></div>
+              <!-- Phone frame -->
+              <div class="phone-frame" style="position:relative;border-radius:20px">
+                <div id="app-img-wrap" style="flex:1;min-height:0;position:relative;overflow:hidden">
+                  <!-- Slide images injected by JS -->
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flex items-center gap-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
-            <span class="font-mono text-[10px] uppercase tracking-[0.08em] text-muted">Login</span>
+
+          <!-- Info panel (bottom on mobile, left on desktop) -->
+          <div class="lg:order-1 flex-1 flex flex-col items-center lg:items-start gap-5 w-full text-center lg:text-left">
+
+            <!-- Counter + screen label -->
+            <div class="flex items-center gap-3 w-full justify-center lg:justify-start">
+              <span id="app-counter" class="font-mono text-[11px] tracking-[0.1em] text-faint tabular-nums">01 / 09</span>
+              <div class="flex-1 h-px bg-border hidden lg:block"></div>
+              <span class="w-px h-3 bg-border-2 shrink-0 lg:hidden"></span>
+              <span id="app-screen-label" class="font-mono text-[11px] tracking-[0.14em] uppercase text-accent"></span>
+            </div>
+
+            <!-- Slide title -->
+            <h3
+              id="app-slide-title"
+              class="font-display font-semibold text-white tracking-[-0.025em] leading-[1.15]"
+              style="font-size: clamp(22px, 2.6vw, 34px)"
+            ></h3>
+
+            <!-- Description -->
+            <p id="app-slide-desc" class="font-body text-[15px] text-muted leading-[1.7]"></p>
+
+            <!-- Progress bar -->
+            <div class="h-px w-full bg-border relative rounded-full overflow-hidden">
+              <div
+                id="app-progress"
+                class="absolute inset-y-0 left-0 bg-accent rounded-full"
+                style="width:11.1%;transition:width 0.5s ease-out"
+              ></div>
+            </div>
+
+            <!-- Chevron nav -->
+            <div class="flex items-center gap-3">
+              <button
+                id="app-prev"
+                aria-label="Previous screen"
+                class="w-10 h-10 rounded-full border border-border-2 flex items-center justify-center text-muted hover:text-white hover:border-white/30 transition-colors cursor-pointer bg-transparent"
+              >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button
+                id="app-next"
+                aria-label="Next screen"
+                class="w-10 h-10 rounded-full border border-border-2 flex items-center justify-center text-muted hover:text-white hover:border-white/30 transition-colors cursor-pointer bg-transparent"
+              >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
           </div>
         </div>
-
-        <!-- Explore -->
-        <div class="app-screenshot flex flex-col gap-3">
-          <div class="rounded-[28px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
-            <img src="/screenshots/explore.png" alt="Explore Events" class="w-full block" loading="lazy" />
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
-            <span class="font-mono text-[10px] uppercase tracking-[0.08em] text-muted">Explore Events</span>
-          </div>
-        </div>
-
-        <!-- Event Detail -->
-        <div class="app-screenshot flex flex-col gap-3">
-          <div class="rounded-[28px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
-            <img src="/screenshots/event-detail.png" alt="Event Detail" class="w-full block" loading="lazy" />
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
-            <span class="font-mono text-[10px] uppercase tracking-[0.08em] text-muted">Event Detail</span>
-          </div>
-        </div>
-
-        <!-- Deposit & Stake -->
-        <div class="app-screenshot flex flex-col gap-3">
-          <div class="rounded-[28px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
-            <img src="/screenshots/deposit-stake.png" alt="Deposit & Stake" class="w-full block" loading="lazy" />
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
-            <span class="font-mono text-[10px] uppercase tracking-[0.08em] text-muted">Deposit &amp; Stake</span>
-          </div>
-        </div>
-
-        <!-- My Tickets -->
-        <div class="app-screenshot flex flex-col gap-3">
-          <div class="rounded-[28px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
-            <img src="/screenshots/my-ticket.png" alt="My Tickets" class="w-full block" loading="lazy" />
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-muted shrink-0"></div>
-            <span class="font-mono text-[10px] uppercase tracking-[0.08em] text-muted">My Tickets</span>
-          </div>
-        </div>
-
-        <!-- Ticket Detail -->
-        <div class="app-screenshot flex flex-col gap-3">
-          <div class="rounded-[28px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
-            <img src="/screenshots/ticket-detail.png" alt="Ticket Detail" class="w-full block" loading="lazy" />
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-muted shrink-0"></div>
-            <span class="font-mono text-[10px] uppercase tracking-[0.08em] text-muted">Ticket Detail</span>
-          </div>
-        </div>
-
-        <!-- Event History -->
-        <div class="app-screenshot flex flex-col gap-3">
-          <div class="rounded-[28px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
-            <img src="/screenshots/event-detail-2.png" alt="Event History" class="w-full block" loading="lazy" />
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-muted shrink-0"></div>
-            <span class="font-mono text-[10px] uppercase tracking-[0.08em] text-muted">Event History</span>
-          </div>
-        </div>
-
-        <!-- Create Organization -->
-        <div class="app-screenshot flex flex-col gap-3">
-          <div class="rounded-[28px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
-            <img src="/screenshots/create-org.png" alt="Create Organization" class="w-full block" loading="lazy" />
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-muted shrink-0"></div>
-            <span class="font-mono text-[10px] uppercase tracking-[0.08em] text-muted">Create Org</span>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -847,6 +830,114 @@
           setTimeout(tick, delay);
         }
         tick();
+      })();
+
+      // App screenshot carousel
+      (function () {
+        const SLIDES = [
+          {
+            label: 'Explore',
+            title: 'Discover events near you.',
+            desc: 'Browse upcoming events, filter by category, and find your next experience — all in one feed.',
+            img: '/screenshots/explore.jpeg',
+          },
+          {
+            label: 'Event Detail',
+            title: 'All the details before you commit.',
+            desc: 'Date, location, organizer, and stake requirement — everything at a glance before you register.',
+            img: '/screenshots/event-detail-1.jpeg',
+          },
+          {
+            label: 'Event Detail',
+            title: 'Capacity, stake, and everything in between.',
+            desc: 'See spots remaining, the on-chain stake amount, event category, and the full description — all in one scroll.',
+            img: '/screenshots/event-detail-2.jpeg',
+          },
+          {
+            label: 'My Tickets',
+            title: 'All your tickets in one place.',
+            desc: 'Upcoming events, past attendance, and refund status — tracked and organized in a single tab.',
+            img: '/screenshots/my-tickets.jpeg',
+          },
+          {
+            label: 'Ticket Detail',
+            title: 'Your on-chain ticket.',
+            desc: 'A scannable QR code tied to your wallet. No printouts, no PDFs — just your wallet and the blockchain.',
+            img: '/screenshots/ticket-detail.jpeg',
+          },
+          {
+            label: 'Claim',
+            title: 'Claim your stake back.',
+            desc: 'Once the unlock date passes, claim your full SOL refund directly from the app in one tap.',
+            img: '/screenshots/claim.jpeg',
+          },
+          {
+            label: 'Organization',
+            title: 'Built for event organizers.',
+            desc: 'Create your organization profile, launch events, and grow a trusted audience — all from your phone.',
+            img: '/screenshots/organization-detail.jpeg',
+          },
+          {
+            label: 'Analytics',
+            title: 'Real-time event insights.',
+            desc: 'Track attendance, no-shows, and earnings per event. Know exactly how your events are performing.',
+            img: '/screenshots/organization-analytics.jpeg',
+          },
+          {
+            label: 'Create Org',
+            title: 'Start organizing today.',
+            desc: 'Set up your organization in minutes, configure your first event, and go live on Solana.',
+            img: '/screenshots/create-organization.jpeg',
+          },
+        ];
+
+        const total = SLIDES.length;
+        let current = 0;
+
+        const counterEl  = document.getElementById('app-counter');
+        const labelEl    = document.getElementById('app-screen-label');
+        const titleEl    = document.getElementById('app-slide-title');
+        const descEl     = document.getElementById('app-slide-desc');
+        const progressEl = document.getElementById('app-progress');
+        const prevBtn    = document.getElementById('app-prev');
+        const nextBtn    = document.getElementById('app-next');
+        const imgWrap    = document.getElementById('app-img-wrap');
+
+        const imgs = SLIDES.map(function (slide, i) {
+          const img = document.createElement('img');
+          img.src = slide.img;
+          img.alt = slide.label;
+          img.loading = i === 0 ? 'eager' : 'lazy';
+          Object.assign(img.style, {
+            position: 'absolute', inset: '0',
+            width: '100%', height: '100%',
+            objectFit: 'cover',
+            opacity: i === 0 ? '1' : '0',
+            transition: 'opacity 0.5s ease',
+          });
+          imgWrap.appendChild(img);
+          return img;
+        });
+
+        function goTo(idx) {
+          imgs[current].style.opacity = '0';
+          current = ((idx % total) + total) % total;
+          imgs[current].style.opacity = '1';
+          var s = SLIDES[current];
+          counterEl.textContent  = String(current + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+          labelEl.textContent    = s.label;
+          titleEl.textContent    = s.title;
+          descEl.textContent     = s.desc;
+          progressEl.style.width = ((current + 1) / total * 100) + '%';
+        }
+
+        goTo(0);
+
+        var timer = setInterval(function () { goTo(current + 1); }, 5000);
+        function resetTimer() { clearInterval(timer); timer = setInterval(function () { goTo(current + 1); }, 5000); }
+
+        prevBtn.addEventListener('click', function () { goTo(current - 1); resetTimer(); });
+        nextBtn.addEventListener('click', function () { goTo(current + 1); resetTimer(); });
       })();
     </script>
   </body>
