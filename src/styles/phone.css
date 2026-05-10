@@ -24,7 +24,6 @@
 .phone-frame {
   aspect-ratio: 9 / 19.5;
   border-radius: 36px;
-  border: 1.5px solid var(--border-2);
   box-shadow:
     0 0 0 1px #0a0a0a,
     0 24px 64px rgba(0, 0, 0, 0.7);
@@ -82,6 +81,27 @@
   overflow: hidden;
 }
 
+/* Fan — Explore screen */
+.explore-eyebrow {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-2);
+  margin-bottom: -2px;
+}
+
+.explore-badge-sol {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--chain);
+  background: rgba(153, 69, 255, 0.12);
+  border-radius: 2px;
+  padding: 2px 6px;
+  letter-spacing: 0.04em;
+}
+
 /* Fan — My Tickets screen */
 .screen-label-bar {
   display: flex;
@@ -99,7 +119,6 @@
 
 .ticket-row {
   background: var(--surface-2);
-  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 12px;
   display: flex;
@@ -156,7 +175,6 @@
 
 .form-input-mock {
   background: var(--bg);
-  border: 1px solid var(--border-2);
   border-radius: var(--radius-sm);
   padding: 8px 10px;
   font-family: var(--f-body);
@@ -250,7 +268,7 @@
 .scanner-inner {
   font-family: var(--f-mono);
   font-size: 9px;
-  color: rgba(202, 255, 0, 0.4);
+  color: rgba(143, 243, 99, 0.4);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -260,7 +278,6 @@
   font-size: 9px;
   color: var(--text-1);
   background: var(--surface);
-  border: 1px solid var(--border-2);
   border-radius: var(--radius-full);
   padding: 4px 10px;
   text-align: center;
@@ -327,7 +344,6 @@
       var(--border-2) 7px
     ),
     var(--surface-3);
-  border: 1px solid var(--accent);
   border-radius: var(--radius-sm);
   margin: 8px 0;
 }
@@ -348,7 +364,6 @@
 
 .event-row {
   background: var(--surface-2);
-  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 10px;
   display: flex;

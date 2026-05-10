@@ -4,12 +4,7 @@
 }
 
 .faq-item {
-  border-bottom: 1px solid var(--border);
   padding: 20px 0;
-}
-
-.faq-item:last-child {
-  border-bottom: none;
 }
 
 .faq-question {
@@ -29,7 +24,6 @@
 
 /* ─── WAITLIST ────────────────────────────────────────────── */
 .waitlist-section {
-  border-top: 1px solid var(--border);
 }
 
 .waitlist-sub {
@@ -50,22 +44,17 @@
 .waitlist-input {
   flex: 1;
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-sm);
   padding: 12px 16px;
   font-family: var(--f-body);
   font-size: 15px;
   color: var(--text-1);
   outline: none;
-  transition: border-color 0.15s;
 }
 
 .waitlist-input::placeholder {
   color: var(--text-3);
-}
-
-.waitlist-input:focus {
-  border-color: var(--accent);
 }
 
 .waitlist-submit {

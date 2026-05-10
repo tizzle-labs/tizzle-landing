@@ -70,7 +70,7 @@
 
   <body class="bg-bg text-white font-body antialiased">
     <!-- ─── HEADER ──────────────────────────────────────────── -->
-    <header class="sticky top-0 z-50 bg-bg border-b border-border">
+    <header class="sticky top-0 z-50 bg-bg">
       <div
         class="relative max-w-[1200px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between"
       >
@@ -96,9 +96,9 @@
         </nav>
         <div class="flex items-center gap-3 relative z-10">
           <a
-            href="/#waitlist"
+            href="/#footer"
             class="hidden sm:inline-flex font-display text-[15px] font-semibold text-accent border border-accent rounded-sm px-5 py-2.5 no-underline hover:bg-accent hover:text-accent-fg transition-colors"
-            >Join Waitlist</a
+            >Demo App</a
           >
           <button
             id="nav-toggle"
@@ -160,9 +160,9 @@
           >
           <div class="border-t border-border pt-4">
             <a
-              href="/#waitlist"
+              href="/#footer"
               class="sm:hidden font-display text-[15px] font-semibold text-accent border border-accent rounded-sm px-5 py-2.5 no-underline hover:bg-accent hover:text-accent-fg transition-colors inline-flex"
-              >Join Waitlist</a
+              >Demo App</a
             >
           </div>
         </div>
@@ -170,9 +170,10 @@
     </header>
 
     <!-- ─── HERO ─────────────────────────────────────────────── -->
-    <div class="border-b border-border bg-surface">
+    <div class="border-b border-border relative overflow-hidden" style="background: url('/onboarding-background.png') center top/cover no-repeat; background-color: #111;">
+      <div class="absolute inset-0 bg-bg/50"></div>
       <div
-        class="max-w-[1200px] mx-auto px-4 sm:px-8 py-12 sm:py-16 text-center"
+        class="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-8 py-12 sm:py-16 text-center"
       >
         <span
           class="inline-flex font-mono text-[11px] tracking-[0.14em] uppercase text-accent mb-4 items-center gap-2"
@@ -212,7 +213,7 @@
             id="search"
             type="text"
             placeholder="Search for guides, FAQs…"
-            class="w-full bg-bg border border-border-2 rounded-sm pl-10 pr-4 py-3 font-body text-[14px] text-white placeholder-faint focus:outline-none focus:border-accent transition-colors"
+            class="w-full bg-bg rounded-sm pl-10 pr-4 py-3 font-body text-[14px] text-white placeholder-faint focus:outline-none"
             autocomplete="off"
           />
           <span
@@ -228,83 +229,77 @@
       id="categories"
       class="max-w-[1200px] mx-auto px-4 sm:px-8 py-8 sm:py-12"
     >
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <a
           href="#getting-started"
-          class="group bg-surface border border-border hover:border-border-2 rounded-sm p-4 no-underline transition-colors"
+          class="group bg-surface-2 rounded-sm p-4 no-underline transition-colors"
         >
-          <div class="text-2xl mb-3">🚀</div>
-          <div
-            class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors"
-          >
-            Getting Started
-          </div>
-          <div class="font-mono text-[11px] text-faint">4 guides</div>
+          <svg class="text-accent mb-3 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <div class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors whitespace-nowrap">Getting Started</div>
+          <div class="font-mono text-[11px] text-faint">5 guides</div>
         </a>
 
         <a
           href="#organization"
-          class="group bg-surface border border-border hover:border-border-2 rounded-sm p-4 no-underline transition-colors"
+          class="group bg-surface-2 rounded-sm p-4 no-underline transition-colors"
         >
-          <div class="text-2xl mb-3">🏢</div>
-          <div
-            class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors"
-          >
-            Organization
-          </div>
+          <svg class="text-accent mb-3 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="13" rx="1"/><path d="M8 22V9M16 22V9M3 9l9-6 9 6"/></svg>
+          <div class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors whitespace-nowrap">Organization</div>
           <div class="font-mono text-[11px] text-faint">4 guides</div>
         </a>
 
         <a
           href="#events"
-          class="group bg-surface border border-border hover:border-border-2 rounded-sm p-4 no-underline transition-colors"
+          class="group bg-surface-2 rounded-sm p-4 no-underline transition-colors"
         >
-          <div class="text-2xl mb-3">📅</div>
-          <div
-            class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors"
-          >
-            Managing Events
-          </div>
-          <div class="font-mono text-[11px] text-faint">5 guides</div>
-        </a>
-
-        <a
-          href="#attendee"
-          class="group bg-surface border border-border hover:border-border-2 rounded-sm p-4 no-underline transition-colors"
-        >
-          <div class="text-2xl mb-3">🎟️</div>
-          <div
-            class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors"
-          >
-            Attending Events
-          </div>
+          <svg class="text-accent mb-3 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors whitespace-nowrap">Creating Events</div>
           <div class="font-mono text-[11px] text-faint">6 guides</div>
         </a>
 
         <a
-          href="#gatekeeper"
-          class="group bg-surface border border-border hover:border-border-2 rounded-sm p-4 no-underline transition-colors"
+          href="#attendee"
+          class="group bg-surface-2 rounded-sm p-4 no-underline transition-colors"
         >
-          <div class="text-2xl mb-3">🔐</div>
-          <div
-            class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors"
-          >
-            Gatekeeper
-          </div>
+          <svg class="text-accent mb-3 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/></svg>
+          <div class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors whitespace-nowrap">Attending Events</div>
           <div class="font-mono text-[11px] text-faint">5 guides</div>
         </a>
 
         <a
-          href="#staking"
-          class="group bg-surface border border-border hover:border-border-2 rounded-sm p-4 no-underline transition-colors"
+          href="#gatekeeper"
+          class="group bg-surface-2 rounded-sm p-4 no-underline transition-colors"
         >
-          <div class="text-2xl mb-3">⚡</div>
-          <div
-            class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors"
-          >
-            Staking & Refunds
-          </div>
+          <svg class="text-accent mb-3 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <div class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors whitespace-nowrap">Gatekeeper</div>
+          <div class="font-mono text-[11px] text-faint">4 guides</div>
+        </a>
+
+        <a
+          href="#staking"
+          class="group bg-surface-2 rounded-sm p-4 no-underline transition-colors"
+        >
+          <svg class="text-accent mb-3 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-8 11h7l-1 9 8-11h-7l1-9z"/></svg>
+          <div class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors whitespace-nowrap">Staking & Refunds</div>
           <div class="font-mono text-[11px] text-faint">5 guides</div>
+        </a>
+
+        <a
+          href="#profile"
+          class="group bg-surface-2 rounded-sm p-4 no-underline transition-colors"
+        >
+          <svg class="text-accent mb-3 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <div class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors whitespace-nowrap">Profile & Settings</div>
+          <div class="font-mono text-[11px] text-faint">3 guides</div>
+        </a>
+
+        <a
+          href="#troubleshooting"
+          class="group bg-surface-2 rounded-sm p-4 no-underline transition-colors"
+        >
+          <svg class="text-accent mb-3 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <div class="font-display text-[13px] font-semibold text-white mb-1 group-hover:text-accent transition-colors whitespace-nowrap">Troubleshooting</div>
+          <div class="font-mono text-[11px] text-faint">4 guides</div>
         </a>
       </div>
     </div>
@@ -328,7 +323,7 @@
             <a
               href="#events"
               class="nav-link font-mono text-[11px] tracking-[0.06em] uppercase text-muted hover:text-white border-l-2 border-transparent pl-3 py-1.5 no-underline transition-colors"
-              >Managing Events</a
+              >Creating Events</a
             >
             <a
               href="#attendee"
@@ -346,6 +341,11 @@
               >Staking & Refunds</a
             >
             <a
+              href="#profile"
+              class="nav-link font-mono text-[11px] tracking-[0.06em] uppercase text-muted hover:text-white border-l-2 border-transparent pl-3 py-1.5 no-underline transition-colors"
+              >Profile & Settings</a
+            >
+            <a
               href="#troubleshooting"
               class="nav-link font-mono text-[11px] tracking-[0.06em] uppercase text-muted hover:text-white border-l-2 border-transparent pl-3 py-1.5 no-underline transition-colors"
               >Troubleshooting</a
@@ -356,15 +356,12 @@
 
       <!-- Content -->
       <div class="flex-1 min-w-0" id="help-content">
+
         <!-- ── Getting Started ──────────────────────────────── -->
         <section id="getting-started" class="mb-16 scroll-mt-24">
           <div class="flex items-center gap-3 mb-6">
-            <span class="text-2xl">🚀</span>
+            <svg class="text-accent w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
             <div>
-              <span
-                class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent block mb-0.5"
-                >Section 01</span
-              >
               <h2
                 class="font-display font-semibold tracking-[-0.02em] text-white"
                 style="font-size: clamp(20px, 3vw, 26px)"
@@ -375,275 +372,121 @@
           </div>
 
           <div class="flex flex-col gap-2">
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden group"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What is Tizzle?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What is Tizzle?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Tizzle is a decentralized event ticketing protocol built on
-                  the Solana blockchain. Instead of buying tickets in the
-                  traditional sense, attendees
-                  <strong class="text-white font-medium">stake tokens</strong>
-                  to reserve their spot at an event.
+                  Tizzle is a decentralized event ticketing protocol built on the Solana blockchain. Instead of purchasing tickets in the traditional sense, attendees <strong class="text-white font-medium">stake tokens</strong> to register for an event.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  When you attend the event and your attendance is verified via
-                  QR code scan, your staked tokens are returned to you in full
-                  (or partial, depending on the organizer's config).
+                  When you attend the event and your ticket is scanned at the venue, your staked tokens are unlocked and returned to your wallet after a short holding period. If you don't show up, the stake is forfeited.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  This creates a commitment system that reduces no-shows, with
-                  zero platform fees charged to attendees. Organizers pay a flat
-                  fee per attendee slot when creating an event.
+                  This creates a real commitment mechanism that dramatically reduces no-shows. Attendees pay no platform fee — organizers pay a flat fee per capacity slot at creation time.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How do I set up a Solana wallet?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I sign in to Tizzle?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  Tizzle supports standard Solana wallets. We recommend the
-                  following:
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  Tizzle uses <strong class="text-white font-medium">Mobile Wallet Adapter (MWA)</strong> for authentication — there is no email, password, or username/password login. You sign in using your Solana wallet app.
                 </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-                  <div class="bg-surface-2 border border-border rounded-sm p-4">
-                    <div
-                      class="font-display text-[13px] font-semibold text-white mb-1"
-                    >
-                      Phantom
-                    </div>
-                    <p class="font-body text-[13px] text-muted">
-                      Browser extension & mobile app. Most popular Solana
-                      wallet. Download at phantom.app
-                    </p>
-                  </div>
-                  <div class="bg-surface-2 border border-border rounded-sm p-4">
-                    <div
-                      class="font-display text-[13px] font-semibold text-white mb-1"
-                    >
-                      Solflare
-                    </div>
-                    <p class="font-body text-[13px] text-muted">
-                      Browser extension & mobile app with advanced features.
-                      Download at solflare.com
-                    </p>
-                  </div>
-                </div>
-                <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  <strong class="text-white font-medium">Important:</strong>
-                  Always save your seed phrase in a secure offline location.
-                  Tizzle cannot recover lost wallets.
-                </p>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How do I connect my wallet to Tizzle?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <ol class="space-y-3">
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >01</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Open the Tizzle app and click
-                      <strong class="text-white font-medium"
-                        >Connect Wallet</strong
-                      >
-                      in the top right corner.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >02</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Select your wallet provider (Phantom, Solflare, or other
-                      compatible wallets).</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >03</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Approve the connection request in your wallet app.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >04</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >You'll be prompted to sign a message to verify ownership
-                      — this does
-                      <strong class="text-white font-medium">not</strong> cost
-                      any SOL.</span
-                    >
-                  </li>
+                <ol class="list-decimal list-inside flex flex-col gap-2 mb-3">
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Open the Tizzle app and tap <strong class="text-white font-medium">Connect Wallet</strong> on the welcome screen.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Your installed wallet app (e.g. Phantom, Solflare) will open automatically via MWA.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Approve the connection request in your wallet app.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">You are signed in. Your wallet public key is your identity on Tizzle.</li>
                 </ol>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  If this is your first time, you will be taken through a short onboarding flow to set up your profile before entering the app.
+                </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What tokens are supported for staking?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What wallets are supported?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  Tizzle supports multiple token standards on Solana:
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  Any Solana wallet app that supports the <strong class="text-white font-medium">Mobile Wallet Adapter (MWA)</strong> standard works with Tizzle. This includes:
                 </p>
-                <div class="space-y-2">
-                  <div
-                    class="flex items-center gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span
-                      class="w-2 h-2 rounded-full bg-accent shrink-0"
-                    ></span>
-                    <span class="font-mono text-[12px] text-white">SOL</span>
-                    <span class="font-body text-[13px] text-muted"
-                      >Native Solana token</span
-                    >
-                  </div>
-                  <div
-                    class="flex items-center gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span
-                      class="w-2 h-2 rounded-full bg-accent shrink-0"
-                    ></span>
-                    <span class="font-mono text-[12px] text-white"
-                      >SPL Token</span
-                    >
-                    <span class="font-body text-[13px] text-muted"
-                      >Standard Solana fungible tokens</span
-                    >
-                  </div>
-                  <div
-                    class="flex items-center gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span
-                      class="w-2 h-2 rounded-full bg-accent shrink-0"
-                    ></span>
-                    <span class="font-mono text-[12px] text-white"
-                      >Token-2022</span
-                    >
-                    <span class="font-body text-[13px] text-muted"
-                      >Next-gen Solana token standard with extensions</span
-                    >
-                  </div>
-                </div>
-                <p class="font-body text-[13px] text-muted mt-4">
-                  The token type accepted for each event is set by the organizer
-                  at creation time.
+                <ul class="list-disc list-inside flex flex-col gap-1.5 mb-3">
+                  <li class="font-body text-[14px] text-muted">Phantom</li>
+                  <li class="font-body text-[14px] text-muted">Solflare</li>
+                  <li class="font-body text-[14px] text-muted">Backpack</li>
+                  <li class="font-body text-[14px] text-muted">Any other MWA-compatible Solana wallet</li>
+                </ul>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  You must have one of these wallet apps installed on the same device as the Tizzle app. Make sure your wallet has enough SOL to cover network transaction fees and any stake amounts.
+                </p>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What tokens can be used as stake?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  Tizzle supports three token standards for event stakes:
+                </p>
+                <ul class="flex flex-col gap-3 mb-3">
+                  <li class="flex gap-3">
+                    <span class="font-mono text-[11px] text-accent bg-accent/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">SOL</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">Native Solana — the most common stake token. All organizers can use SOL.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="font-mono text-[11px] text-accent bg-accent/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">SPL</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">Standard Solana Program Library tokens — fungible tokens like USDC, BONK, etc.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="font-mono text-[11px] text-accent bg-accent/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">TOKEN-2022</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">Next-generation Solana token standard with extended functionality.</span>
+                  </li>
+                </ul>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  The organizer chooses the stake token and amount when creating an event. Attendees must have sufficient balance of that token to register.
+                </p>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What happens during onboarding?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  The first time you connect your wallet, Tizzle walks you through a two-step onboarding:
+                </p>
+                <ol class="list-decimal list-inside flex flex-col gap-2">
+                  <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Set your username</strong> — choose a unique handle that identifies you on the platform. This can be changed later from your profile.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Select your interests</strong> — pick categories of events you care about (music, sports, tech, art, etc.) to personalize your Explore feed.</li>
+                </ol>
+                <p class="font-body text-[14px] text-muted leading-[1.75] mt-3">
+                  Once onboarding is complete, you land on the main app with four tabs: Explore, Tickets, Create, and Scanner.
                 </p>
               </div>
             </details>
           </div>
         </section>
 
-        <!-- ── Organization ─────────────────────────────────── -->
+        <!-- ── Organization ────────────────────────────────── -->
         <section id="organization" class="mb-16 scroll-mt-24">
           <div class="flex items-center gap-3 mb-6">
-            <span class="text-2xl">🏢</span>
+            <svg class="text-accent w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="13" rx="1"/><path d="M8 22V9M16 22V9M3 9l9-6 9 6"/></svg>
             <div>
-              <span
-                class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent block mb-0.5"
-                >Section 02</span
-              >
               <h2
                 class="font-display font-semibold tracking-[-0.02em] text-white"
                 style="font-size: clamp(20px, 3vw, 26px)"
@@ -652,614 +495,259 @@
               </h2>
             </div>
           </div>
-          <p class="font-body text-[14px] text-muted leading-[1.75] mb-6">
-            An Organization is the top-level entity on Tizzle. Every event must
-            belong to an organization. Think of it as your brand or company
-            profile on the protocol.
-          </p>
 
           <div class="flex flex-col gap-2">
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How do I create an organization?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What is an organization?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  Creating an organization registers your wallet as an organizer
-                  on-chain. Here's how:
-                </p>
-                <ol class="space-y-3 mb-4">
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >01</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Connect your wallet and navigate to
-                      <strong class="text-white font-medium"
-                        >Dashboard → Organizations → Create New</strong
-                      >.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >02</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Fill in your organization name and optional metadata
-                      (logo, description).</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >03</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Approve and sign the
-                      <span class="font-mono text-[12px] text-accent"
-                        >create_organization</span
-                      >
-                      transaction in your wallet. A small SOL fee covers the
-                      on-chain account storage (rent).</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >04</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Once confirmed, a Program Derived Address (PDA) is
-                      created on-chain as your Organization Account.</span
-                    >
-                  </li>
-                </ol>
-                <div
-                  class="bg-surface-2 border border-border rounded-sm p-3 flex gap-2"
-                >
-                  <span class="text-accent mt-0.5 shrink-0">ℹ</span>
-                  <p class="font-body text-[13px] text-muted">
-                    Your wallet address becomes the owner of the organization.
-                    Only this wallet can create events under this organization.
-                  </p>
-                </div>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >Can I have multiple organizations?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  Yes. One wallet can own multiple organizations. Each
-                  organization gets its own on-chain PDA and can host
-                  independent events. This is useful if you manage multiple
-                  brands or event series under different identities.
-                </p>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >Can I edit or delete my organization?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Off-chain metadata (name, logo) can be updated at any time via
-                  the dashboard. However, the on-chain Organization PDA and its
-                  owner wallet are
-                  <strong class="text-white font-medium">permanent</strong> —
-                  ownership cannot be transferred.
+                  An organization is your identity as an event organizer on Tizzle. It is the public-facing profile attached to your wallet that hosts events.
+                </p>
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  When attendees browse the Explore screen, they see events listed under their organizer's organization name. Your organization page can include a name, description, website, and social media links.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  Closing (deleting) an organization is only possible if it has
-                  no active events with locked stakes.
+                  You must have an organization before you can create any events.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What are the wallet requirements for an organizer?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I create an organization?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  As an organizer, your wallet needs:
+                  Go to the <strong class="text-white font-medium">Profile tab</strong> and tap <strong class="text-white font-medium">Create Organization</strong>. Fill in the required details:
                 </p>
-                <div class="space-y-2">
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >Enough SOL for rent</strong
-                      >
-                      — a small amount (~0.002–0.01 SOL) to cover on-chain
-                      account storage for the organization and each event</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >Platform fee</strong
-                      >
-                      — paid in SOL when creating an event:
-                      <span class="font-mono text-[12px] text-accent"
-                        >capacity × fee_per_slot</span
-                      ></span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >Transaction fees</strong
-                      >
-                      — a few lamports per transaction for Solana network
-                      fees</span
-                    >
-                  </div>
-                </div>
+                <ul class="flex flex-col gap-2 mb-3">
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Name</strong> — the public display name of your organization (required)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Description</strong> — a short bio or mission statement for your org (required)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Website</strong> — your organization's URL (optional)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Social links</strong> — Twitter/X, Instagram, etc. (optional)</span>
+                  </li>
+                </ul>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  Creating an organization signs an on-chain transaction. After confirmation, your organization is live and linked to your wallet.
+                </p>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">Can I have multiple organizations?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  No. Each wallet address can be associated with <strong class="text-white font-medium">exactly one organization</strong>. This is enforced at the protocol level.
+                </p>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  If you need a second organization (e.g. for a different brand or entity), you would need to use a separate Solana wallet. Once you create an organization on a wallet, that slot is permanently taken.
+                </p>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I edit my organization?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  Go to the <strong class="text-white font-medium">Profile tab</strong>, tap your organization card, then tap <strong class="text-white font-medium">Edit</strong>. You can update the name, description, website, and social links.
+                </p>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  Saving edits submits an on-chain update transaction. The changes take effect once confirmed on Solana.
+                </p>
               </div>
             </details>
           </div>
         </section>
 
-        <!-- ── Managing Events ──────────────────────────────── -->
+        <!-- ── Creating Events ─────────────────────────────── -->
         <section id="events" class="mb-16 scroll-mt-24">
           <div class="flex items-center gap-3 mb-6">
-            <span class="text-2xl">📅</span>
+            <svg class="text-accent w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             <div>
-              <span
-                class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent block mb-0.5"
-                >Section 03</span
-              >
               <h2
                 class="font-display font-semibold tracking-[-0.02em] text-white"
                 style="font-size: clamp(20px, 3vw, 26px)"
               >
-                Managing Events
+                Creating Events
               </h2>
             </div>
           </div>
-          <p class="font-body text-[14px] text-muted leading-[1.75] mb-6">
-            Events are the core unit of the Tizzle protocol. All event
-            parameters are set at creation time and stored immutably on-chain.
-          </p>
 
           <div class="flex flex-col gap-2">
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How do I create an event?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I create an event?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  You must have an organization before creating events.
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  You must have an organization before creating events. Once you do, tap the <strong class="text-white font-medium">Create tab</strong> (the + icon in the bottom navigation) and fill in the event form.
                 </p>
-                <ol class="space-y-3 mb-4">
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >01</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Go to your organization dashboard and click
-                      <strong class="text-white font-medium"
-                        >Create Event</strong
-                      >.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >02</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Fill in event details: name, description, location,
-                      date/time.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >03</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Set on-chain parameters:
-                      <strong class="text-white font-medium">capacity</strong>,
-                      <strong class="text-white font-medium"
-                        >stake amount</strong
-                      >,
-                      <strong class="text-white font-medium">token type</strong
-                      >,
-                      <strong class="text-white font-medium">start time</strong
-                      >, and
-                      <strong class="text-white font-medium">unlock time</strong
-                      >.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >04</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Configure attendance settings: whether attendance is
-                      required for refund, and optional host fee
-                      percentage.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >05</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Review the total platform fee
-                      <span class="font-mono text-[12px] text-accent"
-                        >(capacity × fee_per_slot)</span
-                      >
-                      and approve the transaction in your wallet.</span
-                    >
-                  </li>
-                </ol>
-                <div
-                  class="bg-surface-2 border border-border rounded-sm p-3 flex gap-2"
-                >
-                  <span class="text-yellow-400 mt-0.5 shrink-0">⚠</span>
-                  <p class="font-body text-[13px] text-muted">
-                    All on-chain parameters are
-                    <strong class="text-white font-medium">permanent</strong>
-                    after the transaction is confirmed. Double-check everything
-                    before signing.
-                  </p>
-                </div>
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  When you submit the form, a transaction is sent to the Solana network that:
+                </p>
+                <ul class="list-disc list-inside flex flex-col gap-1.5 mb-3">
+                  <li class="font-body text-[14px] text-muted">Creates the event on-chain with all specified parameters</li>
+                  <li class="font-body text-[14px] text-muted">Deducts the platform fee from your wallet (0.002 SOL × capacity)</li>
+                  <li class="font-body text-[14px] text-muted">Makes the event immediately visible in the Explore tab</li>
+                </ul>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  All event parameters are immutable once created — review everything carefully before confirming the transaction.
+                </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What is the platform fee and how is it calculated?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What fields are required to create an event?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">The event creation form requires:</p>
+                <ul class="flex flex-col gap-2.5">
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Name</strong> — public event title</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Description</strong> — details about the event</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Location</strong> — venue name or address</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Start date & time</strong> — when the event begins</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">End date & time</strong> — when the event ends (used to compute the unlock date)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Capacity</strong> — maximum number of attendees (affects platform fee)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Stake amount</strong> — tokens each attendee must lock to register (0 = free/no stake)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Stake token</strong> — SOL, SPL token, or Token-2022</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Gatekeeper address</strong> — Solana wallet that can scan tickets (defaults to your wallet)</span>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What is the platform fee and how is it calculated?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  Tizzle uses a
-                  <strong class="text-white font-medium">Pay-per-Slot</strong>
-                  model. The platform fee is calculated as:
+                  The platform fee is paid by the organizer when creating an event. The formula is:
                 </p>
-                <div
-                  class="bg-surface-3 border border-border rounded-sm p-4 font-mono text-[13px] text-accent mb-4"
-                >
-                  Total Fee = Capacity × Fee Per Slot
+                <div class="bg-bg rounded-sm p-4 mb-4">
+                  <span class="font-mono text-[13px] text-accent">Platform Fee = 0.0005 SOL × Capacity</span>
                 </div>
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Example: An event with 200 capacity at 0.0005 SOL per slot =
-                  <strong class="text-white font-medium"
-                    >0.10 SOL total platform fee</strong
-                  >.
+                  For example, an event with 100 capacity costs <strong class="text-white font-medium">0.05 SOL</strong> to create. An event with 500 capacity costs <strong class="text-white font-medium">0.25 SOL</strong>.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  This fee is paid once at event creation, sent directly to the
-                  Tizzle Platform Treasury PDA, and is
-                  <strong class="text-white font-medium">non-refundable</strong
-                  >. Attendees are never charged a platform fee.
+                  This fee is deducted from your wallet at transaction time and is <strong class="text-white font-medium">non-refundable</strong>. Attendees are never charged a platform fee — it is organizer-only.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What is the unlock time and why does it matter?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What is the unlock date?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  The
-                  <strong class="text-white font-medium">unlock time</strong> is
-                  a Unix timestamp set by the organizer that determines when
-                  attendees can claim their staked tokens back.
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
+                  The unlock date is the earliest moment an attendee can claim their returned stake after attending. It is automatically calculated as:
                 </p>
+                <div class="bg-bg rounded-sm p-4 mb-4">
+                  <span class="font-mono text-[13px] text-accent">Unlock Date = Event End Time + 7 days</span>
+                </div>
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Typically set to a few hours after the event ends — giving you
-                  time to complete QR check-ins before refunds become claimable.
+                  This date is set at event creation time, is immutable, and is displayed on every event and ticket screen. The 7-day holding period is enforced on-chain by the Tizzle program.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  Before the unlock time, no one (including the organizer) can
-                  release the staked tokens. This is enforced by the smart
-                  contract.
+                  After the unlock date passes, attendees who were successfully scanned in can claim their full stake back from the Tickets tab.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >Can I edit event details after creation?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What is the gatekeeper address?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  It depends on what you want to change:
+                  The gatekeeper is the Solana wallet address that has permission to scan and validate tickets for your event. Only this wallet's device can use the Scanner tab to check in attendees.
                 </p>
-                <div class="space-y-2">
-                  <div
-                    class="flex items-start gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span
-                      class="text-accent font-mono text-[12px] shrink-0 mt-0.5"
-                      >✓</span
-                    >
-                    <span class="font-body text-[13px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >Off-chain metadata</strong
-                      >
-                      (name, description, banner image) — editable anytime via
-                      the dashboard.</span
-                    >
-                  </div>
-                  <div
-                    class="flex items-start gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span
-                      class="text-red-400 font-mono text-[12px] shrink-0 mt-0.5"
-                      >✗</span
-                    >
-                    <span class="font-body text-[13px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >On-chain parameters</strong
-                      >
-                      (capacity, stake amount, unlock time, token type) —
-                      permanently locked after creation.</span
-                    >
-                  </div>
-                </div>
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  By default, the gatekeeper is set to <strong class="text-white font-medium">your own wallet address</strong> (the event organizer). If you want a different person or device to scan tickets — for example, a venue staff member — enter their Solana wallet address in the gatekeeper field.
+                </p>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  The gatekeeper address is set at event creation and cannot be changed after the event is created.
+                </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What happens if I cancel my event?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">Can I edit or cancel an event after creating it?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  If you cancel an event, you as the organizer are responsible
-                  for communicating this to attendees. On the protocol level:
+                  Event parameters are stored immutably on the Solana blockchain. Core details like capacity, stake amount, unlock date, and gatekeeper address <strong class="text-white font-medium">cannot be changed</strong> after creation.
                 </p>
-                <div class="flex items-start gap-3 mb-2">
-                  <span
-                    class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                    >→</span
-                  >
-                  <span class="font-body text-[14px] text-muted"
-                    >Attendees' staked tokens are still locked until the unlock
-                    time. You should set a short unlock time or use the admin
-                    refund mechanism to release stakes early.</span
-                  >
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                    >→</span
-                  >
-                  <span class="font-body text-[14px] text-muted"
-                    >The platform fee paid at creation is
-                    <strong class="text-white font-medium"
-                      >non-refundable</strong
-                    >.</span
-                  >
-                </div>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  Review all fields carefully before submitting the creation transaction. If an event needs to be cancelled, all registered attendees who haven't been scanned will be eligible for a refund of their stake. Contact the Tizzle team via <a href="https://x.com/tizzleai" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">@tizzleai</a> for assistance with cancellations.
+                </p>
               </div>
             </details>
           </div>
         </section>
 
-        <!-- ── Attending Events ──────────────────────────────── -->
+        <!-- ── Attending Events ────────────────────────────── -->
         <section id="attendee" class="mb-16 scroll-mt-24">
           <div class="flex items-center gap-3 mb-6">
-            <span class="text-2xl">🎟️</span>
+            <svg class="text-accent w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/></svg>
             <div>
-              <span
-                class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent block mb-0.5"
-                >Section 04</span
-              >
               <h2
                 class="font-display font-semibold tracking-[-0.02em] text-white"
                 style="font-size: clamp(20px, 3vw, 26px)"
@@ -1268,444 +756,114 @@
               </h2>
             </div>
           </div>
-          <p class="font-body text-[14px] text-muted leading-[1.75] mb-6">
-            As an attendee, you stake tokens to reserve your spot, check in at
-            the event, and claim your refund afterwards.
-          </p>
 
           <div class="flex flex-col gap-2">
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How do I register for an event?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I find events to attend?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <ol class="space-y-3 mb-4">
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >01</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Browse events and open the one you want to attend.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >02</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Review the event details including the
-                      <strong class="text-white font-medium"
-                        >stake amount</strong
-                      >, token type, and refund conditions.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >03</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Click
-                      <strong class="text-white font-medium">Register</strong>
-                      and approve the staking transaction in your wallet.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >04</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Your tokens are locked in an escrow PDA and a
-                      Registration Account is created on-chain with your wallet
-                      address.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >05</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >You'll receive a
-                      <strong class="text-white font-medium">QR code</strong>
-                      tied to your wallet — save this for check-in at the
-                      event.</span
-                    >
-                  </li>
-                </ol>
-                <div
-                  class="bg-surface-2 border border-border rounded-sm p-3 flex gap-2"
-                >
-                  <span class="text-accent mt-0.5 shrink-0">ℹ</span>
-                  <p class="font-body text-[13px] text-muted">
-                    Make sure you have the required token balance before
-                    registering. The exact stake amount is shown on the event
-                    page.
-                  </p>
-                </div>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What happens to my tokens while they're staked?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Your tokens are locked inside a
-                  <strong class="text-white font-medium"
-                    >Program Derived Address (PDA)</strong
-                  >
-                  — an escrow account controlled exclusively by the Tizzle smart
-                  contract. No one, including the organizer or Tizzle team, can
-                  access your tokens.
+                  Open the <strong class="text-white font-medium">Explore tab</strong> (the first tab in the bottom navigation). It shows all upcoming public events on the Tizzle protocol. You can browse by category or scroll through the full list.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  The tokens remain there until either the unlock time passes
-                  (allowing you to claim your refund), or they are forfeited
-                  according to the event's attendance rules.
+                  Tap any event card to see full details including name, organizer, location, date/time, capacity, stake amount, stake token, and unlock date.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >Can I cancel my registration?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I register for an event?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Cancellation depends on the organizer's configuration. Some
-                  events may allow early cancellation with a partial or full
-                  stake return before the event starts. Others may lock the
-                  stake until the unlock time regardless.
+                  On the event detail screen, tap <strong class="text-white font-medium">Register</strong>. The app will show you a confirmation screen with the stake amount and token that will be locked.
+                </p>
+                <ol class="list-decimal list-inside flex flex-col gap-2 mb-3">
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Review the stake amount and tap <strong class="text-white font-medium">Confirm</strong>.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Your wallet app opens via MWA to sign the transaction.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Once the transaction is confirmed, your ticket is created on-chain.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">The ticket appears in your <strong class="text-white font-medium">Tickets tab</strong> with status VALID.</li>
+                </ol>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  Make sure your wallet has sufficient balance of the stake token plus SOL for transaction fees before registering.
+                </p>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I show my ticket at the event?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  Go to your <strong class="text-white font-medium">Tickets tab</strong>, find the event, and tap the ticket to open it. The ticket screen shows a <strong class="text-white font-medium">QR code</strong> that the gatekeeper scans at the venue entrance.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  Check the event's cancellation policy on the event detail page
-                  before registering.
+                  Keep your phone screen on and bright when presenting the QR code. The gatekeeper uses the Tizzle Scanner to read it and confirm your attendance on-chain.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How do I check in at an event?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What are the ticket statuses?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  Attendance is verified via a QR code scan performed by the
-                  event's gatekeeper.
-                </p>
-                <ol class="space-y-3">
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">Your ticket can be in one of these states:</p>
+                <ul class="flex flex-col gap-3">
                   <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >01</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Open the Tizzle app on your phone and navigate to
-                      <strong class="text-white font-medium"
-                        >My Tickets → [Event Name]</strong
-                      >.</span
-                    >
+                    <span class="font-mono text-[11px] text-accent bg-accent/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">VALID</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">Registered and ready. Your stake is locked in escrow. Show this QR code at the event.</span>
                   </li>
                   <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >02</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Show your QR code to the event gatekeeper at the venue
-                      entrance.</span
-                    >
+                    <span class="font-mono text-[11px] text-white bg-surface-2 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">USED</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">You attended and were scanned in. Your stake is pending return — wait for the unlock date to claim.</span>
                   </li>
                   <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >03</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >The gatekeeper scans your QR — this records your
-                      attendance on the Solana blockchain in real-time.</span
-                    >
+                    <span class="font-mono text-[11px] text-accent bg-accent/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">CLAIMABLE</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">The unlock date has passed. Go to the Tickets tab and tap Claim to receive your stake back.</span>
                   </li>
                   <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >04</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Your registration status updates to
-                      <span class="font-mono text-[12px] text-accent"
-                        >checked_in: true</span
-                      >
-                      on-chain.</span
-                    >
+                    <span class="font-mono text-[11px] text-white bg-surface-2 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">REFUNDED</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">You successfully claimed your stake. The tokens are back in your wallet.</span>
                   </li>
-                </ol>
+                  <li class="flex gap-3">
+                    <span class="font-mono text-[11px] text-[#ff3b30] bg-[#ff3b30]/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">NO-SHOW</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">You registered but were never scanned in. Your stake is forfeited and cannot be recovered.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="font-mono text-[11px] text-muted bg-surface-2 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">CANCELLED</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">The event was cancelled. Your stake is automatically refunded.</span>
+                  </li>
+                </ul>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How do I claim my refund?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">Where do I view all my tickets?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  Refunds are
-                  <strong class="text-white font-medium">not automatic</strong>
-                  — you must claim them after the unlock time.
-                </p>
-                <ol class="space-y-3 mb-4">
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >01</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >After the event's unlock time has passed, open the event
-                      in your
-                      <strong class="text-white font-medium">My Tickets</strong>
-                      page.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >02</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >If you attended and were checked in, a
-                      <strong class="text-white font-medium"
-                        >Claim Refund</strong
-                      >
-                      button will appear.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >03</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Click it and approve the
-                      <span class="font-mono text-[12px] text-accent"
-                        >claim_refund</span
-                      >
-                      transaction. Your staked tokens are returned to your
-                      wallet instantly.</span
-                    >
-                  </li>
-                </ol>
-                <div
-                  class="bg-surface-2 border border-border rounded-sm p-3 flex gap-2"
-                >
-                  <span class="text-accent mt-0.5 shrink-0">ℹ</span>
-                  <p class="font-body text-[13px] text-muted">
-                    There is no expiry on unclaimed refunds — your tokens stay
-                    safely in escrow until you claim them.
-                  </p>
-                </div>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What if I don't attend — do I lose my stake?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  It depends on the event's
-                  <strong class="text-white font-medium"
-                    >attendance_required</strong
-                  >
-                  setting configured by the organizer:
-                </p>
-                <div class="space-y-2">
-                  <div
-                    class="flex items-start gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span
-                      class="text-accent font-mono text-[12px] shrink-0 mt-0.5"
-                      >✓</span
-                    >
-                    <span class="font-body text-[13px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >attendance_required = false</strong
-                      >
-                      — you can claim your full stake back regardless of whether
-                      you attended.</span
-                    >
-                  </div>
-                  <div
-                    class="flex items-start gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span
-                      class="text-red-400 font-mono text-[12px] shrink-0 mt-0.5"
-                      >✗</span
-                    >
-                    <span class="font-body text-[13px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >attendance_required = true</strong
-                      >
-                      — your stake is forfeited (in whole or part) if you were
-                      not checked in. Forfeited stakes may go to the organizer's
-                      host fee wallet.</span
-                    >
-                  </div>
-                </div>
-                <p class="font-body text-[13px] text-muted mt-4">
-                  This setting is clearly shown on the event page before you
-                  register.
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  Open the <strong class="text-white font-medium">Tickets tab</strong> (the second icon in the bottom navigation). It shows all tickets associated with your connected wallet — past, present, upcoming, and claimable. Tap any ticket to view its QR code, event details, and current status.
                 </p>
               </div>
             </details>
           </div>
         </section>
 
-        <!-- ── Gatekeeper ────────────────────────────────────── -->
+        <!-- ── Gatekeeper ──────────────────────────────────── -->
         <section id="gatekeeper" class="mb-16 scroll-mt-24">
           <div class="flex items-center gap-3 mb-6">
-            <span class="text-2xl">🔐</span>
+            <svg class="text-accent w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
             <div>
-              <span
-                class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent block mb-0.5"
-                >Section 05</span
-              >
               <h2
                 class="font-display font-semibold tracking-[-0.02em] text-white"
                 style="font-size: clamp(20px, 3vw, 26px)"
@@ -1714,326 +872,93 @@
               </h2>
             </div>
           </div>
-          <p class="font-body text-[14px] text-muted leading-[1.75] mb-6">
-            The Gatekeeper is the person (or device) responsible for scanning
-            attendee QR codes at the event venue, recording attendance on-chain.
-          </p>
 
           <div class="flex flex-col gap-2">
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What is a Gatekeeper?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">Who is the gatekeeper?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  A Gatekeeper is a wallet authorized by the event organizer to
-                  submit
-                  <span class="font-mono text-[12px] text-accent"
-                    >check_in</span
-                  >
-                  transactions on behalf of attendees. When the gatekeeper scans
-                  a QR code, it triggers an on-chain transaction that marks the
-                  attendee's registration as checked in.
+                  The gatekeeper is the Solana wallet address authorized to scan and validate tickets for a specific event. Only the wallet that matches the gatekeeper address set at event creation can use the Scanner tab to check in attendees.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  This can be the organizer's own wallet, a staff member's
-                  wallet, or a dedicated scanning device.
+                  By default this is the organizer's own wallet, but a separate address can be specified at creation — for example, a venue staff member's wallet. The gatekeeper address is fixed after creation and cannot be reassigned.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How do I set up a gatekeeper for my event?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I scan a ticket?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <ol class="space-y-3 mb-4">
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >01</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >In your event dashboard, navigate to
-                      <strong class="text-white font-medium"
-                        >Settings → Gatekeeper</strong
-                      >.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >02</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Enter the wallet address you want to authorize as
-                      gatekeeper. This can be your own wallet or a staff
-                      member's.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >03</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >Share the
-                      <strong class="text-white font-medium"
-                        >Gatekeeper Scanner URL</strong
-                      >
-                      with your staff — this is a mobile-optimized page that
-                      only requires the gatekeeper wallet to be connected.</span
-                    >
-                  </li>
-                  <li class="flex gap-3">
-                    <span
-                      class="font-mono text-[11px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >04</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >On event day, the gatekeeper opens the scanner, connects
-                      their wallet, and can start scanning QR codes
-                      immediately.</span
-                    >
-                  </li>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  Open the <strong class="text-white font-medium">Scanner tab</strong> (the fourth icon in the bottom navigation) on the device connected to the gatekeeper wallet. Point the camera at the attendee's QR code.
+                </p>
+                <ol class="list-decimal list-inside flex flex-col gap-2 mb-3">
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">The scanner automatically detects the QR code.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">The ticket is validated on-chain via a Solana transaction.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">A result screen appears: green checkmark for valid, or an error message for invalid tickets.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">After 3 seconds, the scanner resets and is ready for the next scan.</li>
                 </ol>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How does the QR scanning process work?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  When a gatekeeper scans an attendee's QR code, the following
-                  happens:
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  There is a <strong class="text-white font-medium">3-second cooldown</strong> between scans to prevent duplicate submissions.
                 </p>
-                <div class="space-y-2">
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="font-mono text-[12px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit"
-                      >1</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >The QR code contains the attendee's wallet address and
-                      event ID.</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="font-mono text-[12px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit"
-                      >2</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >The app verifies the attendee's registration PDA exists
-                      on-chain and is not yet checked in.</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="font-mono text-[12px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit"
-                      >3</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >The gatekeeper wallet signs and submits a
-                      <span class="font-mono text-[12px] text-accent"
-                        >check_in</span
-                      >
-                      transaction.</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="font-mono text-[12px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit"
-                      >4</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >The registration PDA is updated on-chain:
-                      <span class="font-mono text-[12px] text-accent"
-                        >checked_in = true</span
-                      >.</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="font-mono text-[12px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit"
-                      >5</span
-                    >
-                    <span
-                      class="font-body text-[14px] text-muted leading-[1.75]"
-                      >The scanner shows a green confirmation. The whole process
-                      takes under 1 second on Solana.</span
-                    >
-                  </div>
-                </div>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >Does the gatekeeper need SOL in their wallet?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What do the scan results mean?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
+                <ul class="flex flex-col gap-3">
+                  <li class="flex gap-3">
+                    <span class="font-mono text-[11px] text-accent bg-accent/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">VALID</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">Ticket accepted. Attendee is checked in and their stake is now pending return.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="font-mono text-[11px] text-[#ff3b30] bg-[#ff3b30]/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">ALREADY USED</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">This ticket has already been scanned. Deny entry.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="font-mono text-[11px] text-[#ff3b30] bg-[#ff3b30]/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">WRONG EVENT</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">The ticket is for a different event. Deny entry.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="font-mono text-[11px] text-[#ff3b30] bg-[#ff3b30]/10 rounded-sm px-2 py-0.5 shrink-0 self-start mt-0.5">INVALID</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]">The QR code is not a valid Tizzle ticket. Deny entry.</span>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">Why isn't the Scanner tab visible?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Yes. The gatekeeper wallet pays the Solana transaction fee
-                  (~0.000005 SOL) for each
-                  <span class="font-mono text-[12px] text-accent"
-                    >check_in</span
-                  >
-                  transaction they submit. For a 500-person event, this is
-                  approximately
-                  <strong class="text-white font-medium">0.0025 SOL</strong>
-                  total — a negligible amount.
+                  The Scanner tab is always visible in the bottom navigation. However, scanning will only succeed when your connected wallet matches the <strong class="text-white font-medium">gatekeeper address</strong> for the event being scanned.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  We recommend keeping at least 0.05 SOL in the gatekeeper
-                  wallet to handle large events comfortably.
-                </p>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What if the network is slow during check-in?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Tizzle uses priority fees to ensure check-in transactions are
-                  processed quickly even during network congestion. Solana's
-                  400ms block time ensures near-instant confirmation in normal
-                  conditions.
-                </p>
-                <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  In rare cases of network outage, Tizzle supports an
-                  <strong class="text-white font-medium"
-                    >offline check-in mode</strong
-                  >
-                  that stores check-ins locally and syncs to the blockchain once
-                  connectivity is restored.
+                  If you receive an "unauthorized" error when scanning, the wallet connected to Tizzle does not match the event's gatekeeper address. Connect the correct wallet or contact the event organizer.
                 </p>
               </div>
             </details>
           </div>
         </section>
 
-        <!-- ── Staking & Refunds ─────────────────────────────── -->
+        <!-- ── Staking & Refunds ───────────────────────────── -->
         <section id="staking" class="mb-16 scroll-mt-24">
           <div class="flex items-center gap-3 mb-6">
-            <span class="text-2xl">⚡</span>
+            <svg class="text-accent w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-8 11h7l-1 9 8-11h-7l1-9z"/></svg>
             <div>
-              <span
-                class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent block mb-0.5"
-                >Section 06</span
-              >
               <h2
                 class="font-display font-semibold tracking-[-0.02em] text-white"
                 style="font-size: clamp(20px, 3vw, 26px)"
@@ -2044,318 +969,195 @@
           </div>
 
           <div class="flex flex-col gap-2">
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >How does the staking mechanism work?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How does the stake-to-attend protocol work?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  The flow works in 5 steps:
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  When you register for an event, the specified stake amount is locked in an on-chain escrow vault controlled by the Tizzle program — not by the organizer or any third party.
                 </p>
-                <div class="space-y-3">
-                  <div class="flex gap-3 items-start">
-                    <span
-                      class="font-mono text-[11px] text-accent-fg bg-accent rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >Lock</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >At registration, your tokens are transferred from your
-                      wallet into a PDA escrow account.</span
-                    >
-                  </div>
-                  <div class="flex gap-3 items-start">
-                    <span
-                      class="font-mono text-[11px] text-accent-fg bg-accent rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >Hold</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >Tokens are held securely until the event's unlock time.
-                      Nobody can access them.</span
-                    >
-                  </div>
-                  <div class="flex gap-3 items-start">
-                    <span
-                      class="font-mono text-[11px] text-accent-fg bg-accent rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >Verify</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >At the event, the gatekeeper scans your QR to record
-                      attendance on-chain.</span
-                    >
-                  </div>
-                  <div class="flex gap-3 items-start">
-                    <span
-                      class="font-mono text-[11px] text-accent-fg bg-accent rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >Unlock</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >After the unlock time, the smart contract allows eligible
-                      attendees to claim their refund.</span
-                    >
-                  </div>
-                  <div class="flex gap-3 items-start">
-                    <span
-                      class="font-mono text-[11px] text-accent-fg bg-accent rounded px-2 py-0.5 shrink-0 h-fit mt-0.5"
-                      >Claim</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >You submit a claim transaction and your staked tokens are
-                      returned to your wallet instantly.</span
-                    >
-                  </div>
-                </div>
+                <ol class="list-decimal list-inside flex flex-col gap-2 mb-3">
+                  <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Register</strong> — stake is locked in escrow. Ticket status: VALID.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Attend & get scanned</strong> — ticket marked USED. Stake is now claimable after the unlock date.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Unlock date passes</strong> — ticket becomes CLAIMABLE.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Claim</strong> — stake returned to your wallet. Ticket status: REFUNDED.</li>
+                </ol>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  If you don't attend, the ticket moves to NO-SHOW after the event and the stake is permanently forfeited.
+                </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What is a PDA (Program Derived Address)?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What happens if I don't attend the event?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  A Program Derived Address (PDA) is a special type of Solana
-                  account that is controlled by a smart contract program rather
-                  than by a private key. No individual — not even the Tizzle
-                  team — can sign transactions from a PDA.
+                  If your ticket is not scanned before the event ends, your ticket status changes to <strong class="text-white font-medium">NO-SHOW</strong>. Your staked tokens are <strong class="text-white font-medium">permanently forfeited</strong> — they cannot be recovered.
                 </p>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  This means your staked tokens are protected entirely by code.
-                  The smart contract enforces all the rules (lock period,
-                  attendance requirement, refund eligibility) automatically and
-                  transparently.
+                  This is the core commitment mechanism of Tizzle. If you know you won't attend, contact the organizer as soon as possible — event cancellation policies are set by the organizer, not the protocol.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >When can I claim my refund?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">Is there a minimum stake amount?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  You can claim your refund when
-                  <strong class="text-white font-medium">all</strong> of these
-                  conditions are met:
+                  Yes. The Tizzle program enforces that <strong class="text-white font-medium">stake_amount must be greater than 0</strong>. Free (zero-stake) events are not supported at the protocol level — every event requires attendees to lock a token amount as commitment.
                 </p>
-                <div class="space-y-2">
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >The event's
-                      <strong class="text-white font-medium"
-                        >unlock time</strong
-                      >
-                      has passed</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >If attendance was required: your wallet was
-                      <strong class="text-white font-medium">checked in</strong>
-                      by the gatekeeper</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >You have not already claimed this refund</span
-                    >
-                  </div>
-                </div>
-                <p class="font-body text-[13px] text-muted mt-4">
-                  There is no deadline to claim your refund — your tokens remain
-                  in the escrow indefinitely until claimed.
-                </p>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >Are there any fees deducted from my refund?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Tizzle charges
-                  <strong class="text-white font-medium"
-                    >zero platform fee</strong
-                  >
-                  to attendees. However, some events may have an
-                  organizer-configured
-                  <strong class="text-white font-medium">host fee</strong>:
-                </p>
-                <div
-                  class="bg-surface-2 border border-border rounded-sm p-4 font-mono text-[13px] text-muted mb-3"
-                >
-                  Your Refund = Stake Amount − (Stake Amount × Host Fee %)
-                </div>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  The host fee percentage (if any) is always shown on the event
-                  page before you register. You also pay a small Solana network
-                  fee (~0.000005 SOL) when submitting the claim transaction.
+                  Organizers can set any non-zero amount that makes sense for their event — even a very small stake is enough to create the commitment mechanic and reduce no-shows.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >What happens to forfeited stakes?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I claim my stake back?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  When an attendee's stake is forfeited (they didn't attend and
-                  attendance was required), the forfeited tokens are distributed
-                  as configured by the organizer at event creation:
+                  Once your ticket status is <strong class="text-white font-medium">CLAIMABLE</strong> (unlock date has passed and you attended):
                 </p>
-                <div class="flex items-start gap-3 mb-2">
-                  <span
-                    class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                    >→</span
-                  >
-                  <span class="font-body text-[14px] text-muted"
-                    >Sent to the organizer's
-                    <strong class="text-white font-medium"
-                      >host fee wallet</strong
-                    ></span
-                  >
-                </div>
-                <div class="flex items-start gap-3">
-                  <span
-                    class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                    >→</span
-                  >
-                  <span class="font-body text-[14px] text-muted"
-                    >Or split between the organizer and the Tizzle protocol
-                    treasury, depending on configuration</span
-                  >
-                </div>
-                <p class="font-body text-[13px] text-muted mt-4">
-                  All forfeit rules are transparent and encoded in the smart
-                  contract — visible on-chain before you stake.
+                <ol class="list-decimal list-inside flex flex-col gap-2 mb-3">
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Go to the <strong class="text-white font-medium">Tickets tab</strong>.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Tap the ticket with CLAIMABLE status.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Tap <strong class="text-white font-medium">Claim</strong> and approve the transaction in your wallet app.</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Your staked tokens are transferred back to your wallet. Ticket status changes to REFUNDED.</li>
+                </ol>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  Claims require a small SOL transaction fee. There is no deadline to claim — your tokens stay in the escrow vault until you initiate the claim.
+                </p>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">Why is there a 7-day waiting period before I can claim?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  The 7-day holding period (unlock date = event end + 7 days) is a protocol-enforced settlement window. It gives time for:
+                </p>
+                <ul class="list-disc list-inside flex flex-col gap-1.5 mb-3">
+                  <li class="font-body text-[14px] text-muted">Dispute resolution if there are scanning discrepancies</li>
+                  <li class="font-body text-[14px] text-muted">On-chain finality and indexing</li>
+                  <li class="font-body text-[14px] text-muted">Ensuring all scan transactions have settled before funds move</li>
+                </ul>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  This period is set at event creation and is immutable. It applies uniformly to all attendees of a given event.
                 </p>
               </div>
             </details>
           </div>
         </section>
 
-        <!-- ── Troubleshooting ───────────────────────────────── -->
+        <!-- ── Profile & Settings ─────────────────────────── -->
+        <section id="profile" class="mb-16 scroll-mt-24">
+          <div class="flex items-center gap-3 mb-6">
+            <svg class="text-accent w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <div>
+              <h2
+                class="font-display font-semibold tracking-[-0.02em] text-white"
+                style="font-size: clamp(20px, 3vw, 26px)"
+              >
+                Profile & Settings
+              </h2>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">What is shown on my profile?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  The <strong class="text-white font-medium">Profile tab</strong> displays your Tizzle identity:
+                </p>
+                <ul class="flex flex-col gap-2">
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Avatar</strong> — a letter avatar generated from your username initial</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Username & display name</strong></span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Wallet address</strong> — your connected Solana public key (truncated)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Stats</strong> — total events attended and events organized</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Badges</strong> — achievement badges earned from activity on Tizzle</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Organization</strong> — your linked organization card (if you have one)</span>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I edit my profile?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  Tap the <strong class="text-white font-medium">Edit</strong> button on the Profile tab. You can update:
+                </p>
+                <ul class="flex flex-col gap-1.5 mb-3">
+                  <li class="font-body text-[14px] text-muted">• Username (must be unique)</li>
+                  <li class="font-body text-[14px] text-muted">• Display name</li>
+                  <li class="font-body text-[14px] text-muted">• Interests / event categories</li>
+                </ul>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  Profile updates are saved to the Tizzle backend and do not require an on-chain transaction.
+                </p>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">How do I disconnect my wallet?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  Go to the <strong class="text-white font-medium">Profile tab</strong> and scroll to the bottom. Tap <strong class="text-white font-medium">Disconnect Wallet</strong>. This logs you out of Tizzle and returns you to the welcome screen.
+                </p>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  Disconnecting does not delete your profile or affect any on-chain data — your tickets, organization, and events remain intact. You can reconnect the same wallet at any time to resume where you left off.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- ── Troubleshooting ─────────────────────────────── -->
         <section id="troubleshooting" class="mb-16 scroll-mt-24">
           <div class="flex items-center gap-3 mb-6">
-            <span class="text-2xl">🛠</span>
+            <svg class="text-accent w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
             <div>
-              <span
-                class="font-mono text-[11px] font-semibold tracking-[0.14em] uppercase text-accent block mb-0.5"
-                >Section 07</span
-              >
               <h2
                 class="font-display font-semibold tracking-[-0.02em] text-white"
                 style="font-size: clamp(20px, 3vw, 26px)"
@@ -2366,338 +1168,95 @@
           </div>
 
           <div class="flex flex-col gap-2">
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >My transaction failed — what do I do?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">My transaction failed — what should I do?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
-                  Common reasons for transaction failure:
-                </p>
-                <div class="space-y-2 mb-4">
-                  <div
-                    class="flex items-start gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span class="text-yellow-400 shrink-0 mt-0.5">⚠</span>
-                    <div>
-                      <div
-                        class="font-display text-[13px] font-semibold text-white mb-1"
-                      >
-                        Insufficient SOL balance
-                      </div>
-                      <p class="font-body text-[13px] text-muted">
-                        Ensure your wallet has enough SOL for both the stake
-                        amount and network fees.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="flex items-start gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span class="text-yellow-400 shrink-0 mt-0.5">⚠</span>
-                    <div>
-                      <div
-                        class="font-display text-[13px] font-semibold text-white mb-1"
-                      >
-                        Event is full
-                      </div>
-                      <p class="font-body text-[13px] text-muted">
-                        The event has reached its capacity. Registration is no
-                        longer possible.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="flex items-start gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span class="text-yellow-400 shrink-0 mt-0.5">⚠</span>
-                    <div>
-                      <div
-                        class="font-display text-[13px] font-semibold text-white mb-1"
-                      >
-                        Unlock time not reached
-                      </div>
-                      <p class="font-body text-[13px] text-muted">
-                        You're trying to claim a refund before the unlock time.
-                        Wait until the event's unlock time has passed.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="flex items-start gap-3 p-3 bg-surface-2 border border-border rounded-sm"
-                  >
-                    <span class="text-yellow-400 shrink-0 mt-0.5">⚠</span>
-                    <div>
-                      <div
-                        class="font-display text-[13px] font-semibold text-white mb-1"
-                      >
-                        Network congestion
-                      </div>
-                      <p class="font-body text-[13px] text-muted">
-                        Retry the transaction — Tizzle automatically applies
-                        priority fees but high congestion can occasionally cause
-                        failures.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <p class="font-body text-[13px] text-muted">
-                  Check the error message in your wallet app for more details,
-                  or look up your wallet address on
-                  <strong class="text-white">Solana Explorer</strong> to inspect
-                  the failed transaction.
-                </p>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >My QR code isn't scanning — what should I check?</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <div class="space-y-2">
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >Increase your screen brightness to maximum</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >Ensure you're on the correct event's ticket page (not a
-                      different event)</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >Ask the gatekeeper to ensure camera permissions are
-                      enabled in their browser</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                      >→</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      >If the QR still won't scan, the gatekeeper can manually
-                      look up your wallet address in the attendee list</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >My refund button isn't showing up</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  Check the following in order:
+                  Most transaction failures are caused by one of these:
                 </p>
-                <div class="space-y-2">
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="font-mono text-[12px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit"
-                      >1</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >Unlock time:</strong
-                      >
-                      The event's unlock time may not have passed yet. Check the
-                      event detail page for the exact unlock timestamp.</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="font-mono text-[12px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit"
-                      >2</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >Attendance not verified:</strong
-                      >
-                      If the event required attendance, confirm your check-in
-                      status is
-                      <span class="font-mono text-[12px] text-accent"
-                        >true</span
-                      >
-                      on-chain via Solana Explorer.</span
-                    >
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <span
-                      class="font-mono text-[12px] text-accent bg-surface-2 border border-border rounded px-2 py-0.5 shrink-0 h-fit"
-                      >3</span
-                    >
-                    <span class="font-body text-[14px] text-muted"
-                      ><strong class="text-white font-medium"
-                        >Already claimed:</strong
-                      >
-                      Your refund may have already been claimed in a previous
-                      session.</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </details>
-
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >I attended the event but I'm not marked as checked in</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
-                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
-                  If the gatekeeper scanned your QR but your on-chain status
-                  wasn't updated, this could be due to:
-                </p>
-                <div class="flex items-start gap-3 mb-2">
-                  <span
-                    class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                    >→</span
-                  >
-                  <span class="font-body text-[14px] text-muted"
-                    >The gatekeeper's transaction failed silently (network
-                    issue) — check if the event was using offline mode, in which
-                    case the sync may be pending.</span
-                  >
-                </div>
-                <div class="flex items-start gap-3 mb-4">
-                  <span
-                    class="text-accent font-mono text-[12px] mt-0.5 shrink-0"
-                    >→</span
-                  >
-                  <span class="font-body text-[14px] text-muted"
-                    >The gatekeeper scanned the wrong QR code or an invalid
-                    code.</span
-                  >
-                </div>
+                <ul class="flex flex-col gap-2 mb-3">
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">1.</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Insufficient SOL for gas</strong> — Every Solana transaction requires a small SOL fee (~0.000005 SOL). Make sure your wallet has SOL even if you're staking a different token.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">2.</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Insufficient stake token balance</strong> — Confirm you have enough of the required stake token in your wallet.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">3.</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Insufficient SOL for platform fee</strong> (organizers) — Creating an event requires 0.002 SOL × capacity in your wallet.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">4.</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Network congestion</strong> — Retry the transaction. Solana occasionally experiences brief congestion.</span>
+                  </li>
+                </ul>
                 <p class="font-body text-[14px] text-muted leading-[1.75]">
-                  Contact the event organizer directly with proof of attendance.
-                  They have an admin override to manually verify check-in before
-                  the unlock time.
+                  Failed transactions do not deduct your stake or fee. It is safe to retry.
                 </p>
               </div>
             </details>
 
-            <details
-              class="help-item bg-surface border border-border rounded-sm overflow-hidden"
-            >
-              <summary
-                class="flex items-center justify-between px-5 py-4 gap-4"
-              >
-                <span class="font-display text-[14px] font-medium text-white"
-                  >I have another issue not listed here</span
-                >
-                <svg
-                  class="chevron text-muted"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">The scanner isn't working — what should I do?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
               </summary>
-              <div class="answer px-5 pb-5 pt-1 border-t border-border">
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">Check the following:</p>
+                <ul class="flex flex-col gap-2 mb-3">
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Camera permission</strong> — Go to your phone's Settings and ensure Tizzle has camera access enabled.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">3-second cooldown</strong> — The scanner has a mandatory 3-second reset between scans. Wait for the camera viewfinder to reappear.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Gatekeeper mismatch</strong> — Confirm your connected wallet matches the gatekeeper address for this event.</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="font-mono text-[11px] text-accent shrink-0 mt-1">•</span>
+                    <span class="font-body text-[14px] text-muted leading-[1.75]"><strong class="text-white font-medium">Lighting</strong> — Ensure the QR code is well-lit and not glare-obscured. Ask the attendee to increase screen brightness.</span>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">My ticket isn't showing as CLAIMABLE — why?</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  A ticket only becomes CLAIMABLE when <strong class="text-white font-medium">both conditions</strong> are met:
+                </p>
+                <ol class="list-decimal list-inside flex flex-col gap-2 mb-3">
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">Your ticket was scanned and confirmed (status moved to USED)</li>
+                  <li class="font-body text-[14px] text-muted leading-[1.75]">The unlock date has passed (event end + 7 days)</li>
+                </ol>
+                <p class="font-body text-[14px] text-muted leading-[1.75] mb-3">
+                  If your ticket still shows USED, the unlock date has not yet arrived. Check the event details for the exact unlock date and time.
+                </p>
+                <p class="font-body text-[14px] text-muted leading-[1.75]">
+                  If you attended but your ticket still shows VALID (never moved to USED), your QR code may not have been successfully scanned. Contact the event organizer or reach out to <a href="https://x.com/tizzleai" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">@tizzleai</a>.
+                </p>
+              </div>
+            </details>
+
+            <details class="help-item bg-surface-2 rounded-sm overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 gap-4">
+                <span class="font-display text-[14px] font-medium text-white">I have another issue not listed here</span>
+                <svg class="chevron text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="answer px-5 pb-5 pt-1">
                 <p class="font-body text-[14px] text-muted leading-[1.75] mb-4">
                   Reach out to the Tizzle community and team:
                 </p>
@@ -2706,7 +1265,7 @@
                     href="https://x.com/tizzleai"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-3 p-4 bg-surface-2 border border-border hover:border-border-2 rounded-sm no-underline group transition-colors"
+                    class="flex items-center gap-3 p-4 bg-bg rounded-sm no-underline group transition-colors"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2761,11 +1320,18 @@
     <!-- ─── FOOTER ───────────────────────────────────────────── -->
     <footer class="border-t border-border">
       <div
-        class="max-w-[1200px] mx-auto px-4 sm:px-8 py-6 flex flex-wrap items-center justify-between gap-4"
+        class="max-w-[1200px] mx-auto px-4 sm:px-8 py-8 flex flex-wrap items-center justify-between gap-6"
       >
-        <a href="/" class="no-underline flex items-center">
-          <img src="/tizzle-logo.png" alt="Tizzle" class="h-9 w-auto" />
-        </a>
+        <!-- Logo + description -->
+        <div class="flex flex-col gap-2">
+          <a href="/" class="no-underline">
+            <img src="/tizzle-logo.png" alt="Tizzle" class="h-10 w-auto" />
+          </a>
+          <p class="font-mono text-[11px] text-faint tracking-[0.04em]">
+            Decentralized event ticketing · Built on Solana
+          </p>
+        </div>
+        <!-- Links -->
         <div class="flex items-center gap-6">
           <a
             href="https://x.com/tizzleai"
@@ -2792,7 +1358,7 @@
             >Terms of Service</a
           >
           <span class="font-mono text-[13px] text-faint tracking-[0.04em]"
-            >© 2026 Tizzle · Built on Solana</span
+            >© 2026 Tizzle</span
           >
         </div>
       </div>
@@ -2851,6 +1417,17 @@
         searchCount.textContent = `${visible} result${visible !== 1 ? "s" : ""}`;
         searchCount.classList.remove("hidden");
         noResults.classList.toggle("hidden", visible > 0);
+      });
+
+      // ── Exclusive accordion ─────────────────────────────────
+      document.querySelectorAll("details.help-item").forEach((el) => {
+        el.addEventListener("toggle", () => {
+          if (el.open) {
+            document.querySelectorAll("details.help-item").forEach((other) => {
+              if (other !== el) other.removeAttribute("open");
+            });
+          }
+        });
       });
 
       // ── Active sidebar on scroll ─────────────────────────────

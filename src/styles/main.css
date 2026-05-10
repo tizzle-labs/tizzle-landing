@@ -18,13 +18,15 @@
 [data-theme="dark"] {
   --bg: #0a0a0a;
   --surface: #111111;
-  --surface-2: #161616;
+  --surface-2: #1a1a1a;
   --surface-3: #1e1e1e;
-  --border: #1e1e1e;
-  --border-2: #2a2a2a;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-2: rgba(255, 255, 255, 0.14);
   --text-1: #ffffff;
   --text-2: #888888;
   --text-3: #444444;
+  --chain: #9945ff;
+  --success: #34c759;
 }
 
 /* ─── RESET ─────────────────────────────────────────────── */
@@ -54,7 +56,6 @@ body {
   top: 0;
   z-index: 100;
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
   padding: 16px 32px;
   display: flex;
   align-items: center;
@@ -119,14 +120,12 @@ body {
   font-size: 11px;
   color: var(--text-2);
   background: var(--surface);
-  border: 1px solid var(--border-2);
   border-radius: var(--radius-full);
   padding: 5px 12px;
 }
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
 .page-footer {
-  border-top: 1px solid var(--border);
   padding: 24px 32px;
   display: flex;
   align-items: center;

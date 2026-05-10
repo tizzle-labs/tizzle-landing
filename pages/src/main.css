@@ -13,7 +13,7 @@
   /* Backgrounds */
   --color-bg: #0a0a0a;
   --color-surface: #111111;
-  --color-surface-2: #161616;
+  --color-surface-2: #1a1a1a;
   --color-surface-3: #1e1e1e;
 
   /* Borders */
@@ -151,4 +151,128 @@
 .text-outline {
   -webkit-text-stroke: 2px #ffffff;
   color: transparent;
+}
+
+
+/* ─── HERO SCROLL CHEVRON ────────────────────────────────────
+   Subtle vertical bounce to invite scrolling.
+──────────────────────────────────────────────────────────── */
+.hero-chevron {
+  animation: chevron-bounce 2s ease-in-out infinite;
+}
+
+@keyframes chevron-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+
+/* ─── INSTALL GUIDE MODAL ────────────────────────────────────
+   Bottom sheet on mobile, centered card on desktop.
+──────────────────────────────────────────────────────────── */
+.install-modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+.install-modal-root.open {
+  pointer-events: auto;
+}
+
+.install-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.85);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.install-modal-root.open .install-modal-backdrop {
+  opacity: 1;
+}
+
+.install-modal-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+}
+
+.install-modal-panel {
+  position: relative;
+  width: 100%;
+  max-height: 90svh;
+  background: var(--color-surface);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.25s ease;
+}
+.install-modal-root.open .install-modal-panel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .install-modal-root {
+    align-items: center;
+    padding: 1.5rem;
+  }
+  .install-modal-wrap {
+    align-items: center;
+    padding: 0;
+    max-width: 560px;
+    width: 100%;
+  }
+  .install-modal-panel {
+    border-radius: 8px;
+    transform: translateY(16px);
+    max-height: 85svh;
+  }
+  .install-modal-root.open .install-modal-panel {
+    transform: translateY(0);
+  }
+}
+
+/* ─── MODAL SCROLLBAR ────────────────────────────────────────
+   Custom thin scrollbar for the install guide modal content.
+──────────────────────────────────────────────────────────── */
+.install-modal-panel ::-webkit-scrollbar {
+  width: 4px;
+}
+.install-modal-panel ::-webkit-scrollbar-track {
+  background: transparent;
+}
+.install-modal-panel ::-webkit-scrollbar-thumb {
+  background: var(--color-border-2);
+  border-radius: 9999px;
+}
+.install-modal-panel ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* ─── STICKY NAV SCROLL STATE ────────────────────────────────
+   Toggled via JS when user scrolls past initial position.
+──────────────────────────────────────────────────────────── */
+.nav-scrolled {
+  background-color: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* On mobile the navbar is never transparent — always show background */
+@media (max-width: 767px) {
+  header {
+    background-color: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
